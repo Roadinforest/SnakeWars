@@ -7,14 +7,14 @@ namespace UI
     {
         [SerializeField] private ConnectionScreen _connectionScreen;
         [SerializeField] private LeaderboardScreen _leaderboardScreen;
-        //[SerializeField] private EnterScreen   _enterScreen;
+        [SerializeField] private EnterScreen   _enterScreen;
 
         private void Start()
         {
             Debug.Log("In UIROOT");
-            _connectionScreen.Show();
+            //_connectionScreen.Show();
             //_leaderboardScreen.Show();
-            //_enterScreen.Hide();
+            _enterScreen.Show();
         }
 
         //private void OnEnable() => 

@@ -1,6 +1,8 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <ui:Template name="leaderboard" src="project://database/Assets/Resources/UI/Leaderboard/leaderboard.uxml?fileID=9197481963319205126&amp;guid=9bfbe2edbf46a2b40854cacb31907ede&amp;type=3#leaderboard" />
     <ui:Template name="connection-screen" src="project://database/Assets/Resources/UI/ConnectionScreen/connection-screen.uxml?fileID=9197481963319205126&amp;guid=13c4eb8f9e5c0f04092a7ddb28b99836&amp;type=3#connection-screen" />
+    <ui:Template name="enter" src="project://database/Assets/Resources/UI/EnterScreen/enter.uxml?fileID=9197481963319205126&amp;guid=bd56bb9c6c54d6d4eb362bf23457e9c4&amp;type=3#enter" />
     <ui:Instance template="leaderboard" name="leaderboard-screen" style="position: absolute; right: 5px; top: 5px; display: none;" />
-    <ui:Instance template="connection-screen" name="connection-screen" style="flex-grow: 1; display: flex; justify-content: center; align-self: center;" />
+    <ui:Instance template="connection-screen" name="connection-screen" style="flex-grow: 1; display: none; justify-content: center; align-self: center;" />
+    <ui:Instance template="enter" name="enter-screen" style="justify-content: space-around; align-self: center; align-items: stretch; flex-direction: column; display: flex; flex-grow: 1;" />
 </ui:UXML>

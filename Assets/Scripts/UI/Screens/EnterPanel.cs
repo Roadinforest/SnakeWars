@@ -8,27 +8,27 @@ namespace UI.Screens
 {
     public class EnterPanel 
     {
-        private readonly TextField _usernameField;
+        //private readonly TextField _usernameField;
         private readonly Button _singleButton;
-        private readonly Button _doubleButton;
-        private readonly Button _multiButton;
+        //private readonly Button _doubleButton;
+        //private readonly Button _multiButton;
         //private readonly Label _errorLabel;
 
-        private Action _onUsernameSubmit;
+        //private Action _onUsernameSubmit;
         
         public EnterPanel(VisualElement parent)
         {
-            _usernameField = parent.Q<TextField>("username-field");
+            //_usernameField = parent.Q<TextField>("username-field-local");
             _singleButton = parent.Q<Button>("single-button");
-            _doubleButton = parent.Q<Button>("double-button");
-            _multiButton = parent.Q<Button>("multi-button");
+            //_doubleButton = parent.Q<Button>("double-button");
+            //_multiButton = parent.Q<Button>("multileaderboardScreen-button");
             //_errorLabel = parent.Q<Label>("error-label");
             Debug.Log("Enter Panel Construct");
             
-            _usernameField.RegisterCallback(OnUsernameSubmitted());
+            //_usernameField.RegisterCallback(OnUsernameSubmitted());
         }
 
-        public string Username => _usernameField.value;
+        //public string Username => _usernameField.value;
         
         //public event Action QuitClicked
         //{
@@ -60,28 +60,28 @@ namespace UI.Screens
         //    _errorLabel.Show();
         //}
         
-        public void BlockButtons() => 
-            SetEnabledButtons(false);
+        //public void BlockButtons() => 
+        //    SetEnabledButtons(false);
 
-        public void UnblockButtons() => 
-            SetEnabledButtons(true);
+        //public void UnblockButtons() => 
+        //    SetEnabledButtons(true);
 
-        private EventCallback<KeyDownEvent> OnUsernameSubmitted() =>
-            evt =>
-            {
-                if (evt.character != '\n') 
-                    return;
+        //private EventCallback<KeyDownEvent> OnUsernameSubmitted() =>
+        //    evt =>
+        //    {
+        //        if (evt.character != '\n') 
+        //            return;
 
-                _onUsernameSubmit?.Invoke();
-            };
+        //        _onUsernameSubmit?.Invoke();
+        //    };
         
-        private void SetEnabledButtons(bool isEnable)
-        {
-            Debug.Log($"set enable {isEnable}");
-            _usernameField.SetEnabled(isEnable);
-            _singleButton.SetEnabled(isEnable);
-            _doubleButton.SetEnabled(isEnable);
-            _multiButton.SetEnabled(isEnable);
-        }
+        //private void SetEnabledButtons(bool isEnable)
+        //{
+        //    Debug.Log($"set enable {isEnable}");
+        //    _usernameField.SetEnabled(isEnable);
+        //    _singleButton.SetEnabled(isEnable);
+        //    _doubleButton.SetEnabled(isEnable);
+        //    _multiButton.SetEnabled(isEnable);
+        //}
     }
 }
