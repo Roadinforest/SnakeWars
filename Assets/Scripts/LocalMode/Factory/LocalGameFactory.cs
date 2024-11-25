@@ -27,6 +27,7 @@ namespace LocalMode.Factory
         public void RemoveSnake(Vector3 pos)
         {
             _snakesDestruction.Destruct(pos);
+            _snakesFactory.RemoveSnake();
         }
 
         //public Snake CreateSnake(string key, PlayerSchema player) =>

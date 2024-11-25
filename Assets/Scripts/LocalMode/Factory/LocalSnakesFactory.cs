@@ -14,6 +14,7 @@ using LocalMode.Extensions;
 
 using Services;
 using UnityEngine;
+using Gameplay.Animations;
 
 namespace LocalMode.Factory
 {
@@ -27,6 +28,7 @@ namespace LocalMode.Factory
         private readonly LocalSnakesRegistry _snakes;
         private readonly StaticDataService _staticData;
         private readonly CameraProvider _cameraProvider;
+        private Snake _OnlySnake;//唯一的小蛇蛇
 
         public LocalSnakesFactory(Assets assets, LocalSnakesRegistry snakes, StaticDataService staticData, CameraProvider cameraProvider)
         {
@@ -52,6 +54,7 @@ namespace LocalMode.Factory
 
             snake.GetComponentInChildren<PlayerAim>().Construct(data.MovementSpeed, data.RotationSpeed);
             _cameraProvider.Follow(snake.Head.transform);
+            //_OnlySnake=snake;
 
             return snake;
         }
@@ -59,6 +62,7 @@ namespace LocalMode.Factory
         private Snake CreateSnake(string pathToPrefab, Vector3 position, Material skin, float movementSpeed)
         {
             var snake = _assets.Instantiate<Snake>(pathToPrefab, position, Quaternion.identity, null);
+            _OnlySnake=snake;
             snake.Head.Construct(movementSpeed);
             snake.GetComponentInChildren<SnakeSkin>().ChangeTo(skin);
             return snake;
@@ -79,11 +83,10 @@ namespace LocalMode.Factory
         //        public Snake CreateRemoteSnake(string key, PlayerSchema schema) =>
         //            CreateRemoteSnake(key, schema, RemoteSnakePath);
 
-        public void RemoveSnake(string key)
+        public void RemoveSnake()
         {
-            //var info = _snakes[key];
-            //_snakes.Remove(key);
-            //Object.Destroy(info.Snake.gameObject);
+            Object.Destroy(_OnlySnake.gameObject);
+            Debug.Log("RemoveSnake in LocalSnakesFactory");
         }
 
         public void AddSnakeDetail(string snakeId, int count)
