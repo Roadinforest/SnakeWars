@@ -20,11 +20,17 @@ namespace LocalMode.Factory
             _vfxFactory = vfxFactory;
         }
 
-        public void Destruct(Vector3 pos)
+        public void Destruct(Vector3 pos,string snakeId)
         {
             Debug.Log("Call SnakesDestruction");
-            //foreach (var position in positions) 
-                _vfxFactory.CreateSnakeDeathVfx(pos, _staticData.ForSnakeSkin(1));
+                //_vfxFactory.CreateSnakeDeathVfx(pos, _staticData.ForSnakeSkin(1));
+            var info = _snakes[snakeId];
+            var positions = info.Snake.GetBodyDetailPositions().ToArray();
+            var skin = _staticData.ForSnakeSkin(info.Player.skinId);
+            
+            foreach (var position in positions) 
+                _vfxFactory.CreateSnakeDeathVfx(position, skin);
+
         }
     }
 }

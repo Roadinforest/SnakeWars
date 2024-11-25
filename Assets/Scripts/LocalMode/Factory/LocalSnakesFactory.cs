@@ -15,6 +15,7 @@ using LocalMode.Extensions;
 using Services;
 using UnityEngine;
 using Gameplay.Animations;
+using Network.Schemas;
 
 namespace LocalMode.Factory
 {
@@ -41,16 +42,35 @@ namespace LocalMode.Factory
         public Snake CreateLocalSnake(string key)
         {
             Debug.Log("Try to create Local Snake");
+
+            //填写身份证阶段
+            SnakeInfo snakeInfo = new SnakeInfo();
+
+            PlayerSchema _playerSchema = new PlayerSchema();
+            _playerSchema = new PlayerSchema();
+            _playerSchema.username = "Player";
+
+            _playerSchema.position = new Vector2Schema();
+            _playerSchema.position.x = 0;
+            _playerSchema.position.y = 0;
+
+            _playerSchema.skinId = (byte)Random.Range(0, 7);
+            _playerSchema.size = (byte)3;//默认长度一开始为3
+            snakeInfo.Player = _playerSchema;
+
             var data = _staticData.ForSnake();
-            var skin = _staticData.ForSnakeSkin(4);
+            var skin = _staticData.ForSnakeSkin(_playerSchema.skinId);
 
             var snake = CreateSnake(PlayerSnakePath, new Vector3(0, 0, 0), skin, data.MovementSpeed);
+            snakeInfo.Snake = snake;
 
-            //New
+            //添加户口，默认ID为Player
+            _snakes.Add("Player", snakeInfo);
+
+            //本地小蛇
             var localSnake = snake.GetComponent<LocalSnake>();
-            localSnake.Initialize();
+            localSnake.Initialize(_playerSchema);
 
-            _snakes.Add("Player", snake);
 
             snake.GetComponentInChildren<PlayerAim>().Construct(data.MovementSpeed, data.RotationSpeed);
             _cameraProvider.Follow(snake.Head.transform);
@@ -92,10 +112,10 @@ namespace LocalMode.Factory
         public void AddSnakeDetail(string snakeId, int count)
         {
             var snakeInfo = _snakes[snakeId];
-            var skin = _staticData.ForSnakeSkin(1);
+            var skin = _staticData.ForSnakeSkin(snakeInfo.Player.skinId);
 
             for (var i = 0; i < count; i++)
-                snakeInfo.AddDetail(CreateSnakeDetail(snakeInfo.Head.transform, snakeInfo.transform, skin));
+                snakeInfo.Snake.AddDetail(CreateSnakeDetail(snakeInfo.Snake.Head.transform, snakeInfo.Snake.transform, skin));
         }
 
         public void RemoveSnakeDetails(string snakeId, int count)
@@ -103,7 +123,7 @@ namespace LocalMode.Factory
             var snakeInfo = _snakes[snakeId];
 
             for (var i = 0; i < count; i++)
-                Object.Destroy(snakeInfo.RemoveDetail());
+                Object.Destroy(snakeInfo.Snake.RemoveDetail());
         }
 
         //        private Snake CreateRemoteSnake(string key, PlayerSchema schema, string pathToPrefab)

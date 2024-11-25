@@ -39,6 +39,12 @@ namespace Gameplay.SnakeLogic
             _leaderboard = leaderboard;
             _input = input;
         }
+        public void Initialize(PlayerSchema _playerSchema)
+        {
+            _localSnakeData=_playerSchema;
+            _leaderboard.CreateLeader(_localSnakeData.username, _localSnakeData);
+            ChangeSize(_localSnakeData.size);
+        }
 
         public void Initialize()
         {

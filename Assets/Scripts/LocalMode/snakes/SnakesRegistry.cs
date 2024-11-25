@@ -7,22 +7,22 @@ namespace LocalMode.Snakes
 {
     public class LocalSnakesRegistry
     {
-        //private readonly Dictionary<string, SnakeInfo> _snakes;
-        private readonly Dictionary<string, Snake> _snakes;
+        private readonly Dictionary<string, SnakeInfo> _snakes;
+        //private readonly Dictionary<string, Snake> _snakes;
 
         public LocalSnakesRegistry() => 
-            _snakes = new Dictionary<string, Snake>();
+            _snakes = new Dictionary<string, SnakeInfo>();
 
-        public Snake this[string key] => _snakes[key];
+        public SnakeInfo this[string key] => _snakes[key];
 
         public event Action<string> Added;
         public event Action<string> Removed;
         public event Action Updated;
 
-        public IEnumerable<(string, Snake)> All() => 
+        public IEnumerable<(string, SnakeInfo)> All() => 
             _snakes.Select(pair => (pair.Key, pair.Value));
 
-        public void Add(string key, Snake snake)
+        public void Add(string key, SnakeInfo snake)
         {
             _snakes[key] = snake;
             Updated?.Invoke();
