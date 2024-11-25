@@ -1,0 +1,4 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="enter" src="project://database/Assets/Resources/UI/EnterScreen/enter.uxml?fileID=9197481963319205126&amp;guid=bd56bb9c6c54d6d4eb362bf23457e9c4&amp;type=3#enter" />
+    <ui:Instance template="enter" name="enter" />
+</ui:UXML>
