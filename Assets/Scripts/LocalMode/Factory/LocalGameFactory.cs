@@ -29,13 +29,9 @@ namespace LocalMode.Factory
             CreateApple(3);
         }
 
-        public void RemoveSnake(string key)
+        public void RemoveSnake(Vector3 pos)
         {
-            if (!_snakes.Contains(key))
-                return;
-            
-            _snakesDestruction.Destruct(key);
-            _snakesFactory.RemoveSnake(key);
+            _snakesDestruction.Destruct(pos);
         }
 
         //public Snake CreateSnake(string key, PlayerSchema player) =>

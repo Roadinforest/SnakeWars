@@ -1,6 +1,8 @@
 ﻿using Gameplay.Animations;
 using Gameplay.Environment;
 using Gameplay.SnakeLogic;
+using LocalMode.Factory;
+using Reflex.Attributes;
 using UnityEngine;
 
 namespace Gameplay.Player
@@ -15,6 +17,8 @@ namespace Gameplay.Player
         [SerializeField] private LayerMask _targetMask;
 
         private readonly Collider[] _colliders = new Collider[3];
+
+        [Inject] LocalGameFactory _localGameFactory;
 
         private void FixedUpdate()
         {
@@ -45,10 +49,12 @@ namespace Gameplay.Player
                 var angle = Vector3.Angle(_head.transform.forward, head.transform.forward);
                 if (angle > _deathAngle)
                     _snakeDeath.Die();
+                _localGameFactory.RemoveSnake(transform.position);
             }
             else
             {
                 _snakeDeath.Die();
+                _localGameFactory.RemoveSnake(transform.position);
                 
                 Debug.Log("I die");
             }

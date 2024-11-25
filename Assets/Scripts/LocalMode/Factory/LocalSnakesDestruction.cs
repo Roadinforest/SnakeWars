@@ -30,7 +30,7 @@ namespace LocalMode.Factory
             _vfxFactory = vfxFactory;
         }
 
-        public void Destruct(string snakeId)
+        public void Destruct(Vector3 pos)
         {
             Debug.Log("Call SnakesDestruction");
             //var info = _snakes[snakeId];
@@ -38,7 +38,7 @@ namespace LocalMode.Factory
             //var skin = _staticData.ForSnakeSkin(info.Player.skinId);
             
             //foreach (var position in positions) 
-                //_vfxFactory.CreateSnakeDeathVfx(position, skin);
+                _vfxFactory.CreateSnakeDeathVfx(pos, _staticData.ForSnakeSkin(1));
 
             //_transmitter.SendDeathSnakeDetailPositions(snakeId, positions);
         }
