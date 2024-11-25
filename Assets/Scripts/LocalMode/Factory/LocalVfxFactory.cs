@@ -4,14 +4,14 @@ using UnityEngine;
 
 namespace LocalMode.Factory
 {
-    public class VfxFactory
+    public class LocalVfxFactory
     {
         private const string SnakeDeathVfx = "Snake/SnakeDeathEffect";
         private const string AppleDeathVfx = "Apple/AppleDeathEffect";
         
         private readonly Assets _assets;
 
-        public VfxFactory(Assets assets) => 
+        public LocalVfxFactory(Assets assets) => 
             _assets = assets;
 
         public SnakeDeathEffect CreateSnakeDeathVfx(Vector3 position, Material skin)

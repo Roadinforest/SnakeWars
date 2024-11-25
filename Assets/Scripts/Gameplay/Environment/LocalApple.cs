@@ -13,11 +13,11 @@ using UnityEngine;
 
 namespace Gameplay.Environment
 {
-    public class AppleLocal : MonoBehaviour
+    public class LocalApple : MonoBehaviour
     {
         [SerializeField] private UniqueId _uniqueId;
         //private NetworkTransmitter _transmitter;
-        private VfxFactory _vfxFactory;
+        private LocalVfxFactory _vfxFactory;
 
         [Inject]
         //public void Construct(NetworkTransmitter transmitter, VfxFactory vfxFactory)
@@ -26,7 +26,7 @@ namespace Gameplay.Environment
         //    _vfxFactory = vfxFactory;
         //}
 
-        public void Construct(VfxFactory vfxFactory)
+        public void Construct(LocalVfxFactory vfxFactory)
         {
             _vfxFactory = vfxFactory;
         }

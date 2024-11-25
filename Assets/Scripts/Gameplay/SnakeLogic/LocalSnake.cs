@@ -24,11 +24,11 @@ namespace Gameplay.SnakeLogic
 
         private readonly List<Action> _disposes = new List<Action>();
         
-        private SnakesFactory _snakesFactory;
+        private LocalSnakesFactory _snakesFactory;
         private LeaderboardService _leaderboard;
 
         [Inject]
-        public void Construct(SnakesFactory snakesFactory, LeaderboardService leaderboard)
+        public void Construct(LocalSnakesFactory snakesFactory, LeaderboardService leaderboard)
         {
             _snakesFactory = snakesFactory;
             _leaderboard = leaderboard;

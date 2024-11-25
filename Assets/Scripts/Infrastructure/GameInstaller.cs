@@ -9,6 +9,14 @@ using Network.Services.Snakes;
 using Services;
 using Services.Leaders;
 using UI.Factory;
+using LocalMode.Factory;
+using LocalMode.Snakes;
+
+using SnakesFactory = Network.Services.Factory.SnakesFactory;
+using AppleFactory = Network.Services.Factory.AppleFactory;
+using VfxFactory = Network.Services.Factory.VfxFactory;
+using SnakesDestruction = Network.Services.Factory.SnakesDestruction;
+//using SnakesRegistry = LocalMode.Snakes.SnakesRegistry;
 
 
 namespace Infrastructure
@@ -25,6 +33,14 @@ namespace Infrastructure
             builder.AddSingleton(typeof(InputService));
             builder.AddSingleton(typeof(Assets));
             builder.AddSingleton(typeof(StaticDataService));
+
+            //New
+            builder.AddSingleton(typeof(LocalGameFactory));
+            builder.AddSingleton(typeof(LocalSnakesFactory));
+            builder.AddSingleton(typeof(LocalSnakesRegistry));
+            builder.AddSingleton(typeof(LocalSnakesDestruction));
+            builder.AddSingleton(typeof(LocalVfxFactory));
+
 
             builder.AddSingleton(typeof(LeaderboardService));
             builder.AddSingleton(typeof(SnakesFactory));

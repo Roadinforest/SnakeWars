@@ -6,6 +6,6 @@ namespace LocalMode.Snakes
     public class SnakeInfo
     {
         public Snake Snake;
-        public PlayerSchema Player;
+        //public PlayerSchema Player;
     }
 }

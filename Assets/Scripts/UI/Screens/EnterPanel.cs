@@ -1,6 +1,7 @@
 using System;
 using UI.Extensions;
 using UnityEngine;
+using UnityEngine.Animations;
 using UnityEngine.UIElements;
 
 namespace UI.Screens
@@ -9,9 +10,9 @@ namespace UI.Screens
     {
         //private readonly TextField _usernameField;
         private readonly Button _singleButton;
-        //private readonly Button _doubleButton;
-        //private readonly Button _multiButton;
-        //private readonly Label _errorLabel;
+        private readonly Button _doubleButton;
+        private readonly Button _multiButton;
+        private readonly Label _errorLabel;
 
         //private Action _onUsernameSubmit;
         
@@ -19,31 +20,34 @@ namespace UI.Screens
         {
             //_usernameField = parent.Q<TextField>("username-field-local");
             _singleButton = parent.Q<Button>("single-button");
-            //_doubleButton = parent.Q<Button>("double-button");
-            //_multiButton = parent.Q<Button>("multileaderboardScreen-button");
-            //_errorLabel = parent.Q<Label>("error-label");
-            _singleButton.clicked += OnSingleButtonClicked;
+            _doubleButton = parent.Q<Button>("double-button");
+            _multiButton = parent.Q<Button>("multi-button");
+            _errorLabel = parent.Q<Label>("error-label");
             Debug.Log("Enter Panel Construct");
             
             //_usernameField.RegisterCallback(OnUsernameSubmitted());
         }
 
 
-        // 点击事件处理方法
-        private void OnSingleButtonClicked()
-        {
-            Debug.Log("Single Button Clicked!");
-            // 可以在这里添加更多的逻辑
-        }
-
         //public string Username => _usernameField.value;
 
-        //public event Action QuitClicked
-        //{
-        //    //Debug.Log("quit clicked");
-        //    //add => _quitButton.clicked += value;
-        //    //remove => _quitButton.clicked -= value;
-        //}
+        public event Action SingleClicked
+        {
+            add => _singleButton.clicked += value;
+            remove => _singleButton.clicked -= value;
+        }
+
+        public event Action DoubleClicked
+        {
+            add => _doubleButton.clicked += value;
+            remove => _doubleButton.clicked -= value;
+        }
+
+        public event Action MultiClicked
+        {
+            add => _multiButton.clicked += value;
+            remove => _multiButton.clicked -= value;
+        }
 
         //public event Action ConnectClicked
         //{
@@ -59,14 +63,14 @@ namespace UI.Screens
         //    }
         //}
 
-        //public void HideError() => 
-        //    _errorLabel.Hide();
+        public void HideError() =>
+            _errorLabel.Hide();
 
-        //public void ShowError(string error)
-        //{
-        //    _errorLabel.text = error;
-        //    _errorLabel.Show();
-        //}
+        public void ShowError(string error)
+        {
+            _errorLabel.text = error;
+            _errorLabel.Show();
+        }
 
         //public void BlockButtons() => 
         //    SetEnabledButtons(false);

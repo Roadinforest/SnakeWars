@@ -3,29 +3,30 @@ using System.Collections.Generic;
 using System.Linq;
 using Gameplay.SnakeLogic;
 //using Network.Schemas;
-using Network.Schemas;
+//using Network.Schemas;
 
 namespace LocalMode.Snakes
 {
-    public class SnakesRegistry
+    public class LocalSnakesRegistry
     {
-        private readonly Dictionary<string, SnakeInfo> _snakes;
+        //private readonly Dictionary<string, SnakeInfo> _snakes;
+        private readonly Dictionary<string, Snake> _snakes;
 
-        public SnakesRegistry() => 
-            _snakes = new Dictionary<string, SnakeInfo>();
+        public LocalSnakesRegistry() => 
+            _snakes = new Dictionary<string, Snake>();
 
-        public SnakeInfo this[string key] => _snakes[key];
+        public Snake this[string key] => _snakes[key];
 
         public event Action<string> Added;
         public event Action<string> Removed;
         public event Action Updated;
 
-        public IEnumerable<(string, SnakeInfo)> All() => 
+        public IEnumerable<(string, Snake)> All() => 
             _snakes.Select(pair => (pair.Key, pair.Value));
 
-        public void Add(string key, PlayerSchema player, Snake snake)
+        public void Add(string key, Snake snake)
         {
-            _snakes[key] = new SnakeInfo() { Snake = snake, Player = player };
+            _snakes[key] = snake;
             Updated?.Invoke();
             Added?.Invoke(key);
         }
