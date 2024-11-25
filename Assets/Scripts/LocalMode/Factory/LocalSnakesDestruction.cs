@@ -16,7 +16,6 @@ namespace LocalMode.Factory
     {
         private readonly LocalSnakesRegistry _snakes;
         private readonly StaticDataService _staticData;
-        //private readonly NetworkTransmitter _transmitter;
         private readonly LocalVfxFactory _vfxFactory;
 
         //public SnakesDestruction(SnakesRegistry snakes, StaticDataService staticData, NetworkTransmitter transmitter, VfxFactory vfxFactory) { _snakes = snakes;

@@ -11,25 +11,28 @@ using UnityEngine;
 
 namespace LocalMode.Factory
 {
-    public class AppleFactory
+    public class LocalAppleFactory
     {
         private const string ApplePath = "Apple/Apple";
 
         private readonly Assets _assets;
-        //private readonly Dictionary<string, Apple> _apples;
+        private readonly Dictionary<string, Apple> _apples;
+        //private int appleNum=20;
 
-        public AppleFactory(Assets assets)
+        public LocalAppleFactory(Assets assets)
         {
             _assets = assets;
-            //_apples = new Dictionary<string, Apple>();
+            _apples = new Dictionary<string, Apple>();
+            Debug.Log("Instantiate LocalAppleFactory");
+            //CreateApple();
         }
 
         public LocalApple CreateApple()
         {
-            float minX = -10;
-            float maxX = 10;
-            float minZ = -10;
-            float maxZ = 10;
+            float minX = -20;
+            float maxX = 20;
+            float minZ = -20;
+            float maxZ = 20;
 
 
             // 生成一个随机的Vector3，其中y=0
@@ -50,13 +53,13 @@ namespace LocalMode.Factory
         //    return apple;
         //}
 
-        //public void RemoveApple(string key)
-        //{
-        //if (!_apples.TryGetValue(key, out var apple)) 
-        //    return;
+        public void RemoveApple(string key)
+        {
+            if (!_apples.TryGetValue(key, out var apple))
+                return;
 
-        //_apples.Remove(key);
-        //Object.Destroy(apple);
-        //}
+            _apples.Remove(key);
+            Object.Destroy(apple);
+        }
     }
 }

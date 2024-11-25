@@ -85,13 +85,13 @@
     <Compile Include="Assets\Scripts\Gameplay\SnakeLogic\SnakeDeath.cs" />
     <Compile Include="Assets\Scripts\UI\Factory\UIFactory.cs" />
     <Compile Include="Assets\Scripts\UI\UIRoot.cs" />
+    <Compile Include="Assets\Scripts\LocalMode\Factory\LocalAppleFactory.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\GameInstaller.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Environment\Apple.cs" />
     <Compile Include="Assets\Scripts\Services\StaticDataService.cs" />
     <Compile Include="Assets\Scripts\StaticData\SnakeStaticDataModification.cs" />
     <Compile Include="Assets\Scripts\LocalMode\Factory\LocalVfxFactory.cs" />
     <Compile Include="Assets\Scripts\StaticData\SnakeData.cs" />
-    <Compile Include="Assets\Scripts\LocalMode\Factory\AppleFactory.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Animations\SnakeHeadAnimator.cs" />
     <Compile Include="Assets\Scripts\UI\Screens\ConnectionScreen.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Player\SnakeHeadTrigger.cs" />

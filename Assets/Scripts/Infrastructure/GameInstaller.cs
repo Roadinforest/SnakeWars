@@ -40,6 +40,7 @@ namespace Infrastructure
             builder.AddSingleton(typeof(LocalSnakesRegistry));
             builder.AddSingleton(typeof(LocalSnakesDestruction));
             builder.AddSingleton(typeof(LocalVfxFactory));
+            builder.AddSingleton(typeof(LocalAppleFactory));
 
 
             builder.AddSingleton(typeof(LeaderboardService));

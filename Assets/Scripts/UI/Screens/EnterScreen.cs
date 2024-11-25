@@ -45,6 +45,7 @@ namespace UI.Screens
 
             //LocalGameFactory l=new LocalGameFactory();
             _localGameFactory.CreateSnake("123");
+
             
             _enterPanel.HideError();
             this.Hide();//隐藏当前界面

@@ -19,19 +19,26 @@ namespace Gameplay.Player
         private void FixedUpdate()
         {
             var hits = OverlapHits();
-            for (var i = 0; i < hits; i++) 
-                ProcessCollision(_colliders[i]);
+            for (var i = 0; i < hits; i++)
+                ProcessCollision(_colliders[i],i);
         }
 
         private int OverlapHits() =>
             Physics.OverlapSphereNonAlloc(_mouthCollider.transform.position, _mouthCollider.radius, _colliders, _targetMask);
 
-        private void ProcessCollision(Component target)
+        private void ProcessCollision(Component target,int i)
         {
+            Debug.Log("In collision");
             if (target.TryGetComponent(out Apple apple))
             {
                 _animator.PlayEat();
                 apple.Collect();
+            }
+            else if (target.TryGetComponent(out LocalApple localApple))
+            {
+                _animator.PlayEat();
+                localApple.Collect();
+                Debug.Log("Eat local apple");
             }
             else if (target.TryGetComponent(out SnakeHead head))
             {
@@ -42,7 +49,10 @@ namespace Gameplay.Player
             else
             {
                 _snakeDeath.Die();
+                
+                Debug.Log("I die");
             }
+            _colliders[i] = null;
         }
     }
 }

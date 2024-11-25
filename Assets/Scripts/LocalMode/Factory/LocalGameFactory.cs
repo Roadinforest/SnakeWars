@@ -6,6 +6,7 @@
 
 //using Network.Schemas;
 using LocalMode.Snakes;
+using LocalMode.Factory;
 using UnityEngine;
 
 namespace LocalMode.Factory
@@ -15,13 +16,17 @@ namespace LocalMode.Factory
         private readonly LocalSnakesRegistry _snakes;
         private readonly LocalSnakesFactory _snakesFactory;
         private readonly LocalSnakesDestruction _snakesDestruction;
+        private readonly LocalAppleFactory _appleFactory;
+
 
         public LocalGameFactory(LocalSnakesRegistry snakes, 
-            LocalSnakesFactory snakesFactory, LocalSnakesDestruction snakesDestruction)
+            LocalSnakesFactory snakesFactory, LocalSnakesDestruction snakesDestruction , LocalAppleFactory appleFactory)
         {
             _snakes = snakes;
             _snakesFactory = snakesFactory;
             _snakesDestruction = snakesDestruction;
+            _appleFactory = appleFactory;
+            CreateApple(3);
         }
 
         public void RemoveSnake(string key)
@@ -38,6 +43,14 @@ namespace LocalMode.Factory
 
         public Snake CreateSnake(string key) =>
                 _snakesFactory.CreateLocalSnake(key);
+
+        public void CreateApple(int count)
+        {
+            for(int i=0;i<count;i++)
+            {
+                _appleFactory.CreateApple();
+            }
+        }
 
         //_networkStatus.IsPlayer(key) 
         //    ? _snakesFactory.CreatePlayerSnake(key, player) 
