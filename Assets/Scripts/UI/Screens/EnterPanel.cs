@@ -1,4 +1,3 @@
-
 using System;
 using UI.Extensions;
 using UnityEngine;
@@ -23,13 +22,22 @@ namespace UI.Screens
             //_doubleButton = parent.Q<Button>("double-button");
             //_multiButton = parent.Q<Button>("multileaderboardScreen-button");
             //_errorLabel = parent.Q<Label>("error-label");
+            _singleButton.clicked += OnSingleButtonClicked;
             Debug.Log("Enter Panel Construct");
             
             //_usernameField.RegisterCallback(OnUsernameSubmitted());
         }
 
+
+        // 点击事件处理方法
+        private void OnSingleButtonClicked()
+        {
+            Debug.Log("Single Button Clicked!");
+            // 可以在这里添加更多的逻辑
+        }
+
         //public string Username => _usernameField.value;
-        
+
         //public event Action QuitClicked
         //{
         //    //Debug.Log("quit clicked");
@@ -59,7 +67,7 @@ namespace UI.Screens
         //    _errorLabel.text = error;
         //    _errorLabel.Show();
         //}
-        
+
         //public void BlockButtons() => 
         //    SetEnabledButtons(false);
 
@@ -74,7 +82,7 @@ namespace UI.Screens
 
         //        _onUsernameSubmit?.Invoke();
         //    };
-        
+
         //private void SetEnabledButtons(bool isEnable)
         //{
         //    Debug.Log($"set enable {isEnable}");

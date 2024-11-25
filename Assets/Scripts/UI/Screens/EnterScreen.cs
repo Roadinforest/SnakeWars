@@ -11,7 +11,7 @@ namespace UI.Screens
         [SerializeField] private string _emptyUsernameMessage = "EMPTY USERNAME!";
 
         private Game _game;
-        //private EnterPanel _enterPanel;
+        private EnterPanel _enterPanel;
 
         [Inject]
         public void Construct(Game game) => 
@@ -22,7 +22,7 @@ namespace UI.Screens
         protected override void Awake()
         {
             base.Awake();
-            //_enterPanel = new EnterPanel(Screen);
+            _enterPanel = new EnterPanel(Screen);
             Debug.Log("Enter Screen Construct");
         }
         
