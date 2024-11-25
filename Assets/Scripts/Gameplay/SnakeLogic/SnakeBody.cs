@@ -48,10 +48,14 @@ namespace Gameplay.SnakeLogic
 
         private float UpdateHistories(float distance)
         {
+            //大于身体节数时，进行跟随移动
             while (distance > _detailDistance)
             {
+                //确定方向
                 var direction = (_head.position - _history.FirstPosition).normalized;
+                //添加历史记录
                 _history.AddToFront(_history.FirstPosition + direction * _detailDistance, _head.rotation);
+                //减少距离
                 distance -= _detailDistance;
             }
 

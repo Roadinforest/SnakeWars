@@ -14,10 +14,11 @@ namespace LocalMode.Factory
         private readonly LocalVfxFactory _vfxFactory;
 
 
-        public LocalSnakesDestruction(StaticDataService staticData, LocalVfxFactory vfxFactory)
+        public LocalSnakesDestruction(LocalSnakesRegistry snake,StaticDataService staticData, LocalVfxFactory vfxFactory)
         {
             _staticData = staticData;
             _vfxFactory = vfxFactory;
+            _snakes = snake;
         }
 
         public void Destruct(Vector3 pos,string snakeId)
