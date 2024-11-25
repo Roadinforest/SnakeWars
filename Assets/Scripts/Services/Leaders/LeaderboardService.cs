@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-//using Network.Schemas;
 using Network.Schemas;
 using UnityEngine;
 
@@ -19,7 +18,7 @@ namespace Services.Leaders
         }
 
         public event Action Updated;
-        
+
         public void CreateLeader(string playerId, PlayerSchema schema)
         {
             var skin = _staticData.ForSnakeSkin(schema.skinId);

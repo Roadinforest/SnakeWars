@@ -12,9 +12,16 @@ namespace UI
         private void Start()
         {
             Debug.Log("In UIROOT");
-            //_connectionScreen.Show();
-            //_leaderboardScreen.Show();
+            _connectionScreen.Hide();
+            _leaderboardScreen.Hide();
             _enterScreen.Show();
+            _enterScreen.SingleClicked += showLeaderBoard;
+        }
+
+        private void showLeaderBoard()
+        {
+                _leaderboardScreen.Show();
+            Debug.Log("Shoe leader board");
         }
 
         //private void OnEnable() => 

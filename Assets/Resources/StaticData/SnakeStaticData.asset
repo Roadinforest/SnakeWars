@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Data:
     MovementSpeed: 10
-    RotationSpeed: 90
+    RotationSpeed: 120
   Skins:
     Materials:
     - {fileID: 2100000, guid: 246d0247b3bce65499e4399e67674346, type: 2}

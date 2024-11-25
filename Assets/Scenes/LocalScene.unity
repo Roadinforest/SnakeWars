@@ -729,37 +729,6 @@ Transform:
   - {fileID: 1800635226}
   m_Father: {fileID: 425980632}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &719449313 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7873970203678744165, guid: ce214f1f151942b4a990ce1594d08915,
-    type: 3}
-  m_PrefabInstance: {fileID: 677271835329443514}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &719449314 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1298116153369928469, guid: ce214f1f151942b4a990ce1594d08915,
-    type: 3}
-  m_PrefabInstance: {fileID: 677271835329443514}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 719449313}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcb62f3b438f4427becd95dba4ba8f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &719449318
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 719449313}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 497ab05efdd7ba84ebeb7eaf83001d4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _uniqueId: {fileID: 719449314}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1116,7 +1085,7 @@ PrefabInstance:
     - target: {fileID: 7353857582285997279, guid: ce214f1f151942b4a990ce1594d08915,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.57
       objectReference: {fileID: 0}
     - target: {fileID: 7353857582285997279, guid: ce214f1f151942b4a990ce1594d08915,
         type: 3}
@@ -1163,15 +1132,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Apple
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4773942727754460968, guid: ce214f1f151942b4a990ce1594d08915, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7873970203678744165, guid: ce214f1f151942b4a990ce1594d08915,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 719449318}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce214f1f151942b4a990ce1594d08915, type: 3}
 --- !u!1001 &7735120956971378882
 PrefabInstance:

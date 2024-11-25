@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using Gameplay.SnakeLogic;
-//using Network.Schemas;
-//using Network.Schemas;
 
 namespace LocalMode.Snakes
 {

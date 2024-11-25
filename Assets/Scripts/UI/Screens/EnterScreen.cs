@@ -21,15 +21,10 @@ namespace UI.Screens
 
 
         [Inject]
-        //public void Construct(Game game, LocalGameFactory localGameFactory)
-        //{
-        //    _localGameFactory = localGameFactory;
-        //    _game = game;
-        //}
         public void Construct(Game game) =>
             _game = game;
 
-        public event Action Connected;
+        public event Action  SingleClicked;
         
         protected override void Awake()
         {
@@ -42,14 +37,14 @@ namespace UI.Screens
         private void OnSingleButtonClicked()
         {
             Debug.Log("Single Button Clicked!");
-
-            //LocalGameFactory l=new LocalGameFactory();
-            _localGameFactory.CreateSnake("123");
-
-            
             _enterPanel.HideError();
             this.Hide();//隐藏当前界面
-            
+
+            SingleClicked?.Invoke();
+
+            //开始本地模式
+            _localGameFactory.CreateSnake("123");
+
         }
 
         private void OnDoubleButtonClicked()
@@ -61,7 +56,6 @@ namespace UI.Screens
         {
             Debug.Log("Multi Button Clicked!");
             _enterPanel.ShowError("Waiting for development");
-            // 可以在这里添加更多的逻辑
         }
 
         private void OnEnable()

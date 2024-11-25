@@ -42,7 +42,7 @@ namespace LocalMode.Factory
         {
             Debug.Log("Try to create Local Snake");
             var data = _staticData.ForSnake();
-            var skin = _staticData.ForSnakeSkin(0);
+            var skin = _staticData.ForSnakeSkin(4);
 
             var snake = CreateSnake(PlayerSnakePath, new Vector3(0, 0, 0), skin, data.MovementSpeed);
 
@@ -50,7 +50,7 @@ namespace LocalMode.Factory
             var localSnake = snake.GetComponent<LocalSnake>();
             localSnake.Initialize();
 
-            _snakes.Add(key, snake);
+            _snakes.Add("Player", snake);
 
             snake.GetComponentInChildren<PlayerAim>().Construct(data.MovementSpeed, data.RotationSpeed);
             _cameraProvider.Follow(snake.Head.transform);

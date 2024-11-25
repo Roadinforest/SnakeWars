@@ -4,6 +4,7 @@ using Gameplay.SnakeLogic;
 using LocalMode.Factory;
 using Reflex.Attributes;
 using UnityEngine;
+using Services.Leaders;
 
 namespace Gameplay.Player
 {
@@ -15,6 +16,7 @@ namespace Gameplay.Player
         [SerializeField] private SphereCollider _mouthCollider;
         [SerializeField, Range(0, 180)] private float _deathAngle = 100f;
         [SerializeField] private LayerMask _targetMask;
+        [SerializeField] private LocalSnake _snake;
 
         private readonly Collider[] _colliders = new Collider[3];
 
@@ -39,12 +41,13 @@ namespace Gameplay.Player
             {
                 _animator.PlayEat();
                 apple.Collect();
+                //apple会发送信号，这里就不会手动增加
             }
             else if (target.TryGetComponent(out LocalApple localApple))
             {
                 _animator.PlayEat();
                 localApple.Collect();
-                //Debug.Log("Eat local apple");
+                _snake.EatApple();
             }
             else if (target.TryGetComponent(out SnakeHead head))
             {
