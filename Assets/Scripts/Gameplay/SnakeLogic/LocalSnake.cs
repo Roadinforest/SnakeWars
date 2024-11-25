@@ -8,12 +8,13 @@ using Gameplay.Common;
 //using Network.Services.Factory;
 
 using LocalMode.Extensions;
-using Network.Schemas;
+//using Network.Schemas;
 using LocalMode.Factory;
 
 using Reflex.Attributes;
 using Services.Leaders;
 using UnityEngine;
+using Services;
 
 namespace Gameplay.SnakeLogic
 {
@@ -21,39 +22,58 @@ namespace Gameplay.SnakeLogic
     {
         [SerializeField] private Snake _snake;
         [SerializeField] private UniqueId _uniqueId;
+        
 
         private readonly List<Action> _disposes = new List<Action>();
         
         private LocalSnakesFactory _snakesFactory;
-        private LeaderboardService _leaderboard;
+        //private LeaderboardService _leaderboard;
 
+        private InputService _input;
+        
+        public Vector3 TargetPoint { get; private set; }
+        
         [Inject]
-        public void Construct(LocalSnakesFactory snakesFactory, LeaderboardService leaderboard)
+        public void Construct(LocalSnakesFactory snakesFactory,InputService input)
         {
             _snakesFactory = snakesFactory;
-            _leaderboard = leaderboard;
+            _input = input;
+        }
+        //public void Construct(LocalSnakesFactory snakesFactory, LeaderboardService leaderboard)
+        //{
+        //    _snakesFactory = snakesFactory;
+        //    _leaderboard = leaderboard;
+        //}
+
+        public void Initialize()
+        {
         }
 
-        public void Initialize(PlayerSchema schema)
+        private void Update()
         {
-            _leaderboard.CreateLeader(_uniqueId.Value, schema);
-            schema.OnPositionChange(ChangePosition).AddTo(_disposes);
-            schema.OnSizeChange(ChangeSize).AddTo(_disposes);
-            schema.OnScoreChange(ChangeScore).AddTo(_disposes);
+            Debug.Log("Update LocalSnake");
+            if (_input.IsMoveButtonPressed())
+            {
+                TargetPoint = _input.WorldMousePosition();
+                _snake.LookAt(TargetPoint);
+            }
+            else
+            {
+                _snake.ResetRotation();
+            }
         }
 
         private void OnDestroy()
         {
-            _leaderboard.RemoveLeader(_uniqueId.Value);
             _disposes.ForEach(dispose => dispose?.Invoke());
             _disposes.Clear();
         }
 
-        private void ChangeScore(ushort current, ushort previous) => 
-            _leaderboard.UpdateLeader(_uniqueId.Value, current);
 
-        private void ChangePosition(Vector2Schema current, Vector2Schema previous) => 
-            _snake.LookAt(current.ToVector3());
+        private void ChangePosition(Vector3 pos)
+        {
+            _snake.LookAt(pos);
+        }
 
         private void ChangeSize(byte current, byte previous)
         {

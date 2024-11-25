@@ -40,18 +40,22 @@ namespace LocalMode.Factory
         {
             Debug.Log("Try to create Local Snake");
             var data = _staticData.ForSnake();
-            var skin = _staticData.ForSnakeSkin(1);
+            var skin = _staticData.ForSnakeSkin(0);
 
-            var snake = CreateSnake(PlayerSnakePath, new Vector3(0, 0, 0), skin, 10f);
+            var snake = CreateSnake(PlayerSnakePath, new Vector3(0, 0, 0), skin, data.MovementSpeed);
 
-            //snake.GetComponent<UniqueId>().Construct(key);
+            //New
+            var localSnake = snake.GetComponent<LocalSnake>();
+            localSnake.Initialize();
+
             _snakes.Add(key, snake);
 
             snake.GetComponentInChildren<PlayerAim>().Construct(data.MovementSpeed, data.RotationSpeed);
-
             _cameraProvider.Follow(snake.Head.transform);
+
             return snake;
         }
+
         private Snake CreateSnake(string pathToPrefab, Vector3 position, Material skin, float movementSpeed)
         {
             var snake = _assets.Instantiate<Snake>(pathToPrefab, position, Quaternion.identity, null);

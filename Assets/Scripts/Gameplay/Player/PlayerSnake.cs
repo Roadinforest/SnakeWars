@@ -18,14 +18,17 @@ namespace Gameplay.Player
 
         private void Update()
         {
-            if (_input.IsMoveButtonPressed())
+            Debug.Log("In Player Snake");
+            if (!_input.IsMoveButtonPressed())
             {
-                TargetPoint = _input.WorldMousePosition();
-                _playerAim.SmoothLookAt(TargetPoint);
+                _playerAim.gameObject.SetActive(false);
             }
             else
             {
-                _playerAim.ResetRotation();
+                TargetPoint = _input.WorldMousePosition();
+                //_playerAim.SmoothLookAt(TargetPoint);
+                _playerAim.gameObject.transform.position = TargetPoint;
+                _playerAim.gameObject.SetActive(true);
             }
         }
     }

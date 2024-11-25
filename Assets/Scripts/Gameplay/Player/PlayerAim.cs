@@ -26,13 +26,14 @@ namespace Gameplay.Player
 
         private void Update()
         {
-            MoveHead();
-            RotateHead();
+            //MoveHead();
+            //RotateHead();
         }
 
         private void MoveHead()
         {
             var timeStep = Time.deltaTime * _speed;
+            //var timeStep = Time.deltaTime * 0;
             transform.Translate(transform.forward * timeStep, Space.World);
         }
 

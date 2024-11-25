@@ -29,6 +29,7 @@ namespace Services
         public SnakeData ForSnake() =>
             _snakeStaticData.Data;
 
+        //相当于皮肤是随机指定的
         public Material ForSnakeSkin(int index)
         {
             var materials = _snakeStaticData.Skins;
