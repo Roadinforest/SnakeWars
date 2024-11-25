@@ -20,6 +20,7 @@ namespace Gameplay.Player
 
         [Inject] LocalGameFactory _localGameFactory;
 
+        // 检测头部是否有碰撞，如果有，则处理碰撞
         private void FixedUpdate()
         {
             var hits = OverlapHits();
@@ -27,12 +28,13 @@ namespace Gameplay.Player
                 ProcessCollision(_colliders[i],i);
         }
 
+        // 检测碰撞
         private int OverlapHits() =>
             Physics.OverlapSphereNonAlloc(_mouthCollider.transform.position, _mouthCollider.radius, _colliders, _targetMask);
 
         private void ProcessCollision(Component target,int i)
         {
-            Debug.Log("In collision");
+            //Debug.Log("In collision");
             if (target.TryGetComponent(out Apple apple))
             {
                 _animator.PlayEat();
@@ -42,7 +44,7 @@ namespace Gameplay.Player
             {
                 _animator.PlayEat();
                 localApple.Collect();
-                Debug.Log("Eat local apple");
+                //Debug.Log("Eat local apple");
             }
             else if (target.TryGetComponent(out SnakeHead head))
             {
@@ -50,6 +52,7 @@ namespace Gameplay.Player
                 if (angle > _deathAngle)
                     _snakeDeath.Die();
                 _localGameFactory.RemoveSnake(transform.position);
+                Debug.Log("I die");
             }
             else
             {
