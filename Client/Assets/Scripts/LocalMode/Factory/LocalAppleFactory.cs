@@ -15,8 +15,7 @@ namespace LocalMode.Factory
 
         private readonly Assets _assets;
         private readonly Dictionary<string, Apple> _apples;
-        private int _xRange = 20;
-        private int _zRnage = 20;
+        private int _mapSize = 25;
 
         public LocalAppleFactory(Assets assets)
         {
@@ -27,9 +26,9 @@ namespace LocalMode.Factory
 
         public LocalApple CreateApple()
         {
-            float x = Random.Range(-_xRange,_xRange);
+            float x = Random.Range(-_mapSize,_mapSize);
             float y = 0f; // 确保y轴始终为0
-            float z = Random.Range(-_zRnage,_zRnage);
+            float z = Random.Range(-_mapSize,_mapSize);
 
 
             var localApple = _assets.Instantiate<LocalApple>(ApplePath, new Vector3(x, y, z), Quaternion.identity, null);

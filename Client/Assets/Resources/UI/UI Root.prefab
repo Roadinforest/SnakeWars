@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 930926979240396551}
   - component: {fileID: 1320242217966976997}
   - component: {fileID: -1495185913523619904}
+  - component: {fileID: -1172631026647546195}
   m_Layer: 0
   m_Name: UI Root
   m_TagString: Untagged
@@ -69,6 +70,7 @@ MonoBehaviour:
   _connectionScreen: {fileID: 6355134314624142056}
   _leaderboardScreen: {fileID: 930926979240396551}
   _enterScreen: {fileID: -1495185913523619904}
+  _countdownScreen: {fileID: -1172631026647546195}
 --- !u!114 &6355134314624142056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132,3 +134,17 @@ MonoBehaviour:
   _menuName: enter-screen
   _rootDocument: {fileID: 5002035796972304936}
   _emptyUsernameMessage: EMPTY USERNAME!
+--- !u!114 &-1172631026647546195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2249083449348074217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b853d596b95f43438facaae177fc7b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _menuName: countdown-screen
+  _rootDocument: {fileID: 5002035796972304936}

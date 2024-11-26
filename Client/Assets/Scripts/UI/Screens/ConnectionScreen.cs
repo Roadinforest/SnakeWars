@@ -12,6 +12,7 @@ namespace UI.Screens
 
         private Game _game;
         private ConnectionPanel _connectionPanel;
+        private int _type;
 
         [Inject]
         public void Construct(Game game) => 
@@ -19,6 +20,8 @@ namespace UI.Screens
 
         public event Action Connected;
         public event Action ReturnClicked;
+
+        public void setType(int type) => _type = type;
         
         protected override void Awake()
         {
@@ -60,7 +63,7 @@ namespace UI.Screens
 
             _connectionPanel.BlockButtons();
 
-            var result = await _game.Connect(_connectionPanel.Username);
+            var result = await _game.Connect(_connectionPanel.Username,_type);
 
             if (result.IsSuccess)
                 Connected?.Invoke();

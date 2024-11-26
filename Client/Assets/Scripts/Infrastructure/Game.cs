@@ -31,8 +31,8 @@ namespace Infrastructure
             _uiFactory.CreateUIRoot();
         }
 
-        public async UniTask<ConnectionResult> Connect(string username) =>
-            await _client.Connect(username);
+        public async UniTask<ConnectionResult> Connect(string username,int type) =>
+            await _client.Connect(username,type);
 
         public async UniTask Disconnect() =>
             await _client.Disconnect();

@@ -8,8 +8,12 @@
 using Colyseus.Schema;
 using Action = System.Action;
 
-namespace Network.Schemas {
-	public partial class AppleSchema : Schema {
+
+
+namespace Network.Schemas
+{
+	public partial class AppleSchema : Schema
+	{
 		[Type(0, "ref", typeof(Vector2Schema))]
 		public Vector2Schema position = new Vector2Schema();
 
@@ -18,22 +22,27 @@ namespace Network.Schemas {
 		 */
 
 		protected event PropertyChangeHandler<Vector2Schema> __positionChange;
-		public Action OnPositionChange(PropertyChangeHandler<Vector2Schema> __handler, bool __immediate = true) {
+		public Action OnPositionChange(PropertyChangeHandler<Vector2Schema> __handler, bool __immediate = true)
+		{
 			if (__callbacks == null) { __callbacks = new SchemaCallbacks(); }
 			__callbacks.AddPropertyCallback(nameof(this.position));
 			__positionChange += __handler;
 			if (__immediate && this.position != null) { __handler(this.position, null); }
-			return () => {
+			return () =>
+			{
 				__callbacks.RemovePropertyCallback(nameof(position));
 				__positionChange -= __handler;
 			};
 		}
 
-		protected override void TriggerFieldChange(DataChange change) {
-			switch (change.Field) {
-				case nameof(position): __positionChange?.Invoke((Vector2Schema) change.Value, (Vector2Schema) change.PreviousValue); break;
+		protected override void TriggerFieldChange(DataChange change)
+		{
+			switch (change.Field)
+			{
+				case nameof(position): __positionChange?.Invoke((Vector2Schema)change.Value, (Vector2Schema)change.PreviousValue); break;
 				default: break;
 			}
 		}
 	}
+
 }

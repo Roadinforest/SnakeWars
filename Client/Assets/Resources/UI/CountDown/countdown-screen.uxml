@@ -1,0 +1,4 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="countdown-panel" src="project://database/Assets/Resources/UI/CountDown/countdown-panel.uxml?fileID=9197481963319205126&amp;guid=e3f4a8909306ff54599b5f9eef868274&amp;type=3#countdown-panel" />
+    <ui:Instance template="countdown-panel" name="countdown-panel" />
+</ui:UXML>

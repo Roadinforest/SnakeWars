@@ -23,9 +23,9 @@ namespace Network.Services
             _handlers = handlers;
         }
 
-        public async UniTask<ConnectionResult> Connect(string username)
+        public async UniTask<ConnectionResult> Connect(string username,int type)
         {
-            var result = await TryConnect(username);
+            var result = await TryConnect(username,type);
 
             if (result.IsFailure)
                 return result;
@@ -47,16 +47,21 @@ namespace Network.Services
                 handler.Dispose();
         }
 
-        private async UniTask<ConnectionResult> TryConnect(string username)
+        private async UniTask<ConnectionResult> TryConnect(string username,int type)
         {
             var settings = _staticData.ForConnection();
             var client = new ColyseusClient(settings);
 
             try
             {
+                //_room = await client.JoinOrCreate<GameRoomState>(GameRoomName, new Dictionary<string, object>()
+                //{
+                //    [nameof(username)] = username
+                //});
+
                 _room = await client.JoinOrCreate<GameRoomState>(GameRoomName, new Dictionary<string, object>()
                 {
-                    [nameof(username)] = username
+                    ["type"] = type
                 });
             }
             catch (Exception exception)

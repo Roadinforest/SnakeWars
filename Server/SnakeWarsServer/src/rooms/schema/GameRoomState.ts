@@ -3,23 +3,59 @@ import { PlayerSchema } from "./PlayerSchema";
 import { Vector2Schema } from "./Vector2Schema";
 import { StaticData } from "../../services/staticData";
 import { AppleSchema } from "./AppleSchema";
+import { LefttimeSchema } from "./LefttimeSchema";
 
 export class GameRoomState extends Schema {
-    readonly mapSize: number = 140;
+    mapSize: number = 140;//地图大小
     readonly scorePerApple: number = 1;
     readonly maxApplesOnRoom: number = 150;
 
     @type({ map: PlayerSchema }) players = new MapSchema<PlayerSchema>();
+    lives = new MapSchema<number>();
+    @type({ map: PlayerSchema }) results= new MapSchema<PlayerSchema>();//结束时记录玩家数据
     @type({ map: AppleSchema}) apples = new MapSchema<AppleSchema>();
+    leftTime = new LefttimeSchema(5*60*1000);
 
     staticData: StaticData;
     lastAppleId: number = 0;
     processedDeaths: Set<string>;
+    //leftTime : number = 5*60*1000;//如果是多人模式，就会有倒计时为5min
+    gameState : boolean = true;//游戏模式，true为正常模式，false为结束模式
+    lifePerPlayer: number = 1;//游戏模式，true为正常模式，false为结束模式
 
     constructor(staticData: StaticData) {
         super();
         this.staticData = staticData;
         this.processedDeaths = new Set<string>();
+    }
+
+    // 结束游戏
+    endGame() {
+        this.gameState = false;
+        //后面追加addResult的逻辑
+    }
+
+    setLeftTime(time : number) {
+        this.leftTime.leftTime=time;
+    }
+
+    decreaseLeftTime(deltaTime : number) {
+        this.leftTime.leftTime-=deltaTime;
+    }
+
+
+    setMapSize(size: number) {
+        this.mapSize = size;
+    }
+
+    // 存储对局结果，为后面存数据做准备
+    addResult(result: PlayerSchema) {
+        this.results.set(result.username, result);
+    }
+
+    // 设置每个玩家的生命条数
+    setLife(lives: number) {
+        this.lifePerPlayer = lives;
     }
 
     createAppleAtRandomPosition() : AppleSchema {
@@ -48,6 +84,7 @@ export class GameRoomState extends Schema {
     createPlayer(sessionId: string, username: string): PlayerSchema {
         const player = new PlayerSchema(username, this.getSpawnPoint(this.mapSize), this.getRandomSkinId(), 1);
         this.players.set(sessionId, player);
+        //this.lives.set(username, this.lifePerPlayer);//设置生命条数
         return player;
     }
 

@@ -6,11 +6,13 @@
     "\\Client\\Assets\\Scripts",
     "\\Client\\Assets\\Scripts\\Network",
     "\\Client\\Assets\\Scripts\\Network\\Services",
+    "\\Client\\Assets\\Scripts\\Network\\Services\\RoomHandlers",
     "\\Server",
     "\\Server\\SnakeWarsServer",
     "\\Server\\SnakeWarsServer\\src",
-    "\\Server\\SnakeWarsServer\\src\\staticData"
+    "\\Server\\SnakeWarsServer\\src\\rooms",
+    "\\Server\\SnakeWarsServer\\src\\rooms\\schema"
   ],
-  "SelectedNode": "\\Client\\Assets\\Scripts\\Network\\Services\\NetworkClient.cs",
+  "SelectedNode": "\\Client\\Assets\\Scripts\\Network\\Services\\RoomHandlers\\NetworkStateInitializer.cs",
   "PreviewInSolutionExplorer": false
 }

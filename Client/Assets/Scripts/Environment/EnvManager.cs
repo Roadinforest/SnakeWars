@@ -24,7 +24,7 @@ namespace Environment
             }
             clear();
             Manager[index].SetActive(true);
-            Manager[index].transform.position = new Vector3(0, 0, 0);
+            Manager[index].transform.position = Vector3.zero;
         }
     }
 }
