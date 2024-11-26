@@ -1,0 +1,1237 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Unity\\Projects\\SnakeWars\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeWars_Client.csproj|d:\\unity\\projects\\snakewars\\assets\\scripts\\editor\\snakestaticdatamodification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeWars_Client.csproj|solutionrelative:assets\\scripts\\editor\\snakestaticdatamodification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeWars_Client.csproj|d:\\unity\\projects\\snakewars\\assets\\scripts\\staticdata\\snakedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeWars_Client.csproj|solutionrelative:assets\\scripts\\staticdata\\snakedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeWars_Client.csproj|D:\\Unity\\Projects\\SnakeWars\\assets\\scripts\\snakemultiplayer.asmdef||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeWars_Client.csproj|solutionrelative:assets\\scripts\\snakemultiplayer.asmdef||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Unity\\Projects\\SnakeWars\\Library\\PackageCache\\com.gustavopsantos.reflex@f4ff084394\\Core\\SceneScope.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Library\\PackageCache\\com.gustavopsantos.reflex@f4ff084394\\Core\\SceneScope.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Unity\\Projects\\SnakeWars\\Library\\PackageCache\\com.gustavopsantos.reflex@f4ff084394\\Logging\\ReflexLogger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Library\\PackageCache\\com.gustavopsantos.reflex@f4ff084394\\Logging\\ReflexLogger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Unity\\Projects\\SnakeWars\\Library\\PackageCache\\com.gustavopsantos.reflex@f4ff084394\\Core\\ProjectScope.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Library\\PackageCache\\com.gustavopsantos.reflex@f4ff084394\\Core\\ProjectScope.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Gameplay\\Environment\\AppleLocal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Gameplay\\Environment\\AppleLocal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Environment\\EnvInfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:Assets\\Scripts\\Environment\\EnvInfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Network\\Services\\Factory\\SnakesDestruction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:Assets\\Scripts\\Network\\Services\\Factory\\SnakesDestruction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Network\\Services\\Factory\\AppleFactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:Assets\\Scripts\\Network\\Services\\Factory\\AppleFactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Gameplay\\Player\\SnakeHeadTrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:Assets\\Scripts\\Gameplay\\Player\\SnakeHeadTrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Infrastructure\\GameInstaller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:Assets\\Scripts\\Infrastructure\\GameInstaller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\UI\\Factory\\UIFactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:Assets\\Scripts\\UI\\Factory\\UIFactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Environment\\EnvManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:Assets\\Scripts\\Environment\\EnvManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\UI\\Screens\\EnterPanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:Assets\\Scripts\\UI\\Screens\\EnterPanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Network\\Schemas\\GameRoomState.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:Assets\\Scripts\\Network\\Schemas\\GameRoomState.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Infrastructure\\Assets.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:Assets\\Scripts\\Infrastructure\\Assets.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Gameplay\\Environment\\Apple.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:Assets\\Scripts\\Gameplay\\Environment\\Apple.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\UI\\Screens\\LeaderboardItem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:Assets\\Scripts\\UI\\Screens\\LeaderboardItem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\UI\\Screens\\GameScreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:Assets\\Scripts\\UI\\Screens\\GameScreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Gameplay\\SnakeLogic\\SnakeSkin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:Assets\\Scripts\\Gameplay\\SnakeLogic\\SnakeSkin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Gameplay\\SnakeLogic\\SnakeHead.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:Assets\\Scripts\\Gameplay\\SnakeLogic\\SnakeHead.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Network\\Services\\Factory\\NetworkGameFactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:Assets\\Scripts\\Network\\Services\\Factory\\NetworkGameFactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Gameplay\\SnakeLogic\\RemoteSnake.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:Assets\\Scripts\\Gameplay\\SnakeLogic\\RemoteSnake.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Gameplay\\SnakeLogic\\SnakeBody.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:Assets\\Scripts\\Gameplay\\SnakeLogic\\SnakeBody.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Gameplay\\SnakeLogic\\SnakeDeath.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:Assets\\Scripts\\Gameplay\\SnakeLogic\\SnakeDeath.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Gameplay\\SnakeLogic\\Snake.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:Assets\\Scripts\\Gameplay\\SnakeLogic\\Snake.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Network\\Services\\ConnectionResult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:Assets\\Scripts\\Network\\Services\\ConnectionResult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Network\\Schemas\\AppleSchema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:Assets\\Scripts\\Network\\Schemas\\AppleSchema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Network\\Extensions\\Vector2DataExtensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:Assets\\Scripts\\Network\\Extensions\\Vector2DataExtensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\LocalMode\\snakes\\SnakesRegistry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:Assets\\Scripts\\LocalMode\\snakes\\SnakesRegistry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\LocalMode\\snakes\\SnakeInfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:Assets\\Scripts\\LocalMode\\snakes\\SnakeInfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Network\\Services\\Factory\\SnakesFactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:Assets\\Scripts\\Network\\Services\\Factory\\SnakesFactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Network\\Services\\Factory\\VfxFactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:Assets\\Scripts\\Network\\Services\\Factory\\VfxFactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Services\\StaticDataService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:Assets\\Scripts\\Services\\StaticDataService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\UI\\Screens\\LeaderboardScreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:Assets\\Scripts\\UI\\Screens\\LeaderboardScreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Services\\Leaders\\LeaderboardService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:Assets\\Scripts\\Services\\Leaders\\LeaderboardService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Gameplay\\Animations\\SnakeHeadAnimator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:Assets\\Scripts\\Gameplay\\Animations\\SnakeHeadAnimator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Gameplay\\Player\\PlayerSnake.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:Assets\\Scripts\\Gameplay\\Player\\PlayerSnake.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Gameplay\\Common\\UniqueId.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:Assets\\Scripts\\Gameplay\\Common\\UniqueId.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Gameplay\\Animations\\DestroyAfterTime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:Assets\\Scripts\\Gameplay\\Animations\\DestroyAfterTime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\CameraLogic\\LookAtCamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:Assets\\Scripts\\CameraLogic\\LookAtCamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Network\\Services\\NetworkClient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:Assets\\Scripts\\Network\\Services\\NetworkClient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Gameplay\\Animations\\SnakeDeathEffect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:Assets\\Scripts\\Gameplay\\Animations\\SnakeDeathEffect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Extensions\\ListExtensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:Assets\\Scripts\\Extensions\\ListExtensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Services\\CameraProvider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:Assets\\Scripts\\Services\\CameraProvider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\StaticData\\SnakeStaticData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:Assets\\Scripts\\StaticData\\SnakeStaticData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Gameplay\\Player\\PlayerAim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:Assets\\Scripts\\Gameplay\\Player\\PlayerAim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Services\\InputService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:Assets\\Scripts\\Services\\InputService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Network\\Services\\Snakes\\SnakeInfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:Assets\\Scripts\\Network\\Services\\Snakes\\SnakeInfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Network\\Services\\Snakes\\SnakesRegistry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:Assets\\Scripts\\Network\\Services\\Snakes\\SnakesRegistry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Infrastructure\\GameBootstrapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:Assets\\Scripts\\Infrastructure\\GameBootstrapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Gameplay\\Player\\PlayerNetworkSync.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:Assets\\Scripts\\Gameplay\\Player\\PlayerNetworkSync.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Infrastructure\\Game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:Assets\\Scripts\\Infrastructure\\Game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Gameplay\\WorldCursor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:Assets\\Scripts\\Gameplay\\WorldCursor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Infrastructure\\Injector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:Assets\\Scripts\\Infrastructure\\Injector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Network\\Services\\RoomHandlers\\NetworkStateInitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:Assets\\Scripts\\Network\\Services\\RoomHandlers\\NetworkStateInitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Network\\Services\\RoomHandlers\\INetworkRoomHandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:Assets\\Scripts\\Network\\Services\\RoomHandlers\\INetworkRoomHandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\LocalMode\\extensions\\Vector2DataExtensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:Assets\\Scripts\\LocalMode\\extensions\\Vector2DataExtensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\LocalMode\\Factory\\LocalAppleFactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:Assets\\Scripts\\LocalMode\\Factory\\LocalAppleFactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\LocalMode\\Factory\\LocalSnakesFactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:Assets\\Scripts\\LocalMode\\Factory\\LocalSnakesFactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\assets\\scripts\\ui\\uiroot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:assets\\scripts\\ui\\uiroot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\UI\\Screens\\EnterScreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:Assets\\Scripts\\UI\\Screens\\EnterScreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\UI\\Screens\\ConnectionScreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:Assets\\Scripts\\UI\\Screens\\ConnectionScreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\LocalMode\\Factory\\LocalGameFactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:Assets\\Scripts\\LocalMode\\Factory\\LocalGameFactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Gameplay\\SnakeLogic\\LocalSnake.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:Assets\\Scripts\\Gameplay\\SnakeLogic\\LocalSnake.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Gameplay\\Environment\\LocalApple.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:Assets\\Scripts\\Gameplay\\Environment\\LocalApple.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\LocalMode\\Factory\\LocalSnakesDestruction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:Assets\\Scripts\\LocalMode\\Factory\\LocalSnakesDestruction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\LocalMode\\Factory\\LocalVfxFactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:Assets\\Scripts\\LocalMode\\Factory\\LocalVfxFactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Network\\Schemas\\Vector2Schema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeMultiplayer.csproj|solutionrelative:Assets\\Scripts\\Network\\Schemas\\Vector2Schema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:1:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeWars_Client.csproj|d:\\unity\\projects\\snakewars\\assets\\scripts\\staticdata\\snakedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:1:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeWars_Client.csproj|solutionrelative:assets\\scripts\\staticdata\\snakedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:1:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeWars_Client.csproj|d:\\unity\\projects\\snakewars\\assets\\scripts\\cameralogic\\camerafollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:1:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeWars_Client.csproj|solutionrelative:assets\\scripts\\cameralogic\\camerafollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:2:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeWars_Client.csproj|d:\\unity\\projects\\snakewars\\assets\\scripts\\staticdata\\snakedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:2:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeWars_Client.csproj|solutionrelative:assets\\scripts\\staticdata\\snakedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:2:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeWars_Client.csproj|d:\\unity\\projects\\snakewars\\assets\\scripts\\cameralogic\\camerafollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:2:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeWars_Client.csproj|solutionrelative:assets\\scripts\\cameralogic\\camerafollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeWars_Client.csproj|d:\\unity\\projects\\snakewars\\assets\\scripts\\ui\\screens\\connectionpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}|SnakeWars_Client.csproj|solutionrelative:assets\\scripts\\ui\\screens\\connectionpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 316,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SnakeStaticDataModification.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Editor\\SnakeStaticDataModification.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Editor\\SnakeStaticDataModification.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Editor\\SnakeStaticDataModification.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Editor\\SnakeStaticDataModification.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T07:02:58.725Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SnakeData.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\StaticData\\SnakeData.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\StaticData\\SnakeData.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\StaticData\\SnakeData.cs",
+              "RelativeToolTip": "Assets\\Scripts\\StaticData\\SnakeData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T06:57:16.874Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 70,
+              "Title": "SnakeData.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\StaticData\\SnakeData.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\StaticData\\SnakeData.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\StaticData\\SnakeData.cs",
+              "RelativeToolTip": "Assets\\Scripts\\StaticData\\SnakeData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T15:25:40.401Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "SnakesDestruction.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Network\\Services\\Factory\\SnakesDestruction.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Network\\Services\\Factory\\SnakesDestruction.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Network\\Services\\Factory\\SnakesDestruction.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Network\\Services\\Factory\\SnakesDestruction.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAkwBgAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T09:24:45.341Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "EnvInfo.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Environment\\EnvInfo.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Environment\\EnvInfo.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Environment\\EnvInfo.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Environment\\EnvInfo.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABYAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T06:29:24.292Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SceneScope.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Library\\PackageCache\\com.gustavopsantos.reflex@f4ff084394\\Core\\SceneScope.cs",
+              "RelativeDocumentMoniker": "Library\\PackageCache\\com.gustavopsantos.reflex@f4ff084394\\Core\\SceneScope.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Library\\PackageCache\\com.gustavopsantos.reflex@f4ff084394\\Core\\SceneScope.cs",
+              "RelativeToolTip": "Library\\PackageCache\\com.gustavopsantos.reflex@f4ff084394\\Core\\SceneScope.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T15:09:44.863Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AppleFactory.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Network\\Services\\Factory\\AppleFactory.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Network\\Services\\Factory\\AppleFactory.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Network\\Services\\Factory\\AppleFactory.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Network\\Services\\Factory\\AppleFactory.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABIAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T11:17:32.616Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SnakeMultiplayer.asmdef",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\SnakeMultiplayer.asmdef",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\SnakeMultiplayer.asmdef",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\SnakeMultiplayer.asmdef",
+              "RelativeToolTip": "Assets\\Scripts\\SnakeMultiplayer.asmdef",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001874|",
+              "WhenOpened": "2024-11-26T06:53:37.119Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "SnakeHeadTrigger.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Gameplay\\Player\\SnakeHeadTrigger.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\Player\\SnakeHeadTrigger.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Gameplay\\Player\\SnakeHeadTrigger.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\Player\\SnakeHeadTrigger.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAAB4AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T10:44:45.495Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "GameInstaller.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Infrastructure\\GameInstaller.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Infrastructure\\GameInstaller.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Infrastructure\\GameInstaller.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Infrastructure\\GameInstaller.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAAwDQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T12:53:22.084Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UIFactory.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\UI\\Factory\\UIFactory.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\Factory\\UIFactory.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\UI\\Factory\\UIFactory.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI\\Factory\\UIFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T06:49:39.534Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "EnvManager.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Environment\\EnvManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Environment\\EnvManager.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Environment\\EnvManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Environment\\EnvManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T05:56:06.801Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "EnterPanel.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\UI\\Screens\\EnterPanel.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\Screens\\EnterPanel.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\UI\\Screens\\EnterPanel.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI\\Screens\\EnterPanel.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAQwEQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T02:21:10.547Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "GameRoomState.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Network\\Schemas\\GameRoomState.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Network\\Schemas\\GameRoomState.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Network\\Schemas\\GameRoomState.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Network\\Schemas\\GameRoomState.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAxwAgAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T15:27:42.037Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Assets.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Infrastructure\\Assets.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Infrastructure\\Assets.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Infrastructure\\Assets.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Infrastructure\\Assets.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T13:56:49.848Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Apple.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Gameplay\\Environment\\Apple.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\Environment\\Apple.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Gameplay\\Environment\\Apple.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\Environment\\Apple.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T03:46:38.178Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "LeaderboardItem.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\UI\\Screens\\LeaderboardItem.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\Screens\\LeaderboardItem.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\UI\\Screens\\LeaderboardItem.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI\\Screens\\LeaderboardItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T15:01:21.452Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ReflexLogger.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Library\\PackageCache\\com.gustavopsantos.reflex@f4ff084394\\Logging\\ReflexLogger.cs",
+              "RelativeDocumentMoniker": "Library\\PackageCache\\com.gustavopsantos.reflex@f4ff084394\\Logging\\ReflexLogger.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Library\\PackageCache\\com.gustavopsantos.reflex@f4ff084394\\Logging\\ReflexLogger.cs",
+              "RelativeToolTip": "Library\\PackageCache\\com.gustavopsantos.reflex@f4ff084394\\Logging\\ReflexLogger.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T15:18:35.951Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "GameScreen.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\UI\\Screens\\GameScreen.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\Screens\\GameScreen.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\UI\\Screens\\GameScreen.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI\\Screens\\GameScreen.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAiwBYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T02:19:15.836Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AppleLocal.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Gameplay\\Environment\\AppleLocal.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\Environment\\AppleLocal.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Gameplay\\Environment\\AppleLocal.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\Environment\\AppleLocal.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAAwC0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T11:30:37.005Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProjectScope.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Library\\PackageCache\\com.gustavopsantos.reflex@f4ff084394\\Core\\ProjectScope.cs",
+              "RelativeDocumentMoniker": "Library\\PackageCache\\com.gustavopsantos.reflex@f4ff084394\\Core\\ProjectScope.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Library\\PackageCache\\com.gustavopsantos.reflex@f4ff084394\\Core\\ProjectScope.cs",
+              "RelativeToolTip": "Library\\PackageCache\\com.gustavopsantos.reflex@f4ff084394\\Core\\ProjectScope.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T13:31:42.142Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "SnakeSkin.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Gameplay\\SnakeLogic\\SnakeSkin.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\SnakeLogic\\SnakeSkin.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Gameplay\\SnakeLogic\\SnakeSkin.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\SnakeLogic\\SnakeSkin.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T08:24:09.054Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "SnakeHead.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Gameplay\\SnakeLogic\\SnakeHead.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\SnakeLogic\\SnakeHead.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Gameplay\\SnakeLogic\\SnakeHead.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\SnakeLogic\\SnakeHead.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAkwBgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T09:02:59.329Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "NetworkGameFactory.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Network\\Services\\Factory\\NetworkGameFactory.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Network\\Services\\Factory\\NetworkGameFactory.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Network\\Services\\Factory\\NetworkGameFactory.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Network\\Services\\Factory\\NetworkGameFactory.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAmwCIAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T03:57:59.993Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "RemoteSnake.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Gameplay\\SnakeLogic\\RemoteSnake.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\SnakeLogic\\RemoteSnake.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Gameplay\\SnakeLogic\\RemoteSnake.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\SnakeLogic\\RemoteSnake.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAkwC0AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T11:15:53.801Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "SnakeBody.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Gameplay\\SnakeLogic\\SnakeBody.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\SnakeLogic\\SnakeBody.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Gameplay\\SnakeLogic\\SnakeBody.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\SnakeLogic\\SnakeBody.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAwwEUAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T08:43:22.794Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "SnakeDeath.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Gameplay\\SnakeLogic\\SnakeDeath.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\SnakeLogic\\SnakeDeath.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Gameplay\\SnakeLogic\\SnakeDeath.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\SnakeLogic\\SnakeDeath.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAsAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T13:57:12.156Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Snake.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Gameplay\\SnakeLogic\\Snake.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\SnakeLogic\\Snake.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Gameplay\\SnakeLogic\\Snake.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\SnakeLogic\\Snake.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAgwBsAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T15:27:03.576Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "ConnectionResult.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Network\\Services\\ConnectionResult.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Network\\Services\\ConnectionResult.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Network\\Services\\ConnectionResult.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Network\\Services\\ConnectionResult.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T15:25:16.104Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "AppleSchema.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Network\\Schemas\\AppleSchema.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Network\\Schemas\\AppleSchema.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Network\\Schemas\\AppleSchema.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Network\\Schemas\\AppleSchema.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T11:50:43.067Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Vector2DataExtensions.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Network\\Extensions\\Vector2DataExtensions.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Network\\Extensions\\Vector2DataExtensions.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Network\\Extensions\\Vector2DataExtensions.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Network\\Extensions\\Vector2DataExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T11:32:35.659Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "SnakesRegistry.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\LocalMode\\snakes\\SnakesRegistry.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\LocalMode\\snakes\\SnakesRegistry.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\LocalMode\\snakes\\SnakesRegistry.cs",
+              "RelativeToolTip": "Assets\\Scripts\\LocalMode\\snakes\\SnakesRegistry.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T11:25:38.529Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "SnakeInfo.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\LocalMode\\snakes\\SnakeInfo.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\LocalMode\\snakes\\SnakeInfo.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\LocalMode\\snakes\\SnakeInfo.cs",
+              "RelativeToolTip": "Assets\\Scripts\\LocalMode\\snakes\\SnakeInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T11:25:24.943Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "SnakesFactory.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Network\\Services\\Factory\\SnakesFactory.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Network\\Services\\Factory\\SnakesFactory.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Network\\Services\\Factory\\SnakesFactory.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Network\\Services\\Factory\\SnakesFactory.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAmwEcAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T08:49:48.416Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "VfxFactory.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Network\\Services\\Factory\\VfxFactory.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Network\\Services\\Factory\\VfxFactory.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Network\\Services\\Factory\\VfxFactory.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Network\\Services\\Factory\\VfxFactory.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T14:28:18.657Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "StaticDataService.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Services\\StaticDataService.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Services\\StaticDataService.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Services\\StaticDataService.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Services\\StaticDataService.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAowB8AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T15:25:29.418Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "LeaderboardScreen.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\UI\\Screens\\LeaderboardScreen.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\Screens\\LeaderboardScreen.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\UI\\Screens\\LeaderboardScreen.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI\\Screens\\LeaderboardScreen.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T14:58:24.11Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "LeaderboardService.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Services\\Leaders\\LeaderboardService.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Services\\Leaders\\LeaderboardService.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Services\\Leaders\\LeaderboardService.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Services\\Leaders\\LeaderboardService.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAiwBsAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T11:49:42.038Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "SnakeHeadAnimator.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Gameplay\\Animations\\SnakeHeadAnimator.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\Animations\\SnakeHeadAnimator.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Gameplay\\Animations\\SnakeHeadAnimator.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\Animations\\SnakeHeadAnimator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAQAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T15:26:38.957Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "PlayerSnake.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Gameplay\\Player\\PlayerSnake.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\Player\\PlayerSnake.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Gameplay\\Player\\PlayerSnake.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\Player\\PlayerSnake.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T11:16:00.942Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "UniqueId.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Gameplay\\Common\\UniqueId.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\Common\\UniqueId.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Gameplay\\Common\\UniqueId.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\Common\\UniqueId.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T03:49:47.714Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "DestroyAfterTime.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Gameplay\\Animations\\DestroyAfterTime.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\Animations\\DestroyAfterTime.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Gameplay\\Animations\\DestroyAfterTime.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\Animations\\DestroyAfterTime.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T15:26:36.915Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "LookAtCamera.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\CameraLogic\\LookAtCamera.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CameraLogic\\LookAtCamera.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\CameraLogic\\LookAtCamera.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CameraLogic\\LookAtCamera.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T15:26:45.84Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "NetworkClient.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Network\\Services\\NetworkClient.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Network\\Services\\NetworkClient.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Network\\Services\\NetworkClient.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Network\\Services\\NetworkClient.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAgwBMAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T15:25:17.824Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "SnakeDeathEffect.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Gameplay\\Animations\\SnakeDeathEffect.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\Animations\\SnakeDeathEffect.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Gameplay\\Animations\\SnakeDeathEffect.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\Animations\\SnakeDeathEffect.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T15:26:38.078Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 71,
+              "Title": "CameraFollow.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\CameraLogic\\CameraFollow.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CameraLogic\\CameraFollow.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\CameraLogic\\CameraFollow.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CameraLogic\\CameraFollow.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T03:43:28.091Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "ListExtensions.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Extensions\\ListExtensions.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Extensions\\ListExtensions.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Extensions\\ListExtensions.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Extensions\\ListExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T15:26:41.297Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "CameraProvider.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Services\\CameraProvider.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Services\\CameraProvider.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Services\\CameraProvider.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Services\\CameraProvider.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T13:41:04.53Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "SnakeStaticData.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\StaticData\\SnakeStaticData.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\StaticData\\SnakeStaticData.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\StaticData\\SnakeStaticData.cs",
+              "RelativeToolTip": "Assets\\Scripts\\StaticData\\SnakeStaticData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T08:47:51.252Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "PlayerAim.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Gameplay\\Player\\PlayerAim.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\Player\\PlayerAim.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Gameplay\\Player\\PlayerAim.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\Player\\PlayerAim.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwB0AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T15:26:49.584Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "InputService.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Services\\InputService.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Services\\InputService.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Services\\InputService.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Services\\InputService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAiwBAAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T15:25:26.927Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "SnakeInfo.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Network\\Services\\Snakes\\SnakeInfo.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Network\\Services\\Snakes\\SnakeInfo.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Network\\Services\\Snakes\\SnakeInfo.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Network\\Services\\Snakes\\SnakeInfo.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T15:25:14.458Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "SnakesRegistry.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Network\\Services\\Snakes\\SnakesRegistry.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Network\\Services\\Snakes\\SnakesRegistry.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Network\\Services\\Snakes\\SnakesRegistry.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Network\\Services\\Snakes\\SnakesRegistry.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T11:25:07.282Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "GameBootstrapper.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Infrastructure\\GameBootstrapper.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Infrastructure\\GameBootstrapper.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Infrastructure\\GameBootstrapper.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Infrastructure\\GameBootstrapper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T13:53:06.76Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "PlayerNetworkSync.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Gameplay\\Player\\PlayerNetworkSync.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\Player\\PlayerNetworkSync.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Gameplay\\Player\\PlayerNetworkSync.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\Player\\PlayerNetworkSync.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T13:56:57.312Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "Game.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Infrastructure\\Game.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Infrastructure\\Game.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Infrastructure\\Game.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Infrastructure\\Game.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T14:57:24.441Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "WorldCursor.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Gameplay\\WorldCursor.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\WorldCursor.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Gameplay\\WorldCursor.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\WorldCursor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T15:27:07.232Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "Injector.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Infrastructure\\Injector.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Infrastructure\\Injector.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Infrastructure\\Injector.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Infrastructure\\Injector.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAiwAwAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T15:22:00.674Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "NetworkStateInitializer.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Network\\Services\\RoomHandlers\\NetworkStateInitializer.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Network\\Services\\RoomHandlers\\NetworkStateInitializer.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Network\\Services\\RoomHandlers\\NetworkStateInitializer.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Network\\Services\\RoomHandlers\\NetworkStateInitializer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T15:01:24.866Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "INetworkRoomHandler.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Network\\Services\\RoomHandlers\\INetworkRoomHandler.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Network\\Services\\RoomHandlers\\INetworkRoomHandler.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Network\\Services\\RoomHandlers\\INetworkRoomHandler.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Network\\Services\\RoomHandlers\\INetworkRoomHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAgAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T05:02:57.363Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 72,
+              "Title": "SnakeData.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\StaticData\\SnakeData.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\StaticData\\SnakeData.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\StaticData\\SnakeData.cs",
+              "RelativeToolTip": "Assets\\Scripts\\StaticData\\SnakeData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T03:38:06.43Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "Vector2DataExtensions.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\LocalMode\\extensions\\Vector2DataExtensions.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\LocalMode\\extensions\\Vector2DataExtensions.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\LocalMode\\extensions\\Vector2DataExtensions.cs",
+              "RelativeToolTip": "Assets\\Scripts\\LocalMode\\extensions\\Vector2DataExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T11:32:59.634Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 73,
+              "Title": "CameraFollow.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\CameraLogic\\CameraFollow.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CameraLogic\\CameraFollow.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\CameraLogic\\CameraFollow.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CameraLogic\\CameraFollow.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T03:35:58.188Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 84,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 74,
+              "Title": "ConnectionPanel.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\UI\\Screens\\ConnectionPanel.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\Screens\\ConnectionPanel.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\UI\\Screens\\ConnectionPanel.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI\\Screens\\ConnectionPanel.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAAACQAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T02:17:32.738Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "UIRoot.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\UI\\UIRoot.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\UIRoot.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\UI\\UIRoot.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI\\UIRoot.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T15:07:59.047Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "LocalSnakesFactory.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\LocalMode\\Factory\\LocalSnakesFactory.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\LocalMode\\Factory\\LocalSnakesFactory.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\LocalMode\\Factory\\LocalSnakesFactory.cs",
+              "RelativeToolTip": "Assets\\Scripts\\LocalMode\\Factory\\LocalSnakesFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T11:21:02.237Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "LocalAppleFactory.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\LocalMode\\Factory\\LocalAppleFactory.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\LocalMode\\Factory\\LocalAppleFactory.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\LocalMode\\Factory\\LocalAppleFactory.cs",
+              "RelativeToolTip": "Assets\\Scripts\\LocalMode\\Factory\\LocalAppleFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T11:19:50.166Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "EnterScreen.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\UI\\Screens\\EnterScreen.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\Screens\\EnterScreen.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\UI\\Screens\\EnterScreen.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI\\Screens\\EnterScreen.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAwEYAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T02:20:24.953Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "ConnectionScreen.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\UI\\Screens\\ConnectionScreen.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\Screens\\ConnectionScreen.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\UI\\Screens\\ConnectionScreen.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI\\Screens\\ConnectionScreen.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T15:01:37.215Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "LocalGameFactory.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\LocalMode\\Factory\\LocalGameFactory.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\LocalMode\\Factory\\LocalGameFactory.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\LocalMode\\Factory\\LocalGameFactory.cs",
+              "RelativeToolTip": "Assets\\Scripts\\LocalMode\\Factory\\LocalGameFactory.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwCUAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T11:20:20.03Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "LocalSnake.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Gameplay\\SnakeLogic\\LocalSnake.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\SnakeLogic\\LocalSnake.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Gameplay\\SnakeLogic\\LocalSnake.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\SnakeLogic\\LocalSnake.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAywDMAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T11:47:39.185Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "LocalApple.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Gameplay\\Environment\\LocalApple.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\Environment\\LocalApple.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Gameplay\\Environment\\LocalApple.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\Environment\\LocalApple.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T07:06:37.162Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "LocalSnakesDestruction.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\LocalMode\\Factory\\LocalSnakesDestruction.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\LocalMode\\Factory\\LocalSnakesDestruction.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\LocalMode\\Factory\\LocalSnakesDestruction.cs",
+              "RelativeToolTip": "Assets\\Scripts\\LocalMode\\Factory\\LocalSnakesDestruction.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBQAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T11:20:35.022Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
+              "Title": "LocalVfxFactory.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\LocalMode\\Factory\\LocalVfxFactory.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\LocalMode\\Factory\\LocalVfxFactory.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\LocalMode\\Factory\\LocalVfxFactory.cs",
+              "RelativeToolTip": "Assets\\Scripts\\LocalMode\\Factory\\LocalVfxFactory.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T11:21:12.982Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 69,
+              "Title": "Vector2Schema.cs",
+              "DocumentMoniker": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Network\\Schemas\\Vector2Schema.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Network\\Schemas\\Vector2Schema.cs",
+              "ToolTip": "D:\\Unity\\Projects\\SnakeWars\\Assets\\Scripts\\Network\\Schemas\\Vector2Schema.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Network\\Schemas\\Vector2Schema.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T14:41:56.886Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

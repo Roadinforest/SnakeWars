@@ -1,7 +1,7 @@
-/.vs/
+/Client/.vs/
 /.vsconfig
-/Temp/
-/Logs/
-/Library/
+/Client/Temp/
+/Client/Logs/
+/Client/Library/
 
 

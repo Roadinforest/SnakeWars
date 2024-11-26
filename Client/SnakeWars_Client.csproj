@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{89BE2877-D13B-8C42-0C51-C65CB4FC47D3}</ProjectGuid>
+    <ProjectGuid>{150DF0F0-3090-0ACD-1C71-E2B406D832B7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>SnakeWars_Client</AssemblyName>
