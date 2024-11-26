@@ -1,7 +1,7 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <Style src="project://database/Assets/Resources/UI/ConnectionScreen/login.uss?fileID=7433441132597879392&amp;guid=586c3049d5366364a90f55a1c61ef741&amp;type=3#login" />
     <ui:VisualElement name="enter-panel">
-        <ui:VisualElement name="enter-content" class="login-panel" style="height: 408px;">
+        <ui:VisualElement name="enter-content" class="login-panel" style="height: 454px; width: 399px; flex-grow: 0;">
             <ui:VisualElement name="margins" class="login-margins" style="-unity-font: url(&quot;project://database/Assets/Font/DynaPuff-Regular.ttf?fileID=12800000&amp;guid=6600c91a8492975419b095eea96c9235&amp;type=3#DynaPuff-Regular&quot;);">
                 <ui:TextField picking-mode="Ignore" max-length="10" placeholder-text="Username..." readonly="false" hide-placeholder-on-focus="true" auto-correction="false" multiline="false" name="username-field-local" />
                 <ui:VisualElement name="space" style="flex-grow: 0; height: 20px;" />
@@ -9,7 +9,8 @@
                 <ui:VisualElement name="space" style="flex-grow: 0; height: 10px;" />
                 <ui:Button text="Double" name="double-button" style="height: 65px;" />
                 <ui:Label tabindex="-1" text="ERROR MESSAGE*" display-tooltip-when-elided="true" name="error-label" style="-unity-font-definition: url(&apos;project://database/Assets/Fonts/DynaPuff-Regular.ttf?fileID=12800000&amp;guid=e7a5668950b74f6459751a7e9ea7ae54&amp;type=3#DynaPuff-Regular&apos;); color: rgba(220, 0, 0, 0.97); position: absolute; right: 0; top: 5px; left: 15px; bottom: auto; display: none;" />
-                <ui:Button text="Multi" name="multi-button" style="top: 10px;" />
+                <ui:Button text="Multi" name="multi-button" style="top: auto;" />
+                <ui:Button text="QUIT" name="quit-button" style="top: auto;" />
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="enter-header" class="login-header" />

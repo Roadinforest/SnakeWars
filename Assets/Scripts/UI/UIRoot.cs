@@ -16,12 +16,25 @@ namespace UI
             _leaderboardScreen.Hide();
             _enterScreen.Show();
             _enterScreen.SingleClicked += showLeaderBoard;
+            _enterScreen.DoubleClicked += showConnectScreen;
+            _enterScreen.MultiClicked += showConnectScreen;
+            _connectionScreen.ReturnClicked += showEnterScreen;
         }
 
+        private void showEnterScreen()
+        {
+            _enterScreen.Show();
+            Debug.Log("Show Enter Screen");
+        }
         private void showLeaderBoard()
         {
-                _leaderboardScreen.Show();
-            Debug.Log("Shoe leader board");
+            _leaderboardScreen.Show();
+            Debug.Log("Show leader board");
+        }
+        private void showConnectScreen()
+        {
+            _connectionScreen.Show();
+            Debug.Log("Show connect screen");
         }
 
         //private void OnEnable() => 

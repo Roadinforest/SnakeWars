@@ -18,6 +18,7 @@ namespace UI.Screens
             _game = game;
 
         public event Action Connected;
+        public event Action ReturnClicked;
         
         protected override void Awake()
         {
@@ -40,8 +41,12 @@ namespace UI.Screens
         private void OnConnectClicked() => 
             ConnectServer().Forget();
                 
-        private void OnQuitClicked() => 
-            Application.Quit();
+        private void OnQuitClicked()
+        {
+            this.Hide();
+            ReturnClicked?.Invoke();
+            //Application.Quit();
+        }
 
         private async UniTask ConnectServer()
         {
@@ -55,14 +60,12 @@ namespace UI.Screens
 
             _connectionPanel.BlockButtons();
 
-            //var result = await _game.Connect(_connectionPanel.Username);
+            var result = await _game.Connect(_connectionPanel.Username);
 
-            //if (result.IsSuccess)
-            //    Connected?.Invoke();
-            //else
-            //    _connectionPanel.ShowError(result.Message);
-
-            Connected.Invoke();//后来加上的
+            if (result.IsSuccess)
+                Connected?.Invoke();
+            else
+                _connectionPanel.ShowError(result.Message);
 
             _connectionPanel.UnblockButtons();
         }

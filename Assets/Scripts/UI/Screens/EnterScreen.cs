@@ -4,7 +4,6 @@ using Infrastructure;
 using Reflex.Attributes;
 using UnityEngine;
 
-//using LocalMode;
 using LocalMode.Factory;
 
 namespace UI.Screens
@@ -25,6 +24,8 @@ namespace UI.Screens
             _game = game;
 
         public event Action  SingleClicked;
+        public event Action  DoubleClicked;
+        public event Action  MultiClicked;
         
         protected override void Awake()
         {
@@ -39,7 +40,6 @@ namespace UI.Screens
             Debug.Log("Single Button Clicked!");
             _enterPanel.HideError();
             this.Hide();//隐藏当前界面
-
             SingleClicked?.Invoke();
 
             //开始本地模式
@@ -50,12 +50,17 @@ namespace UI.Screens
         private void OnDoubleButtonClicked()
         {
             Debug.Log("Double Button Clicked!");
-            _enterPanel.ShowError("Waiting for development");
+            this.Hide();//隐藏当前界面
+
+            DoubleClicked?.Invoke();
+            //_enterPanel.ShowError("Waiting for development");
         }
         private void OnMultiButtonClicked()
         {
             Debug.Log("Multi Button Clicked!");
-            _enterPanel.ShowError("Waiting for development");
+            this.Hide();//隐藏当前界面
+            MultiClicked?.Invoke();
+            //_enterPanel.ShowError("Waiting for development");
         }
 
         private void OnEnable()
@@ -64,9 +69,7 @@ namespace UI.Screens
             _enterPanel.SingleClicked += OnSingleButtonClicked;
             _enterPanel.DoubleClicked += OnDoubleButtonClicked;
             _enterPanel.MultiClicked += OnMultiButtonClicked;
-
-            //_enterPanel.ConnectClicked += OnConnectClicked;
-            //_enterPanel.QuitClicked += OnQuitClicked;
+            _enterPanel.QuitClicked += OnQuitClicked;
         }
 
         private void OnDisable()
@@ -75,38 +78,20 @@ namespace UI.Screens
             _enterPanel.SingleClicked -= OnSingleButtonClicked;
             _enterPanel.DoubleClicked -= OnDoubleButtonClicked;
             _enterPanel.MultiClicked -= OnMultiButtonClicked;
-            //_enterPanel.ConnectClicked -= OnConnectClicked;
-            //_enterPanel.QuitClicked -= OnQuitClicked;
+            _enterPanel.QuitClicked -= OnQuitClicked;
         }
 
-        //private void OnConnectClicked() => 
-        //    ConnectServer().Forget();
 
-        //private void OnQuitClicked() => 
-        //    Application.Quit();
+        private void OnQuitClicked()
+        {
+            Debug.Log("Quit Button Click");
 
-        //private async UniTask ConnectServer()
-        //{
-        //    _enterPanel.HideError();
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+#else
+            Application.Quit();
+#endif
+        }
 
-        //    if (string.IsNullOrWhiteSpace(_enterPanel.Username))
-        //    {
-        //        _enterPanel.ShowError(_emptyUsernameMessage);
-        //        return;
-        //    }
-
-        //    _enterPanel.BlockButtons();
-
-        //    //var result = await _game.Connect(_connectionPanel.Username);
-
-        //    //if (result.IsSuccess)
-        //    //    Connected?.Invoke();
-        //    //else
-        //    //    _connectionPanel.ShowError(result.Message);
-
-        //    Connected.Invoke();//后来加上的
-
-        //    _enterPanel.UnblockButtons();
-        //}
     }
 }

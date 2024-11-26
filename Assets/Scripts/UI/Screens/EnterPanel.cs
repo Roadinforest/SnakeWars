@@ -12,6 +12,7 @@ namespace UI.Screens
         private readonly Button _singleButton;
         private readonly Button _doubleButton;
         private readonly Button _multiButton;
+        private readonly Button _quitButton;
         private readonly Label _errorLabel;
 
         //private Action _onUsernameSubmit;
@@ -22,6 +23,7 @@ namespace UI.Screens
             _singleButton = parent.Q<Button>("single-button");
             _doubleButton = parent.Q<Button>("double-button");
             _multiButton = parent.Q<Button>("multi-button");
+            _quitButton= parent.Q<Button>("quit-button");
             _errorLabel = parent.Q<Label>("error-label");
             Debug.Log("Enter Panel Construct");
             
@@ -49,19 +51,11 @@ namespace UI.Screens
             remove => _multiButton.clicked -= value;
         }
 
-        //public event Action ConnectClicked
-        //{
-        //    add
-        //    {
-        //        _connectButton.clicked += value;
-        //        _onUsernameSubmit += value;
-        //    }
-        //    remove
-        //    {
-        //        _connectButton.clicked -= value;
-        //        _onUsernameSubmit -= value;
-        //    }
-        //}
+        public event Action QuitClicked
+        {
+            add => _quitButton.clicked += value;
+            remove => _quitButton.clicked -= value;
+        }
 
         public void HideError() =>
             _errorLabel.Hide();
@@ -71,21 +65,6 @@ namespace UI.Screens
             _errorLabel.text = error;
             _errorLabel.Show();
         }
-
-        //public void BlockButtons() => 
-        //    SetEnabledButtons(false);
-
-        //public void UnblockButtons() => 
-        //    SetEnabledButtons(true);
-
-        //private EventCallback<KeyDownEvent> OnUsernameSubmitted() =>
-        //    evt =>
-        //    {
-        //        if (evt.character != '\n') 
-        //            return;
-
-        //        _onUsernameSubmit?.Invoke();
-        //    };
 
         //private void SetEnabledButtons(bool isEnable)
         //{

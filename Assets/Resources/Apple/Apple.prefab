@@ -79,7 +79,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.7
+  m_Radius: 1
   m_Center: {x: -1.14, y: 0.2, z: 1.98}
 --- !u!1001 &2968198457189187776
 PrefabInstance:
