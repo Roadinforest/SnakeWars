@@ -3,7 +3,7 @@
     <ui:VisualElement name="enter-panel">
         <ui:VisualElement name="enter-content" class="login-panel" style="height: 454px; width: 399px; flex-grow: 0;">
             <ui:VisualElement name="margins" class="login-margins" style="-unity-font: url(&quot;project://database/Assets/Font/DynaPuff-Regular.ttf?fileID=12800000&amp;guid=6600c91a8492975419b095eea96c9235&amp;type=3#DynaPuff-Regular&quot;);">
-                <ui:TextField picking-mode="Ignore" max-length="10" placeholder-text="Username..." readonly="false" hide-placeholder-on-focus="true" auto-correction="false" multiline="false" name="username-field-local" />
+                <ui:TextField picking-mode="Ignore" max-length="10" placeholder-text="Username..." readonly="false" hide-placeholder-on-focus="true" auto-correction="false" multiline="false" name="username-field-local" style="display: none;" />
                 <ui:VisualElement name="space" style="flex-grow: 0; height: 20px;" />
                 <ui:Button text="SIngle" name="single-button" />
                 <ui:VisualElement name="space" style="flex-grow: 0; height: 10px;" />

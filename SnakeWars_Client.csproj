@@ -10,10 +10,10 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}</ProjectGuid>
+    <ProjectGuid>{89BE2877-D13B-8C42-0C51-C65CB4FC47D3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>SnakeMultiplayer</AssemblyName>
+    <AssemblyName>SnakeWars_Client</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -63,10 +63,16 @@
     <Compile Include="Assets\Scripts\Gameplay\Player\PlayerAim.cs" />
     <Compile Include="Assets\Scripts\Network\Services\RoomHandlers\NetworkApplesListener.cs" />
     <Compile Include="Assets\Scripts\UI\Usernames\UsernameLabelsFitter.cs" />
+    <Compile Include="Assets\Scripts\UI\Screens\EnterPanel.cs" />
     <Compile Include="Assets\Scripts\StaticData\SnakeStaticData.cs" />
+    <Compile Include="Assets\Scripts\LocalMode\Factory\LocalGameFactory.cs" />
+    <Compile Include="Assets\Scripts\Environment\EnvInfo.cs" />
+    <Compile Include="Assets\Scripts\LocalMode\snakes\SnakesRegistry.cs" />
     <Compile Include="Assets\Scripts\UI\Usernames\UsernameLabel.cs" />
     <Compile Include="Assets\Scripts\Network\Services\Factory\SnakesDestruction.cs" />
     <Compile Include="Assets\Scripts\Gameplay\SnakeLogic\Snake.cs" />
+    <Compile Include="Assets\Scripts\LocalMode\Factory\LocalSnakesDestruction.cs" />
+    <Compile Include="Assets\Scripts\LocalMode\Factory\LocalSnakesFactory.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Injector.cs" />
     <Compile Include="Assets\Scripts\Network\Services\Factory\VfxFactory.cs" />
     <Compile Include="Assets\Scripts\UI\Extensions\VisualElementExtensions.cs" />
@@ -80,11 +86,13 @@
     <Compile Include="Assets\Scripts\Gameplay\SnakeLogic\SnakeDeath.cs" />
     <Compile Include="Assets\Scripts\UI\Factory\UIFactory.cs" />
     <Compile Include="Assets\Scripts\UI\UIRoot.cs" />
+    <Compile Include="Assets\Scripts\LocalMode\Factory\LocalAppleFactory.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\GameInstaller.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Environment\Apple.cs" />
     <Compile Include="Assets\Scripts\Services\StaticDataService.cs" />
-    <Compile Include="Assets\Scripts\StaticData\SnakeStaticDataModification.cs" />
+    <Compile Include="Assets\Scripts\LocalMode\Factory\LocalVfxFactory.cs" />
     <Compile Include="Assets\Scripts\StaticData\SnakeData.cs" />
+    <Compile Include="Assets\Scripts\Environment\EnvManager.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Animations\SnakeHeadAnimator.cs" />
     <Compile Include="Assets\Scripts\UI\Screens\ConnectionScreen.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Player\SnakeHeadTrigger.cs" />
@@ -98,19 +106,23 @@
     <Compile Include="Assets\Scripts\Network\Schemas\AppleSchema.cs" />
     <Compile Include="Assets\Scripts\Gameplay\SnakeLogic\SnakeHead.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Common\UniqueId.cs" />
+    <Compile Include="Assets\Scripts\LocalMode\extensions\Vector2DataExtensions.cs" />
     <Compile Include="Assets\Scripts\Gameplay\SnakeLogic\SnakeBody.cs" />
     <Compile Include="Assets\Scripts\Services\InputService.cs" />
     <Compile Include="Assets\Scripts\CameraLogic\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Gameplay\SnakeLogic\SnakeHistory.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Animations\SnakeDeathEffect.cs" />
     <Compile Include="Assets\Scripts\Services\Leaders\LeaderInfo.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\SnakeLogic\LocalSnake.cs" />
     <Compile Include="Assets\Scripts\Gameplay\WorldCursor.cs" />
     <Compile Include="Assets\Scripts\Gameplay\SnakeLogic\RemoteSnake.cs" />
     <Compile Include="Assets\Scripts\Network\Services\RoomHandlers\NetworkPlayersListener.cs" />
+    <Compile Include="Assets\Scripts\LocalMode\snakes\SnakeInfo.cs" />
     <Compile Include="Assets\Scripts\Network\Services\RoomHandlers\INetworkStatusProvider.cs" />
     <Compile Include="Assets\Scripts\Services\CameraProvider.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Game.cs" />
     <Compile Include="Assets\Scripts\Network\Schemas\GameRoomState.cs" />
+    <Compile Include="Assets\Scripts\UI\Screens\EnterScreen.cs" />
     <Compile Include="Assets\Scripts\StaticData\SnakeSkins.cs" />
     <Compile Include="Assets\Scripts\Network\Schemas\PlayerSchema.cs" />
     <Compile Include="Assets\Scripts\Network\Extensions\Vector2DataExtensions.cs" />
@@ -121,6 +133,7 @@
     <Compile Include="Assets\Scripts\Infrastructure\Assets.cs" />
     <Compile Include="Assets\Scripts\Gameplay\SnakeLogic\SnakeSkin.cs" />
     <Compile Include="Assets\Scripts\Network\Services\RoomHandlers\INetworkRoomHandler.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Environment\LocalApple.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\GameBootstrapper.cs" />
     <Compile Include="Assets\Scripts\Extensions\ListExtensions.cs" />
     <Compile Include="Assets\Scripts\Network\Services\Factory\NetworkGameFactory.cs" />

@@ -1181,9 +1181,9 @@
       <Project>{B487B217-6877-01C6-2E92-5BCA152E1084}</Project>
       <Name>SnakeWars_Client.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="SnakeMultiplayer.csproj">
-      <Project>{F50CF17D-06CE-0CFB-E7B8-D6BDAD40F99A}</Project>
-      <Name>SnakeMultiplayer</Name>
+    <ProjectReference Include="SnakeWars_Client.csproj">
+      <Project>{89BE2877-D13B-8C42-0C51-C65CB4FC47D3}</Project>
+      <Name>SnakeWars_Client</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
