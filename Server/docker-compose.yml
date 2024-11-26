@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+    snake-game-backend:
+        build: ./SnakeMultiplayerServer
+        container_name: SnakeMultiplayerServer
+        ports:
+            - '2567:2567'
