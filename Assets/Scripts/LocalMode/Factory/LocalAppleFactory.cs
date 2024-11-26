@@ -11,7 +11,7 @@ namespace LocalMode.Factory
 {
     public class LocalAppleFactory
     {
-        private const string ApplePath = "Apple/Apple";
+        private const string ApplePath = "Apple/Local Apple";
 
         private readonly Assets _assets;
         private readonly Dictionary<string, Apple> _apples;

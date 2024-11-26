@@ -8,8 +8,10 @@
                 <ui:Button text="SIngle" name="single-button" />
                 <ui:VisualElement name="space" style="flex-grow: 0; height: 10px;" />
                 <ui:Button text="Double" name="double-button" style="height: 65px;" />
+                <ui:VisualElement name="space" style="flex-grow: 0; height: 10px; flex-direction: row;" />
                 <ui:Label tabindex="-1" text="ERROR MESSAGE*" display-tooltip-when-elided="true" name="error-label" style="-unity-font-definition: url(&apos;project://database/Assets/Fonts/DynaPuff-Regular.ttf?fileID=12800000&amp;guid=e7a5668950b74f6459751a7e9ea7ae54&amp;type=3#DynaPuff-Regular&apos;); color: rgba(220, 0, 0, 0.97); position: absolute; right: 0; top: 5px; left: 15px; bottom: auto; display: none;" />
                 <ui:Button text="Multi" name="multi-button" style="top: auto;" />
+                <ui:VisualElement name="space" style="flex-grow: 0; height: 20px; flex-direction: row;" />
                 <ui:Button text="QUIT" name="quit-button" style="top: auto;" />
             </ui:VisualElement>
         </ui:VisualElement>

@@ -4,6 +4,7 @@ using Infrastructure;
 using Reflex.Attributes;
 using UnityEngine;
 
+using Environment;
 using LocalMode.Factory;
 
 namespace UI.Screens
@@ -14,10 +15,10 @@ namespace UI.Screens
 
         private Game _game;
         private EnterPanel _enterPanel;
+        private EnvManager _envManager;
 
-        [Inject]
-        private LocalGameFactory _localGameFactory;
-
+        [Inject] private LocalGameFactory _localGameFactory;
+        [Inject] private EnvInfo _envInfo;
 
         [Inject]
         public void Construct(Game game) =>
@@ -31,6 +32,7 @@ namespace UI.Screens
         {
             base.Awake();
             _enterPanel = new EnterPanel(Screen);
+            _envManager = GameObject.Find("EnvManager").GetComponent<EnvManager>();
             Debug.Log("Enter Screen Construct");
         }
 
@@ -41,9 +43,12 @@ namespace UI.Screens
             _enterPanel.HideError();
             this.Hide();//隐藏当前界面
             SingleClicked?.Invoke();
+            _envManager.changeEnv(0);
+            _envInfo.setIndex(0);
 
             //开始本地模式
-            _localGameFactory.CreateSnake("123");
+            _localGameFactory.CreateApple(10);
+            _localGameFactory.CreateSnake();
 
         }
 
@@ -51,6 +56,8 @@ namespace UI.Screens
         {
             Debug.Log("Double Button Clicked!");
             this.Hide();//隐藏当前界面
+            _envManager.changeEnv(1);
+            _envInfo.setIndex(1);
 
             DoubleClicked?.Invoke();
             //_enterPanel.ShowError("Waiting for development");
@@ -60,6 +67,8 @@ namespace UI.Screens
             Debug.Log("Multi Button Clicked!");
             this.Hide();//隐藏当前界面
             MultiClicked?.Invoke();
+            _envManager.changeEnv(2);
+            _envInfo.setIndex(2);
             //_enterPanel.ShowError("Waiting for development");
         }
 

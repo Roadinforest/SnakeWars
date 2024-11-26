@@ -4,11 +4,6 @@ using Gameplay.Player;
 using Gameplay.SnakeLogic;
 using Infrastructure;
 
-//using Network.Extensions;
-//using Network.Schemas;
-//using Network.Services.Snakes;
-
-//using Network.Schemas;
 using LocalMode.Snakes;
 using LocalMode.Extensions;
 
@@ -39,7 +34,7 @@ namespace LocalMode.Factory
             _cameraProvider = cameraProvider;
         }
 
-        public Snake CreateLocalSnake(string key)
+        public Snake CreateLocalSnake()
         {
             Debug.Log("Try to create Local Snake");
 

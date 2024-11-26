@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\UI\Screens\EnterPanel.cs" />
     <Compile Include="Assets\Scripts\StaticData\SnakeStaticData.cs" />
     <Compile Include="Assets\Scripts\LocalMode\Factory\LocalGameFactory.cs" />
+    <Compile Include="Assets\Scripts\Environment\EnvInfo.cs" />
     <Compile Include="Assets\Scripts\LocalMode\snakes\SnakesRegistry.cs" />
     <Compile Include="Assets\Scripts\UI\Usernames\UsernameLabel.cs" />
     <Compile Include="Assets\Scripts\Network\Services\Factory\SnakesDestruction.cs" />
@@ -92,6 +93,7 @@
     <Compile Include="Assets\Scripts\StaticData\SnakeStaticDataModification.cs" />
     <Compile Include="Assets\Scripts\LocalMode\Factory\LocalVfxFactory.cs" />
     <Compile Include="Assets\Scripts\StaticData\SnakeData.cs" />
+    <Compile Include="Assets\Scripts\Environment\EnvManager.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Animations\SnakeHeadAnimator.cs" />
     <Compile Include="Assets\Scripts\UI\Screens\ConnectionScreen.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Player\SnakeHeadTrigger.cs" />

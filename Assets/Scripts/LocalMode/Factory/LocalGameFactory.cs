@@ -21,7 +21,6 @@ namespace LocalMode.Factory
             _snakesFactory = snakesFactory;
             _snakesDestruction = snakesDestruction;
             _appleFactory = appleFactory;
-            CreateApple(3);
         }
 
         public void RemoveSnake(Vector3 pos)
@@ -33,8 +32,8 @@ namespace LocalMode.Factory
         //public Snake CreateSnake(string key, PlayerSchema player) =>
         //        _snakesFactory.CreatePlayerSnake(key, player);
 
-        public Snake CreateSnake(string key) =>
-                _snakesFactory.CreateLocalSnake(key);
+        public Snake CreateSnake() =>
+                _snakesFactory.CreateLocalSnake();
 
         public void CreateApple(int count)
         {

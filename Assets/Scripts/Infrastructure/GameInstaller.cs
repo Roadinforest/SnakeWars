@@ -11,6 +11,7 @@ using Services.Leaders;
 using UI.Factory;
 using LocalMode.Factory;
 using LocalMode.Snakes;
+using Environment;
 
 using SnakesFactory = Network.Services.Factory.SnakesFactory;
 using AppleFactory = Network.Services.Factory.AppleFactory;
@@ -41,6 +42,7 @@ namespace Infrastructure
             builder.AddSingleton(typeof(LocalSnakesDestruction));
             builder.AddSingleton(typeof(LocalVfxFactory));
             builder.AddSingleton(typeof(LocalAppleFactory));
+            builder.AddSingleton(typeof(EnvInfo));
 
 
             builder.AddSingleton(typeof(LeaderboardService));
