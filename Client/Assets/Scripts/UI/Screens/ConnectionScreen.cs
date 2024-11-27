@@ -18,7 +18,7 @@ namespace UI.Screens
         public void Construct(Game game) => 
             _game = game;
 
-        public event Action Connected;
+        public event Action ConnectedSucceed;
         public event Action ReturnClicked;
 
         public void setType(int type) => _type = type;
@@ -66,7 +66,7 @@ namespace UI.Screens
             var result = await _game.Connect(_connectionPanel.Username,_type);
 
             if (result.IsSuccess)
-                Connected?.Invoke();
+                ConnectedSucceed?.Invoke();
             else
                 _connectionPanel.ShowError(result.Message);
 

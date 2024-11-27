@@ -9,6 +9,7 @@ namespace UI
         [SerializeField] private LeaderboardScreen _leaderboardScreen;
         [SerializeField] private EnterScreen   _enterScreen;
         [SerializeField] private CountDownScreen _countdownScreen;
+        [SerializeField] private NoticeScreen _noticeScreen;
 
         private void Start()
         {
@@ -16,6 +17,7 @@ namespace UI
             _connectionScreen.Hide();
             _leaderboardScreen.Hide();
             _countdownScreen.Hide();
+            _noticeScreen.Hide();
             _enterScreen.Show();
 
         }
@@ -34,6 +36,11 @@ namespace UI
         {
             _connectionScreen.Show();
             Debug.Log("Show connect screen");
+        }
+        private void showLoadingNotice()
+        {
+            _noticeScreen.Show();
+            _noticeScreen.ShowInfo("Waiting for other players...");
         }
         private void showCountdownScreen()
         {
@@ -64,12 +71,8 @@ namespace UI
             _enterScreen.DoubleClicked += setTypeDouble;
             _enterScreen.MultiClicked += setTypeMulti;
 
-            //_enterScreen.MultiClicked += showCountdownScreen;
-
             _connectionScreen.ReturnClicked += ShowEnterScreen;
-            _connectionScreen.Connected += showLeaderBoard;
-
-            _connectionScreen.Connected += OnConnected;
+            _connectionScreen.ConnectedSucceed += OnConnected;
         }
 
         private void OnDisable()
@@ -78,14 +81,23 @@ namespace UI
             _enterScreen.DoubleClicked -= showConnectScreen;
             _enterScreen.MultiClicked -= showConnectScreen;
             _connectionScreen.ReturnClicked -= ShowEnterScreen;
-            _connectionScreen.Connected -= showLeaderBoard;
+            _connectionScreen.ConnectedSucceed -= showLeaderBoard;
 
-            _connectionScreen.Connected -= OnConnected;
+            _connectionScreen.ConnectedSucceed -= OnConnected;
         }
 
         private void OnConnected()
         {
             _connectionScreen.Hide();
+            _leaderboardScreen.Hide();
+            _noticeScreen.Hide();
+            showLoadingNotice();
+        }
+
+        public void GameStart()
+        {
+            _countdownScreen.Hide();
+            _noticeScreen.Hide();
             _leaderboardScreen.Show();
         }
     }

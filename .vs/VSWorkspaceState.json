@@ -5,15 +5,13 @@
     "\\Client\\Assets",
     "\\Client\\Assets\\Scripts",
     "\\Client\\Assets\\Scripts\\Network",
-    "\\Client\\Assets\\Scripts\\Network\\Schemas",
-    "\\Client\\Assets\\Scripts\\Network\\Schemas_local",
+    "\\Client\\Assets\\Scripts\\Network\\Services",
+    "\\Client\\Assets\\Scripts\\Network\\Services\\Factory",
+    "\\Client\\Assets\\Scripts\\Network\\Services\\Snakes",
     "\\Server",
     "\\Server\\SnakeWarsServer",
-    "\\Server\\SnakeWarsServer\\src",
-    "\\Server\\SnakeWarsServer\\src\\rooms",
-    "\\Server\\SnakeWarsServer\\src\\rooms\\schema",
-    "\\Server\\tmp"
+    "\\Server\\SnakeWarsServer\\src\\services"
   ],
-  "SelectedNode": "\\Client\\Assets\\Scripts\\Network\\Schemas\\Vector2Schema.cs",
+  "SelectedNode": "\\Client\\Assets\\Scripts\\Network\\Services\\Factory\\SnakesFactory.cs",
   "PreviewInSolutionExplorer": false
 }

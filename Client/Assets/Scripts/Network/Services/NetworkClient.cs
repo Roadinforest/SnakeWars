@@ -6,6 +6,7 @@ using Network.Schemas;
 using Network.Services.RoomHandlers;
 using Services;
 using UnityEngine;
+using UI;
 
 namespace Network.Services
 {
@@ -18,6 +19,7 @@ namespace Network.Services
 
         private ColyseusRoom<GameRoomState> _room;
         private ColyseusRoom<GameRoomState> _testRoom;
+        private UIRoot _uIroot;
         
         public NetworkClient(StaticDataService staticData, IEnumerable<INetworkRoomHandler> handlers)
         {
@@ -74,6 +76,10 @@ namespace Network.Services
                         // 使用 seatReservation 加入房间
                         _room = await client.ConsumeSeatReservation<GameRoomState>(reservation);
                         InitializeHandlers();
+
+                        _uIroot=GameObject.FindObjectOfType<UIRoot>();
+                        _uIroot.GameStart();
+
                         Debug.Log("Joined room successfully");
                     }
                     catch (Exception e)

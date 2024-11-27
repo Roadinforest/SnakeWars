@@ -67,12 +67,14 @@
     <None Include="Assets\Resources\UI\ConnectionScreen\login.uxml" />
     <None Include="Assets\Resources\UI\WaitScreen\waitScreen-item.uxml" />
     <None Include="Assets\Resources\UI\CountDown\countdown-screen.uxml" />
+    <None Include="Assets\Resources\UI\NoticeScreen\notice-screen.uxml" />
     <None Include="Assets\Resources\UI\ConnectionScreen\connection-screen.uxml" />
     <None Include="Assets\Resources\UI\CountDown\countdown-panel.uxml" />
     <None Include="Assets\Resources\UI\Components\world-space-username-label.uxml" />
     <None Include="Assets\Resources\UI\ConnectionScreen\login.uss" />
     <None Include="Assets\Resources\UI\Leaderboard\leaderboard-item.uxml" />
     <None Include="Assets\Resources\UI\WaitScreen\waitScreen.uxml" />
+    <None Include="Assets\Resources\UI\NoticeScreen\notice-panel.uxml" />
     <None Include="Assets\Resources\UI\UIRoot.uxml" />
     <None Include="Assets\Resources\UI\ConnectionScreen\connection-screen.uss" />
     <None Include="Assets\Resources\UI\Leaderboard\leaderboard.uxml" />

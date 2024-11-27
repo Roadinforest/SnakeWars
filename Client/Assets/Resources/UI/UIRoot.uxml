@@ -3,8 +3,10 @@
     <ui:Template name="connection-screen" src="project://database/Assets/Resources/UI/ConnectionScreen/connection-screen.uxml?fileID=9197481963319205126&amp;guid=13c4eb8f9e5c0f04092a7ddb28b99836&amp;type=3#connection-screen" />
     <ui:Template name="enter" src="project://database/Assets/Resources/UI/EnterScreen/enter.uxml?fileID=9197481963319205126&amp;guid=bd56bb9c6c54d6d4eb362bf23457e9c4&amp;type=3#enter" />
     <ui:Template name="countdown-screen" src="project://database/Assets/Resources/UI/CountDown/countdown-screen.uxml?fileID=9197481963319205126&amp;guid=516345a76896a664b91047d94ebb9a85&amp;type=3#countdown-screen" />
+    <ui:Template name="notice-screen" src="project://database/Assets/Resources/UI/NoticeScreen/notice-screen.uxml?fileID=9197481963319205126&amp;guid=825f4dfed65220642ba616bf1014c9a2&amp;type=3#notice-screen" />
     <ui:Instance template="leaderboard" name="leaderboard-screen" style="position: absolute; right: 5px; top: 5px; display: none;" />
     <ui:Instance template="connection-screen" name="connection-screen" style="flex-grow: 1; display: none; justify-content: center; align-self: center;" />
     <ui:Instance template="enter" name="enter-screen" style="justify-content: space-around; align-self: center; align-items: stretch; flex-direction: column; display: none; flex-grow: 1;" />
-    <ui:Instance template="countdown-screen" name="countdown-screen" />
+    <ui:Instance template="countdown-screen" name="countdown-screen" style="display: none;" />
+    <ui:Instance template="notice-screen" name="notice-screen" style="height: 326px;" />
 </ui:UXML>

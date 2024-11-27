@@ -74,9 +74,11 @@
     <Compile Include="Assets\Scripts\LocalMode\Factory\LocalSnakesDestruction.cs" />
     <Compile Include="Assets\Scripts\LocalMode\Factory\LocalSnakesFactory.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Injector.cs" />
+    <Compile Include="Assets\Scripts\UI\Screens\NoticeScreen.cs" />
     <Compile Include="Assets\Scripts\Network\Services\Factory\VfxFactory.cs" />
     <Compile Include="Assets\Scripts\UI\Extensions\VisualElementExtensions.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Player\PlayerNetworkSync.cs" />
+    <Compile Include="Assets\Scripts\UI\Screens\NoticePanel.cs" />
     <Compile Include="Assets\Scripts\Network\Services\Factory\AppleFactory.cs" />
     <Compile Include="Assets\Scripts\Network\Services\Snakes\SnakeInfo.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Animations\DestroyAfterTime.cs" />
