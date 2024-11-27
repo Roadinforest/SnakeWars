@@ -24,9 +24,6 @@ namespace Network.Services.Factory
 
         public Apple CreateApple(string key, AppleSchema schema)
         {
-            Debug.Log("Try to create Apples");
-            Debug.Log(schema.position.x);
-            Debug.Log(schema.position.y);
             var apple = _assets.Instantiate<Apple>(ApplePath, schema.position.ToVector3(), Quaternion.identity, null);
             apple.GetComponent<UniqueId>().Construct(key);
             schema.OnPositionChange(apple.ChangePosition);

@@ -30,8 +30,7 @@ namespace Network.Services
             var result = await TryConnect(username,type);
 
             if (result.IsFailure)
-                return result;
-            
+                Debug.Log("Fail In Connect");
 
             return result;
         }
@@ -47,7 +46,13 @@ namespace Network.Services
                 handler.Dispose();
         }
 
-        private async UniTask<ConnectionResult> TryConnect(string username,int type)
+        private void InitializeHandlers()
+        {
+            foreach (var handler in _handlers)
+                handler.Handle(_room);
+        }
+
+        private async UniTask<ConnectionResult> TryConnect(string username, int type)
         {
             var settings = _staticData.ForConnection();
             var client = new ColyseusClient(settings);
@@ -65,12 +70,11 @@ namespace Network.Services
                 {
                     try
                     {
-                        Debug.Log("Get reservation session id :"+reservation.sessionId);
+                        Debug.Log("Get reservation session id :" + reservation.sessionId);
                         // 使用 seatReservation 加入房间
                         _room = await client.ConsumeSeatReservation<GameRoomState>(reservation);
+                        InitializeHandlers();
                         Debug.Log("Joined room successfully");
-                        foreach (var handler in _handlers)
-                            handler.Handle(_room);
                     }
                     catch (Exception e)
                     {

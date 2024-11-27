@@ -1,10 +1,9 @@
 import { Room, Client } from "@colyseus/core";
-import { Delayed } from "@colyseus/core";
 import { GameRoomState } from "./schema/GameRoomState";
-import { Vector2Schema } from "./schema/Vector2Schema";
 import { StaticData } from "../services/staticData";
 import { matchMaker } from "@colyseus/core";
 import { GameRoom } from "./GameRoom";
+import { RoomListingData } from "colyseus";
 
 export class TestGameRoom extends Room<GameRoomState> {
 
@@ -13,29 +12,21 @@ export class TestGameRoom extends Room<GameRoomState> {
 		options: any
 	} > = new Map(); // 等待队列
 
-	private static MultiwaitingClients: Map<string, [Client, any]> = new Map(); // 等待队列
+	private static MultiwaitingClients: Map<string, {
+		client: Client,
+		options: any
+	} > = new Map(); // 多人等待队列
+
+	private _MultiRoom : RoomListingData<any>;//多人房唯一标识
 
 
 	onCreate(options: any) {
 		console.log("TestGame Room created!");
 
+		// 借用一下GameRoomState
         const staticData = new StaticData();
         staticData.initialize();
         this.setState(new GameRoomState(staticData));
-
-		//this.onMessage("move", (client, data) => {
-		//    const position = new Vector2Schema(data.position.x, data.position.y);
-		//    this.state.movePlayer(client.sessionId, position);
-		//});
-
-		//this.onMessage("collectApple", (client, data) => {
-		//    this.state.collectApple(client.sessionId, data.appleId);
-		//});
-
-		//this.onMessage("snakeDeath", (client, data) => {
-		//    this.state.processSnakeDeath(data.snakeId, data.positions);
-		//});
-
 	}
 
 	onAuth(client: Client, options: any, req: any) {
@@ -83,11 +74,19 @@ export class TestGameRoom extends Room<GameRoomState> {
 
 		// 多人模式匹配逻辑
 		else if (options.type === 2) {
+			//如果已经有房间，则加入
+			if (this._MultiRoom != null)
+			{
+				const reservation = await matchMaker.reserveSeatFor(this._MultiRoom, options);
+				client.send("seatReservation", reservation);
+			}
+
+			//没有房间，则等待人到齐了再创建
 			if (TestGameRoom.MultiwaitingClients.size >= 2) {
 				// 取出等待中的前两个客户端
 				const iterator = TestGameRoom.MultiwaitingClients.entries();
-				const [waitingClient1Id, waitingClient1Options] = iterator.next().value;
-				const [waitingClient2Id, waitingClient2Options] = iterator.next().value;
+				const [waitingClient1Id, waitingClient1] = iterator.next().value;
+				const [waitingClient2Id, waitingClient2] = iterator.next().value;
 
 				// 从等待队列中移除
 				TestGameRoom.MultiwaitingClients.delete(waitingClient1Id);
@@ -103,21 +102,25 @@ export class TestGameRoom extends Room<GameRoomState> {
 					player3: client.sessionId,
 				});
 
-				// 手动将三个客户端加入同一个房间
-				room.onJoin(waitingClient1Options.client, waitingClient1Options.options);
-				room.onJoin(waitingClient2Options.client, waitingClient2Options.options);
-				room.onJoin(client, options);
+				const reservation1 = await matchMaker.reserveSeatFor(room, waitingClient1.options);
+				const reservation2 = await matchMaker.reserveSeatFor(room, waitingClient2.options);
+				const reservation3 = await matchMaker.reserveSeatFor(room, options);
+
+
+				// 将 seat reservations 发送给客户端
+				waitingClient1.client.send("seatReservation", reservation1);
+				waitingClient2.client.send("seatReservation", reservation2);
+				client.send("seatReservation", reservation3);
 
 				console.log(`Multi-player room created: ${room.roomId}`);
 			} else {
 				// 如果等待人数不足，则将当前玩家加入等待队列
-				TestGameRoom.MultiwaitingClients.set(client.sessionId, [ client, options ]);
+				TestGameRoom.MultiwaitingClients.set(client.sessionId, { client, options });
 				console.log(`${client.sessionId} is now waiting for multi-player pairing.`);
 			}
 		}
 
 		else {
-			//this.state.createPlayer(client.sessionId, options.username);
 			console.log(client.sessionId+" Enter with error type");
 		}
 	}
@@ -134,7 +137,6 @@ export class TestGameRoom extends Room<GameRoomState> {
 			TestGameRoom.MultiwaitingClients.delete(client.sessionId);
 			console.log(`${client.sessionId} removed from waiting queue.`);
 		}
-
 		//this.state.removePlayer(client.sessionId);
 	}
 
