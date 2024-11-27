@@ -16,11 +16,11 @@ namespace UI.Screens
             Debug.Log("Enter CountDownScreen Construct");
         }
 
-        public void ShowCountDown(int number)
+        public void ShowCountDown(int seconds)
         {
-            int minutes = number / 60;
-            int seconds = number % 60;
-            _label.text = $"Left {minutes} Min {seconds} Sec";
+            int _minutes = seconds / 60;
+            int _seconds = seconds % 60;
+            _label.text = $"Left {_minutes} Min {_seconds} Sec";
         }
     }
 }

@@ -38,7 +38,6 @@ namespace UI
         private void showCountdownScreen()
         {
             _countdownScreen.Show();
-            _countdownScreen.ShowCountDown(99);
             Debug.Log("Show countdown screen");
         }
 
@@ -65,7 +64,7 @@ namespace UI
             _enterScreen.DoubleClicked += setTypeDouble;
             _enterScreen.MultiClicked += setTypeMulti;
 
-            _enterScreen.MultiClicked += showCountdownScreen;
+            //_enterScreen.MultiClicked += showCountdownScreen;
 
             _connectionScreen.ReturnClicked += ShowEnterScreen;
             _connectionScreen.Connected += showLeaderBoard;

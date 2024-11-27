@@ -14,7 +14,7 @@ export class GameRoomState extends Schema {
     lives = new MapSchema<number>();
     @type({ map: PlayerSchema }) results= new MapSchema<PlayerSchema>();//结束时记录玩家数据
     @type({ map: AppleSchema}) apples = new MapSchema<AppleSchema>();
-    leftTime = new LefttimeSchema(5*60*1000);
+    @type(LefttimeSchema) leftTime = new LefttimeSchema(5*60*1000);
 
     staticData: StaticData;
     lastAppleId: number = 0;
@@ -41,6 +41,7 @@ export class GameRoomState extends Schema {
 
     decreaseLeftTime(deltaTime : number) {
         this.leftTime.leftTime-=deltaTime;
+        //console.log("leftTime:",this.leftTime.leftTime);
     }
 
 

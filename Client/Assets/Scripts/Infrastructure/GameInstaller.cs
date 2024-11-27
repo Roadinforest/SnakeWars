@@ -55,6 +55,7 @@ namespace Infrastructure
             builder.AddSingleton(typeof(NetworkClient));
             builder.AddSingleton(typeof(NetworkPlayersListener));
             builder.AddSingleton(typeof(NetworkApplesListener));
+            builder.AddSingleton(typeof(NetworkTimeListener));
             builder.AddSingleton(typeof(NetworkStateInitializer), typeof(INetworkRoomHandler));
             builder.AddSingleton(typeof(NetworkStatusProvider), typeof(INetworkRoomHandler), typeof(INetworkStatusProvider));
             builder.AddSingleton(typeof(NetworkTransmitter), typeof(NetworkTransmitter), typeof(INetworkRoomHandler));

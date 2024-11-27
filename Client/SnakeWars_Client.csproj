@@ -88,11 +88,11 @@
     <Compile Include="Assets\Scripts\UI\UIRoot.cs" />
     <Compile Include="Assets\Scripts\LocalMode\Factory\LocalAppleFactory.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\GameInstaller.cs" />
-    <Compile Include="Assets\Scripts\Network\Schemas_local\PlayerSchema.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Environment\Apple.cs" />
     <Compile Include="Assets\Scripts\Services\StaticDataService.cs" />
     <Compile Include="Assets\Scripts\LocalMode\Factory\LocalVfxFactory.cs" />
     <Compile Include="Assets\Scripts\StaticData\SnakeData.cs" />
+    <Compile Include="Assets\Scripts\Network\Services\RoomHandlers\NetworkTimeListener.cs" />
     <Compile Include="Assets\Scripts\Environment\EnvManager.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Animations\SnakeHeadAnimator.cs" />
     <Compile Include="Assets\Scripts\UI\Screens\ConnectionScreen.cs" />
@@ -112,7 +112,6 @@
     <Compile Include="Assets\Scripts\Gameplay\SnakeLogic\SnakeBody.cs" />
     <Compile Include="Assets\Scripts\Services\InputService.cs" />
     <Compile Include="Assets\Scripts\CameraLogic\CameraFollow.cs" />
-    <Compile Include="Assets\Scripts\Network\Schemas_local\AppleSchema.cs" />
     <Compile Include="Assets\Scripts\Gameplay\SnakeLogic\SnakeHistory.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Animations\SnakeDeathEffect.cs" />
     <Compile Include="Assets\Scripts\Services\Leaders\LeaderInfo.cs" />
@@ -123,14 +122,12 @@
     <Compile Include="Assets\Scripts\LocalMode\snakes\SnakeInfo.cs" />
     <Compile Include="Assets\Scripts\Network\Services\RoomHandlers\INetworkStatusProvider.cs" />
     <Compile Include="Assets\Scripts\Services\CameraProvider.cs" />
-    <Compile Include="Assets\Scripts\Network\Schemas_local\GameRoomState.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Game.cs" />
     <Compile Include="Assets\Scripts\Network\Schemas\GameRoomState.cs" />
     <Compile Include="Assets\Scripts\UI\Screens\CountDownPanel.cs" />
     <Compile Include="Assets\Scripts\UI\Screens\EnterScreen.cs" />
     <Compile Include="Assets\Scripts\StaticData\SnakeSkins.cs" />
     <Compile Include="Assets\Scripts\Network\Schemas\PlayerSchema.cs" />
-    <Compile Include="Assets\Scripts\Network\Schemas_local\Vector2Schema.cs" />
     <Compile Include="Assets\Scripts\Network\Schemas\LefttimeSchema.cs" />
     <Compile Include="Assets\Scripts\Network\Extensions\Vector2DataExtensions.cs" />
     <Compile Include="Assets\Scripts\UI\Screens\GameScreen.cs" />

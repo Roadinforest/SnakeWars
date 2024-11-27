@@ -61,7 +61,8 @@ namespace Network.Services
 
                 _room = await client.JoinOrCreate<GameRoomState>(GameRoomName, new Dictionary<string, object>()
                 {
-                    ["type"] = type
+                    ["type"] = type,
+                    [nameof(username)] = username
                 });
             }
             catch (Exception exception)

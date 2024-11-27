@@ -7,12 +7,15 @@ namespace Network.Services.RoomHandlers
     {
         private readonly NetworkPlayersListener _playersListener;
         private readonly NetworkApplesListener _applesListener;
+        private readonly NetworkTimeListener _timeListener;
         private ColyseusRoom<GameRoomState> _room;
 
-        public NetworkStateInitializer(NetworkPlayersListener playersListener, NetworkApplesListener applesListener)
+        public NetworkStateInitializer(NetworkPlayersListener playersListener, NetworkApplesListener applesListener,
+            NetworkTimeListener timeListener)
         {
             _playersListener = playersListener;
             _applesListener = applesListener;
+            _timeListener = timeListener;
         }
 
         public void Handle(ColyseusRoom<GameRoomState> room)
@@ -35,6 +38,7 @@ namespace Network.Services.RoomHandlers
             _room.OnStateChange -= OnStateChanged;
             _playersListener.Initialize(state);
             _applesListener.Initialize(state);
+            _timeListener.Initialize(state);
         }
     }
 }

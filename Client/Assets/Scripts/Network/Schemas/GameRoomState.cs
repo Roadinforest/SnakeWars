@@ -21,6 +21,9 @@ namespace Network.Schemas
 		[Type(2, "map", typeof(MapSchema<AppleSchema>))]
 		public MapSchema<AppleSchema> apples = new MapSchema<AppleSchema>();
 
+		[Type(3, "ref", typeof(LefttimeSchema))]
+		public LefttimeSchema leftTime = new LefttimeSchema();
+
 		/*
 		 * Support for individual property change callbacks below...
 		 */
@@ -67,6 +70,20 @@ namespace Network.Schemas
 			};
 		}
 
+		protected event PropertyChangeHandler<LefttimeSchema> __leftTimeChange;
+		public Action OnLeftTimeChange(PropertyChangeHandler<LefttimeSchema> __handler, bool __immediate = true)
+		{
+			if (__callbacks == null) { __callbacks = new SchemaCallbacks(); }
+			__callbacks.AddPropertyCallback(nameof(this.leftTime));
+			__leftTimeChange += __handler;
+			if (__immediate && this.leftTime != null) { __handler(this.leftTime, null); }
+			return () =>
+			{
+				__callbacks.RemovePropertyCallback(nameof(leftTime));
+				__leftTimeChange -= __handler;
+			};
+		}
+
 		protected override void TriggerFieldChange(DataChange change)
 		{
 			switch (change.Field)
@@ -74,6 +91,7 @@ namespace Network.Schemas
 				case nameof(players): __playersChange?.Invoke((MapSchema<PlayerSchema>)change.Value, (MapSchema<PlayerSchema>)change.PreviousValue); break;
 				case nameof(results): __resultsChange?.Invoke((MapSchema<PlayerSchema>)change.Value, (MapSchema<PlayerSchema>)change.PreviousValue); break;
 				case nameof(apples): __applesChange?.Invoke((MapSchema<AppleSchema>)change.Value, (MapSchema<AppleSchema>)change.PreviousValue); break;
+				case nameof(leftTime): __leftTimeChange?.Invoke((LefttimeSchema)change.Value, (LefttimeSchema)change.PreviousValue); break;
 				default: break;
 			}
 		}
