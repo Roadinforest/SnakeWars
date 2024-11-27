@@ -12,6 +12,7 @@ export class GameRoom extends Room<GameRoomState> {
     readonly MultiMapSize: number = 130;
     readonly MultiLives: number = 3;
     readonly LeftMinute: number = 5;
+    GameType: number = -1;
 
     public delayedTimeout!: Delayed;//倒计时
 
@@ -20,8 +21,8 @@ export class GameRoom extends Room<GameRoomState> {
         console.log("Game Room created!")
         const staticData = new StaticData();
         staticData.initialize();
-
         this.setState(new GameRoomState(staticData));
+        this.maxClients = 10;
 
         this.onMessage("move", (client, data) => {
             const position = new Vector2Schema(data.position.x, data.position.y);
@@ -39,11 +40,18 @@ export class GameRoom extends Room<GameRoomState> {
         //双人模式
         if (options != null && options.type == 1) {
             this.state.setMapSize(this.DoubleMapSize);
+            this.GameType = 1;
+            console.log("This is a double-player game!!!");
+        }
+        else if (options == null) {
+            this.state.setMapSize(this.DoubleMapSize);
+            this.GameType = 1;
             console.log("This is a double-player game!!!");
         }
         //多人模式
         else if (options != null && options.type == 2) {
             console.log("This is a multi-player game!!!");
+            this.GameType = 2;
             this.state.setMapSize(this.MultiMapSize);
             this.state.setLife(this.MultiLives);//设置三条生命
             this.countDown(this.LeftMinute);//设置结束倒计时
@@ -76,6 +84,8 @@ export class GameRoom extends Room<GameRoomState> {
     }
 
     onJoin(client: Client, options: any) {
+        if (options == null) console.log("options is null");
+        console.log(options);
         console.log(client.sessionId, "joined!", options.username);
         this.state.createPlayer(client.sessionId, options.username);
     }
@@ -86,6 +96,6 @@ export class GameRoom extends Room<GameRoomState> {
     }
 
     onDispose() {
-        console.log("room", this.roomId, "disposing...");
+        console.log("GameRoom", this.roomId, "disposing...");
     }
 }

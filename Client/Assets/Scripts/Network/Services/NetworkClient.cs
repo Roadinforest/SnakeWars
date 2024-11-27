@@ -12,10 +12,12 @@ namespace Network.Services
     public class NetworkClient
     {
         private const string GameRoomName = "GameRoom";
+        private const string TestGameRoomName = "TestGameRoom";
         private readonly StaticDataService _staticData;
         private readonly IEnumerable<INetworkRoomHandler> _handlers;
 
         private ColyseusRoom<GameRoomState> _room;
+        private ColyseusRoom<GameRoomState> _testRoom;
         
         public NetworkClient(StaticDataService staticData, IEnumerable<INetworkRoomHandler> handlers)
         {
@@ -30,8 +32,6 @@ namespace Network.Services
             if (result.IsFailure)
                 return result;
             
-            foreach (var handler in _handlers) 
-                handler.Handle(_room);
 
             return result;
         }
@@ -54,22 +54,37 @@ namespace Network.Services
 
             try
             {
-                //_room = await client.JoinOrCreate<GameRoomState>(GameRoomName, new Dictionary<string, object>()
-                //{
-                //    [nameof(username)] = username
-                //});
-
-                _room = await client.JoinOrCreate<GameRoomState>(GameRoomName, new Dictionary<string, object>()
+                _testRoom = await client.JoinOrCreate<GameRoomState>(TestGameRoomName, new Dictionary<string, object>()
                 {
                     ["type"] = type,
                     [nameof(username)] = username
                 });
+
+                // 监听 seatReservation 消息
+                _testRoom.OnMessage<ColyseusMatchMakeResponse>("seatReservation", async (reservation) =>
+                {
+                    try
+                    {
+                        Debug.Log("Get reservation session id :"+reservation.sessionId);
+                        // 使用 seatReservation 加入房间
+                        _room = await client.ConsumeSeatReservation<GameRoomState>(reservation);
+                        Debug.Log("Joined room successfully");
+                        foreach (var handler in _handlers)
+                            handler.Handle(_room);
+                    }
+                    catch (Exception e)
+                    {
+                        Debug.Log($"Error joining room inner: {e.Message}");
+                    }
+                });
+
             }
             catch (Exception exception)
             {
+                Debug.Log($"Error joining room: {exception}");
                 return ConnectionResult.Failure(exception.Message);
             }
-            
+
             return ConnectionResult.Success();
         }
     }
