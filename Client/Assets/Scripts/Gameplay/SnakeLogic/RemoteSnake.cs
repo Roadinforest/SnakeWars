@@ -32,7 +32,7 @@ namespace Gameplay.SnakeLogic
         {
             _leaderboard.CreateLeader(_uniqueId.Value, schema);
             schema.OnPositionChange(ChangePosition).AddTo(_disposes);
-            schema.OnSizeChange(ChangeSize).AddTo(_disposes);
+            schema.OnSizeChange(ChangeSize).AddTo(_disposes);//位置更新
             schema.OnScoreChange(ChangeScore).AddTo(_disposes);
         }
 

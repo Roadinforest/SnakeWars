@@ -3,5 +3,7 @@
 /Client/Temp/
 /Client/Logs/
 /Client/Library/
+/Client/WebGL Builds/
+/Client/obj/
 
 
