@@ -15,7 +15,7 @@ namespace LocalMode.Factory
 
         private readonly Assets _assets;
         private readonly Dictionary<string, Apple> _apples;
-        private int _mapSize = 25;
+        private int _mapSize = 20;
 
         public LocalAppleFactory(Assets assets)
         {

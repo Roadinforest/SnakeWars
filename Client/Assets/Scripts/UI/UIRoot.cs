@@ -22,6 +22,15 @@ namespace UI
 
         }
 
+        private void ShowGameEnd()
+        {
+            _countdownScreen.Hide();
+            _noticeScreen.Show();
+            _leaderboardScreen.Hide();
+            _enterScreen.Hide();
+            _noticeScreen.ShowGameEnd();
+        }
+
         private void ShowEnterScreen()
         {
             _enterScreen.Show();
@@ -73,6 +82,8 @@ namespace UI
 
             _connectionScreen.ReturnClicked += ShowEnterScreen;
             _connectionScreen.ConnectedSucceed += OnConnected;
+            
+            _noticeScreen.HomeClicked += ShowEnterScreen;
         }
 
         private void OnDisable()
@@ -84,6 +95,7 @@ namespace UI
             _connectionScreen.ConnectedSucceed -= showLeaderBoard;
 
             _connectionScreen.ConnectedSucceed -= OnConnected;
+            _noticeScreen.HomeClicked -= ShowEnterScreen;
         }
 
         private void OnConnected()
@@ -99,6 +111,15 @@ namespace UI
             _countdownScreen.Hide();
             _noticeScreen.Hide();
             _leaderboardScreen.Show();
+        }
+
+        public void GameOVer()
+        {
+            Debug.Log("In UIRoot , show GameOver");
+            _countdownScreen.Hide();
+            _noticeScreen.Show();
+            _noticeScreen.ShowGameEnd();
+            _leaderboardScreen.Hide();
         }
     }
 }

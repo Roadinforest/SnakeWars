@@ -36,7 +36,6 @@ namespace Gameplay.Player
 
         private void ProcessCollision(Component target,int i)
         {
-            //Debug.Log("In collision");
             if (target.TryGetComponent(out Apple apple))
             {
                 _animator.PlayEat();

@@ -8,5 +8,5 @@
     <ui:Instance template="connection-screen" name="connection-screen" style="flex-grow: 1; display: none; justify-content: center; align-self: center;" />
     <ui:Instance template="enter" name="enter-screen" style="justify-content: space-around; align-self: center; align-items: stretch; flex-direction: column; display: none; flex-grow: 1;" />
     <ui:Instance template="countdown-screen" name="countdown-screen" style="display: none;" />
-    <ui:Instance template="notice-screen" name="notice-screen" style="height: 326px;" />
+    <ui:Instance template="notice-screen" name="notice-screen" style="height: 447px;" />
 </ui:UXML>

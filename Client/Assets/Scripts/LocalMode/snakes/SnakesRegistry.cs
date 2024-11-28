@@ -38,8 +38,9 @@ namespace LocalMode.Snakes
                 Updated?.Invoke();
                 Removed?.Invoke(key);
             }
-            
+
             return result;
+            //return true;
         }
 
         public bool Contains(string key) => 

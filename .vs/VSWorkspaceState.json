@@ -10,6 +10,6 @@
     "\\Server\\SnakeWarsServer\\src\\rooms\\schema",
     "\\Server\\SnakeWarsServer\\src\\services"
   ],
-  "SelectedNode": "\\Server\\SnakeWarsServer\\src\\rooms\\TestGameRoom.ts",
+  "SelectedNode": "\\Server\\SnakeWarsServer\\src\\DataSave\\DataSaver.ts",
   "PreviewInSolutionExplorer": false
 }

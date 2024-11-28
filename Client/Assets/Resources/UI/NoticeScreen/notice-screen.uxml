@@ -1,4 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <ui:Template name="notice-panel" src="project://database/Assets/Resources/UI/NoticeScreen/notice-panel.uxml?fileID=9197481963319205126&amp;guid=a91dc650380be0f439ccf9225363bfa1&amp;type=3#notice-panel" />
-    <ui:Instance template="notice-panel" name="notice-panel" style="align-items: stretch; justify-content: center; height: 130px; width: 268px; left: 18%; top: 32%; flex-grow: 0; align-self: stretch;" />
+    <ui:Template name="gameover-panel" src="project://database/Assets/Resources/UI/NoticeScreen/gameover-panel.uxml?fileID=9197481963319205126&amp;guid=e1232262a7a9a874a85e30799ee2109c&amp;type=3#gameover-panel" />
+    <ui:Instance template="notice-panel" name="notice-panel" style="align-items: stretch; justify-content: center; height: 130px; width: 268px; left: 18%; top: 32%; flex-grow: 0; align-self: stretch; display: none;" />
+    <ui:Instance template="gameover-panel" name="gameover-panel" style="align-items: center; height: 462px; justify-content: space-around; -unity-text-align: upper-center;" />
 </ui:UXML>

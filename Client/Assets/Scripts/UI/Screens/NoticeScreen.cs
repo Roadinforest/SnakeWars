@@ -14,7 +14,8 @@ namespace UI.Screens
         public void Construct(Game game) => 
             _game = game;
 
-        public event Action Connected;
+        public event Action  QuitClicked;
+        public event Action  HomeClicked;
         
         protected override void Awake()
         {
@@ -25,13 +26,40 @@ namespace UI.Screens
         {
             this._panel.ShowInfo(info);
         }
+
+        public void ShowGameEnd()
+        {
+            _panel.ShowGameEnd();
+        }
         
         private void OnEnable()
         {
+            _panel.QuitClicked += OnQuitClicked; 
+            _panel.HomeClicked += OnHomeClicked;
         }
         
         private void OnDisable()
         {
+            _panel.QuitClicked -= OnQuitClicked; 
+            _panel.HomeClicked -= OnHomeClicked;
+        }
+
+        private void OnQuitClicked()
+        {
+            Debug.Log("Quit Button Click");
+            QuitClicked?.Invoke();
+
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+#else
+            Application.Quit();
+#endif
+        }
+
+        private void OnHomeClicked()
+        {
+            HomeClicked?.Invoke();
+            this.Hide();
         }
 
     }
