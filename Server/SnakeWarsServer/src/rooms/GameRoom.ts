@@ -16,12 +16,14 @@ export class GameRoom extends Room<GameRoomState> {
     readonly MultiMapSize: number = 130;
     readonly MultiLives: number = 3;
     readonly LeftMinute: number = 5;
+    dataSaver: DataSaver;
+
     GameType: number = -1;
 
     public delayedTimeout!: Delayed;//倒计时
 
 
-    onCreate(options: any) {
+    async onCreate(options: any) {
         console.log("Game Room created!")
         const staticData = new StaticData();
         staticData.initialize();
@@ -67,6 +69,7 @@ export class GameRoom extends Room<GameRoomState> {
         for (var i = 0; i < this.startApplesCount; i++) {
             this.state.createAppleAtRandomPosition();
         }
+        this.dataSaver = await new DataSaver();
     }
 
     countDown(minutes : number) {
@@ -85,8 +88,6 @@ export class GameRoom extends Room<GameRoomState> {
         console.log("Game Over");
         this.state.showResult();
 
-        //此处调用数据库写入逻辑
-        const dataSaver = await new DataSaver();
         let GameTypeName;
         switch (this.GameType) {
             case 0: GameTypeName = "Single Mode" 
@@ -99,10 +100,12 @@ export class GameRoom extends Room<GameRoomState> {
         }
 
         const _results = this.state.results;
+        console.log("The size of results is "+_results.size)
         for (let entry of _results.entries()) {
-            console.log(`Key: ${entry[1].username}, Value: ${entry[1].score}`);
-            dataSaver.saveGameRecord(GameTypeName, this.roomId, entry[1].username, entry[1].score);
+            //console.log(`Key: ${entry[1].username}, Value: ${entry[1].score}`);
+            this.dataSaver.saveGameRecord(GameTypeName, this.roomId, entry[1].username, entry[1].score);
         }
+        //此处调用数据库写入逻辑
         this.state.endGame();
     }
 

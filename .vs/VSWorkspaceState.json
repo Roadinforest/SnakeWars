@@ -1,15 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Server",
-    "\\Server\\SnakeWarsServer",
-    "\\Server\\SnakeWarsServer\\src",
-    "\\Server\\SnakeWarsServer\\src\\DataSave",
-    "\\Server\\SnakeWarsServer\\src\\entity",
-    "\\Server\\SnakeWarsServer\\src\\rooms",
-    "\\Server\\SnakeWarsServer\\src\\rooms\\schema",
-    "\\Server\\SnakeWarsServer\\src\\services"
+    "\\Client",
+    "\\Client\\Assets",
+    "\\Client\\Assets\\Scripts",
+    "\\Client\\Assets\\Scripts\\Network",
+    "\\Client\\Assets\\Scripts\\Network\\Services",
+    "\\Client\\Assets\\Scripts\\Network\\Services\\Factory",
+    "\\Client\\Assets\\Scripts\\Network\\Services\\RoomHandlers",
+    "\\Client\\Assets\\Scripts\\UI",
+    "\\Client\\Assets\\Scripts\\UI\\Screens"
   ],
-  "SelectedNode": "\\Server\\SnakeWarsServer\\src\\DataSave\\DataSaver.ts",
+  "SelectedNode": "\\Client\\Assets\\Scripts\\Network\\Services\\RoomHandlers\\NetworkStateInitializer.cs",
   "PreviewInSolutionExplorer": false
 }

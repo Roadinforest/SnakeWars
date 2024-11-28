@@ -19,12 +19,6 @@ namespace Infrastructure
             _uiFactory = uiFactory;
         }
 
-        //public Game(UIFactory uiFactory)
-        //{
-        //    //_staticData = staticData;
-        //    _uiFactory = uiFactory;
-        //}
-
         public void Start()
         {
             _staticData.Load();

@@ -66,7 +66,7 @@ GameObject:
   - component: {fileID: 2520165689119963819}
   - component: {fileID: 6528018701423731698}
   - component: {fileID: 5791962800060287788}
-  - component: {fileID: 8466776183028443227}
+  - component: {fileID: 6525040365292129679}
   m_Layer: 0
   m_Name: Head
   m_TagString: Untagged
@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animator: {fileID: 5677943638914221941}
---- !u!114 &8466776183028443227
+--- !u!114 &6525040365292129679
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -176,7 +176,7 @@ MonoBehaviour:
   _targetMask:
     serializedVersion: 2
     m_Bits: 72
-  _snake: {fileID: -4265523063313193996}
+  _snake: {fileID: 0}
 --- !u!1 &3168570585787361072
 GameObject:
   m_ObjectHideFlags: 0

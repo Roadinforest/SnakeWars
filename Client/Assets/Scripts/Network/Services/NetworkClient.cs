@@ -18,7 +18,7 @@ namespace Network.Services
         private readonly IEnumerable<INetworkRoomHandler> _handlers;
 
         private ColyseusRoom<GameRoomState> _room;
-        private ColyseusRoom<GameRoomState> _testRoom;
+        private ColyseusRoom<GameRoomState> _MainRoom;
         private UIRoot _uIroot;
         
         public NetworkClient(StaticDataService staticData, IEnumerable<INetworkRoomHandler> handlers)
@@ -61,20 +61,21 @@ namespace Network.Services
 
             try
             {
-                _testRoom = await client.JoinOrCreate<GameRoomState>(TestGameRoomName, new Dictionary<string, object>()
+                _MainRoom = await client.JoinOrCreate<GameRoomState>(TestGameRoomName, new Dictionary<string, object>()
                 {
                     ["type"] = type,
                     [nameof(username)] = username
                 });
 
                 // 监听 seatReservation 消息
-                _testRoom.OnMessage<ColyseusMatchMakeResponse>("seatReservation", async (reservation) =>
+                _MainRoom.OnMessage<ColyseusMatchMakeResponse>("seatReservation", async (reservation) =>
                 {
                     try
                     {
                         Debug.Log("Get reservation session id :" + reservation.sessionId);
-                        // 使用 seatReservation 加入房间
                         _room = await client.ConsumeSeatReservation<GameRoomState>(reservation);
+                        Debug.Log("Session Id " + _room.SessionId);
+
                         InitializeHandlers();
 
                         _uIroot=GameObject.FindObjectOfType<UIRoot>();

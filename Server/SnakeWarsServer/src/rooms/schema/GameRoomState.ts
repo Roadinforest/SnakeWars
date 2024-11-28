@@ -50,9 +50,9 @@ export class GameRoomState extends Schema {
     }
 
     // 存储对局结果，为后面存数据做准备
-    addResult(result: PlayerSchema) {
-        this.results.set(result.username, result);
-    }
+    //addResult(result: PlayerSchema) {
+    //    this.results.set(result.username, result);
+    //}
 
     // 设置每个玩家的生命条数
     setLife(lives: number) {

@@ -34,7 +34,7 @@ namespace Gameplay.Player
         private int OverlapHits() =>
             Physics.OverlapSphereNonAlloc(_mouthCollider.transform.position, _mouthCollider.radius, _colliders, _targetMask);
 
-        private void ProcessCollision(Component target,int i)
+        private void ProcessCollision(Component target,int index)
         {
             if (target.TryGetComponent(out Apple apple))
             {
@@ -42,20 +42,25 @@ namespace Gameplay.Player
                 apple.Collect();
                 //apple会发送信号，这里就不会手动增加
             }
+
             else if (target.TryGetComponent(out LocalApple localApple))
             {
                 _animator.PlayEat();
                 localApple.Collect();
-                _snake.EatApple();
+                _snake.EatApple();//本地蛇触发加分
             }
-            else if (target.TryGetComponent(out SnakeHead head))
-            {
-                var angle = Vector3.Angle(_head.transform.forward, head.transform.forward);
-                if (angle > _deathAngle)
-                    _snakeDeath.Die();
-                _localGameFactory.RemoveSnake(transform.position);
-                Debug.Log("I die");
-            }
+
+            //else if (target.TryGetComponent(out SnakeHead head))
+            //{
+            //    var angle = Vector3.Angle(_head.transform.forward, head.transform.forward);
+            //    if (angle > _deathAngle)
+            //        _snakeDeath.Die();
+
+            //    _localGameFactory.RemoveSnake(transform.position);
+               
+
+            //    Debug.Log("I die");
+            //}
             else
             {
                 _snakeDeath.Die();
@@ -63,7 +68,7 @@ namespace Gameplay.Player
                 
                 Debug.Log("I die");
             }
-            _colliders[i] = null;
+            _colliders[index] = null;
         }
     }
 }

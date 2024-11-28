@@ -84,20 +84,6 @@ namespace LocalMode.Factory
         }
 
 
-        //        public Snake CreatePlayerSnake(string key, PlayerSchema schema)
-        //        {
-        //            var data = _staticData.ForSnake();
-
-        //            var remoteSnake = CreateRemoteSnake(key, schema, PlayerSnakePath);
-        //            remoteSnake.GetComponentInChildren<PlayerAim>().Construct(data.MovementSpeed, data.RotationSpeed);
-
-        //            _cameraProvider.Follow(remoteSnake.Head.transform);
-        //            return remoteSnake;
-        //        }
-
-        //        public Snake CreateRemoteSnake(string key, PlayerSchema schema) =>
-        //            CreateRemoteSnake(key, schema, RemoteSnakePath);
-
         public void RemoveSnake()
         {
             Object.Destroy(_OnlySnake.gameObject);
@@ -120,24 +106,6 @@ namespace LocalMode.Factory
             for (var i = 0; i < count; i++)
                 Object.Destroy(snakeInfo.Snake.RemoveDetail());
         }
-
-        //        private Snake CreateRemoteSnake(string key, PlayerSchema schema, string pathToPrefab)
-        //        {
-        //            var data = _staticData.ForSnake();
-        //            var skin = _staticData.ForSnakeSkin(schema.skinId);
-
-        //            var snake = CreateSnake(pathToPrefab, schema.position.ToVector3(), skin, data.MovementSpeed);
-        //            snake.GetComponent<UniqueId>().Construct(key);
-        //            _snakes.Add(key, schema, snake);
-
-        //            var remoteSnake = snake.GetComponent<RemoteSnake>();
-        //            remoteSnake.Initialize(schema);
-
-        //            return snake;
-        //        }
-
-
-
 
         private GameObject CreateSnakeDetail(Transform head, Transform parent, Material skin)
         {
