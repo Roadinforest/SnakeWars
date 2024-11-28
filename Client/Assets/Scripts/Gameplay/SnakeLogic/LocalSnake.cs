@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using Extensions;
 using Gameplay.Common;
 
-using LocalMode.Extensions;
 using LocalMode.Factory;
 using Network.Schemas;
 
@@ -21,13 +20,12 @@ namespace Gameplay.SnakeLogic
         [SerializeField] private Snake _snake;
         [SerializeField] private ushort _score=0;
         [SerializeField] private byte _size=3;
-        //[SerializeField] private UniqueId _uniqueId;
-        public PlayerSchema _localSnakeData = new PlayerSchema();//借用一下Network的数据结构
-
+        private bool _isIntialized=false;
+        public PlayerSchema _localSnakeData = new PlayerSchema();
         private readonly List<Action> _disposes = new List<Action>();
         
         private LocalSnakesFactory _snakesFactory;
-        [Inject] private LeaderboardService _leaderboard;//方便记录分数
+        [Inject] private LeaderboardService _leaderboard;
 
         private InputService _input;
         public Vector3 TargetPoint { get; private set; }
@@ -39,11 +37,18 @@ namespace Gameplay.SnakeLogic
             _leaderboard = leaderboard;
             _input = input;
         }
+
         public void Initialize(PlayerSchema _playerSchema)
         {
+            _isIntialized = true;
             _localSnakeData=_playerSchema;
             _leaderboard.CreateLeader(_localSnakeData.username, _localSnakeData);
             ChangeSize(_localSnakeData.size);
+        }
+
+        public bool isInitialized()
+        {
+            return _isIntialized;
         }
 
         public void Initialize()
@@ -56,15 +61,14 @@ namespace Gameplay.SnakeLogic
             _localSnakeData.position.y=0;
 
             _localSnakeData.skinId = (byte)Random.Range(0, 7);
-            _localSnakeData.size= (byte)3;//默认长度一开始为3
-            _localSnakeData.score= (byte)0;//默认长度一开始为3
+            _localSnakeData.size= (byte)3;
+            _localSnakeData.score= (byte)0;
 
             _leaderboard.CreateLeader(_localSnakeData.username, _localSnakeData);
         }
 
         private void Update()
         {
-            Debug.Log("Update LocalSnake");
             if (_input.IsMoveButtonPressed())
             {
                 TargetPoint = _input.WorldMousePosition();
@@ -78,6 +82,7 @@ namespace Gameplay.SnakeLogic
 
         private void OnDestroy()
         {
+            if(_localSnakeData != null)
             _leaderboard.RemoveLeader(_localSnakeData.username);
             _disposes.ForEach(dispose => dispose?.Invoke());
             _disposes.Clear();
@@ -97,13 +102,9 @@ namespace Gameplay.SnakeLogic
             ChangeSize(_size);
         }
 
-        // 分数
-        //public void ChangeScore(ushort current, ushort previous) => 
         public void ChangeScore(ushort current) => 
             _leaderboard.UpdateLeader(_localSnakeData.username, current);
 
-        // 身体大小
-        //public void ChangeSize(byte current, byte previous)
         public void ChangeSize(byte current)
         {
             if (_snake.Body.Size == current)

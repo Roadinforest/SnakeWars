@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Network.Schemas;
-using UnityEngine;
 
 namespace Services.Leaders
 {
@@ -35,6 +34,7 @@ namespace Services.Leaders
 
         public void RemoveLeader(string playerId)
         {
+            if(playerId == null) return;
             _leaders.Remove(playerId);
             Updated?.Invoke();
         }

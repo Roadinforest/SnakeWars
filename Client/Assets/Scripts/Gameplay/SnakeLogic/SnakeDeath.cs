@@ -20,7 +20,7 @@ namespace Gameplay.SnakeLogic
         public void Die()
         {
             _uIroot = GameObject.FindObjectOfType<UIRoot>();
-            _uIroot.GameOVer();
+            _uIroot.GameOver();
             _gameFactory.RemoveSnake(_uniqueId.Value);
         }
     }

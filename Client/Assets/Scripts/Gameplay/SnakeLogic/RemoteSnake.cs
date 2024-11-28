@@ -35,6 +35,7 @@ namespace Gameplay.SnakeLogic
             schema.OnSizeChange(ChangeSize).AddTo(_disposes);//位置更新
             schema.OnScoreChange(ChangeScore).AddTo(_disposes);
         }
+        //AddTo(_disposes) 方法将取消订阅的操作添加到 _disposes 列表中，以便在对象销毁时调用这些操作
 
         private void OnDestroy()
         {

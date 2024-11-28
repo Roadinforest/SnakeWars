@@ -6,7 +6,6 @@ namespace Gameplay.Player
     {
         private float _speed;
         private float _rotationSpeed;
-        
         private Quaternion _targetRotation;
 
         public void Construct(float speed, float rotationSpeed)
@@ -26,21 +25,6 @@ namespace Gameplay.Player
 
         private void Update()
         {
-            //MoveHead();
-            //RotateHead();
-        }
-
-        private void MoveHead()
-        {
-            var timeStep = Time.deltaTime * _speed;
-            //var timeStep = Time.deltaTime * 0;
-            transform.Translate(transform.forward * timeStep, Space.World);
-        }
-
-        private void RotateHead()
-        {
-            var timeStep = Time.deltaTime * _rotationSpeed;
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, _targetRotation, timeStep);
         }
     }
 }

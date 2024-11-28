@@ -48,7 +48,6 @@ namespace UI.Screens
         {
             this.Hide();
             ReturnClicked?.Invoke();
-            //Application.Quit();
         }
 
         private async UniTask ConnectServer()

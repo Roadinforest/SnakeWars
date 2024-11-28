@@ -62,13 +62,10 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Gameplay\Player\PlayerAim.cs" />
     <Compile Include="Assets\Scripts\Network\Services\RoomHandlers\NetworkApplesListener.cs" />
-    <Compile Include="Assets\Scripts\UI\Usernames\UsernameLabelsFitter.cs" />
     <Compile Include="Assets\Scripts\UI\Screens\EnterPanel.cs" />
     <Compile Include="Assets\Scripts\StaticData\SnakeStaticData.cs" />
     <Compile Include="Assets\Scripts\LocalMode\Factory\LocalGameFactory.cs" />
     <Compile Include="Assets\Scripts\Environment\EnvInfo.cs" />
-    <Compile Include="Assets\Scripts\LocalMode\snakes\SnakesRegistry.cs" />
-    <Compile Include="Assets\Scripts\UI\Usernames\UsernameLabel.cs" />
     <Compile Include="Assets\Scripts\Network\Services\Factory\SnakesDestruction.cs" />
     <Compile Include="Assets\Scripts\Gameplay\SnakeLogic\Snake.cs" />
     <Compile Include="Assets\Scripts\LocalMode\Factory\LocalSnakesDestruction.cs" />
@@ -110,7 +107,6 @@
     <Compile Include="Assets\Scripts\Network\Schemas\AppleSchema.cs" />
     <Compile Include="Assets\Scripts\Gameplay\SnakeLogic\SnakeHead.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Common\UniqueId.cs" />
-    <Compile Include="Assets\Scripts\LocalMode\extensions\Vector2DataExtensions.cs" />
     <Compile Include="Assets\Scripts\Gameplay\SnakeLogic\SnakeBody.cs" />
     <Compile Include="Assets\Scripts\Services\InputService.cs" />
     <Compile Include="Assets\Scripts\CameraLogic\CameraFollow.cs" />
@@ -121,7 +117,6 @@
     <Compile Include="Assets\Scripts\Gameplay\WorldCursor.cs" />
     <Compile Include="Assets\Scripts\Gameplay\SnakeLogic\RemoteSnake.cs" />
     <Compile Include="Assets\Scripts\Network\Services\RoomHandlers\NetworkPlayersListener.cs" />
-    <Compile Include="Assets\Scripts\LocalMode\snakes\SnakeInfo.cs" />
     <Compile Include="Assets\Scripts\Network\Services\RoomHandlers\INetworkStatusProvider.cs" />
     <Compile Include="Assets\Scripts\Services\CameraProvider.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Game.cs" />

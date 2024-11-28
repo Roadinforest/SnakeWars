@@ -13,7 +13,6 @@ namespace UI
 
         private void Start()
         {
-            Debug.Log("In UIROOT");
             _connectionScreen.Hide();
             _leaderboardScreen.Hide();
             _countdownScreen.Hide();
@@ -34,27 +33,22 @@ namespace UI
         private void ShowEnterScreen()
         {
             _enterScreen.Show();
-            Debug.Log("Show Enter Screen");
         }
         private void showLeaderBoard()
         {
             _leaderboardScreen.Show();
-            Debug.Log("Show leader board");
         }
         private void showConnectScreen()
         {
             _connectionScreen.Show();
-            Debug.Log("Show connect screen");
         }
         private void showLoadingNotice()
         {
             _noticeScreen.Show();
-            _noticeScreen.ShowInfo("Waiting for other players...");
         }
         private void showCountdownScreen()
         {
             _countdownScreen.Show();
-            Debug.Log("Show countdown screen");
         }
 
         private void setTypeLocal()
@@ -113,9 +107,8 @@ namespace UI
             _leaderboardScreen.Show();
         }
 
-        public void GameOVer()
+        public void GameOver()
         {
-            Debug.Log("In UIRoot , show GameOver");
             _countdownScreen.Hide();
             _noticeScreen.Show();
             _noticeScreen.ShowGameEnd();

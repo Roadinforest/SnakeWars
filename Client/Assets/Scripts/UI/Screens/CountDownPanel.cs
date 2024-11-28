@@ -12,8 +12,6 @@ namespace UI.Screens
         public CountDownPanel(VisualElement parent)
         {
             _label = parent.Q<Label>("countdown-label");
-            //_label = parent.Q<Label>("error-label");
-            Debug.Log("Enter CountDownScreen Construct");
         }
 
         public void ShowCountDown(int seconds)

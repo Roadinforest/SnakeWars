@@ -1,20 +1,20 @@
 ﻿using Gameplay.SnakeLogic;
 
-using LocalMode.Snakes;
 using LocalMode.Factory;
 using UnityEngine;
+using Network.Services.Snakes;
 
 namespace LocalMode.Factory
 {
     public class LocalGameFactory
     {
-        private readonly LocalSnakesRegistry _snakes;
+        private readonly SnakesRegistry _snakes;
         private readonly LocalSnakesFactory _snakesFactory;
         private readonly LocalSnakesDestruction _snakesDestruction;
         private readonly LocalAppleFactory _appleFactory;
 
 
-        public LocalGameFactory(LocalSnakesRegistry snakes, 
+        public LocalGameFactory(SnakesRegistry snakes, 
             LocalSnakesFactory snakesFactory, LocalSnakesDestruction snakesDestruction , LocalAppleFactory appleFactory)
         {
             _snakes = snakes;
@@ -29,9 +29,6 @@ namespace LocalMode.Factory
             _snakesFactory.RemoveSnake();
         }
 
-        //public Snake CreateSnake(string key, PlayerSchema player) =>
-        //        _snakesFactory.CreatePlayerSnake(key, player);
-
         public Snake CreateSnake() =>
                 _snakesFactory.CreateLocalSnake();
 
@@ -42,10 +39,5 @@ namespace LocalMode.Factory
                 _appleFactory.CreateApple();
             }
         }
-
-        //_networkStatus.IsPlayer(key) 
-        //    ? _snakesFactory.CreatePlayerSnake(key, player) 
-        //    : _snakesFactory.CreateRemoteSnake(key, player);
-
     }
 }

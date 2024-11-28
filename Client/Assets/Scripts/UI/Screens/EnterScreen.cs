@@ -9,7 +9,7 @@ using LocalMode.Factory;
 
 namespace UI.Screens
 {
-    public class EnterScreen: GameScreen
+    public class EnterScreen : GameScreen
     {
         [SerializeField] private string _emptyUsernameMessage = "EMPTY USERNAME!";
 
@@ -24,10 +24,10 @@ namespace UI.Screens
         public void Construct(Game game) =>
             _game = game;
 
-        public event Action  SingleClicked;
-        public event Action  DoubleClicked;
-        public event Action  MultiClicked;
-        
+        public event Action SingleClicked;
+        public event Action DoubleClicked;
+        public event Action MultiClicked;
+
         protected override void Awake()
         {
             base.Awake();
@@ -36,12 +36,10 @@ namespace UI.Screens
             Debug.Log("Enter Screen Construct");
         }
 
-        // 点击事件处理方法
         private void OnSingleButtonClicked()
         {
-            Debug.Log("Single Button Clicked!");
             _enterPanel.HideError();
-            this.Hide();//隐藏当前界面
+            this.Hide();
             SingleClicked?.Invoke();
             _envManager.changeEnv(0);
             _envInfo.setIndex(0);
@@ -49,32 +47,26 @@ namespace UI.Screens
             //开始本地模式
             _localGameFactory.CreateApple(10);
             _localGameFactory.CreateSnake();
-
         }
 
         private void OnDoubleButtonClicked()
         {
-            Debug.Log("Double Button Clicked!");
-            this.Hide();//隐藏当前界面
+            this.Hide();
             _envManager.changeEnv(1);
             _envInfo.setIndex(1);
 
             DoubleClicked?.Invoke();
-            //_enterPanel.ShowError("Waiting for development");
         }
         private void OnMultiButtonClicked()
         {
-            Debug.Log("Multi Button Clicked!");
             this.Hide();//隐藏当前界面
             MultiClicked?.Invoke();
             _envManager.changeEnv(2);
             _envInfo.setIndex(2);
-            //_enterPanel.ShowError("Waiting for development");
         }
 
         private void OnEnable()
         {
-            Debug.Log("Enter Screen Enable");
             _enterPanel.SingleClicked += OnSingleButtonClicked;
             _enterPanel.DoubleClicked += OnDoubleButtonClicked;
             _enterPanel.MultiClicked += OnMultiButtonClicked;
@@ -83,7 +75,6 @@ namespace UI.Screens
 
         private void OnDisable()
         {
-            Debug.Log("Enter Screen Disable");
             _enterPanel.SingleClicked -= OnSingleButtonClicked;
             _enterPanel.DoubleClicked -= OnDoubleButtonClicked;
             _enterPanel.MultiClicked -= OnMultiButtonClicked;
@@ -93,12 +84,11 @@ namespace UI.Screens
 
         private void OnQuitClicked()
         {
-            Debug.Log("Quit Button Click");
 
 #if UNITY_EDITOR
             UnityEditor.EditorApplication.isPlaying = false;
 #else
-            Application.Quit();
+            Application.Quit();//Unuse in WebGL
 #endif
         }
 

@@ -26,7 +26,10 @@ namespace Network.Services.Factory
         public void RemoveSnake(string key)
         {
             if (!_snakes.Contains(key))
+            {
+                Debug.Log("Don't contain in Snake Registry");
                 return;
+            }
             
             _snakesDestruction.Destruct(key);
             _snakesFactory.RemoveSnake(key);

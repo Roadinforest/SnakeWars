@@ -81,7 +81,6 @@ namespace Network.Services.Factory
             return snake;
         }
         
-        // 构建蛇的本体
         private Snake CreateSnake(string pathToPrefab, Vector3 position, Material skin, float movementSpeed)
         {
             var snake = _assets.Instantiate<Snake>(pathToPrefab, position, Quaternion.identity, null);

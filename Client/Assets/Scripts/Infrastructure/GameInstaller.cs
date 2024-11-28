@@ -1,5 +1,4 @@
 using Reflex.Core;
-using Reflex.Logging;
 using UnityEngine;
 
 using Network.Services;
@@ -10,14 +9,7 @@ using Services;
 using Services.Leaders;
 using UI.Factory;
 using LocalMode.Factory;
-using LocalMode.Snakes;
 using Environment;
-
-using SnakesFactory = Network.Services.Factory.SnakesFactory;
-using AppleFactory = Network.Services.Factory.AppleFactory;
-using VfxFactory = Network.Services.Factory.VfxFactory;
-using SnakesDestruction = Network.Services.Factory.SnakesDestruction;
-//using SnakesRegistry = LocalMode.Snakes.SnakesRegistry;
 
 
 namespace Infrastructure
@@ -26,7 +18,6 @@ namespace Infrastructure
     {
         public void InstallBindings(ContainerBuilder builder)
         {
-            Debug.Log("GameInstaller installed start");
             builder.AddSingleton(typeof(Injector));
             builder.AddSingleton(typeof(CameraProvider));
             builder.AddSingleton(typeof(UIFactory));
@@ -35,15 +26,12 @@ namespace Infrastructure
             builder.AddSingleton(typeof(Assets));
             builder.AddSingleton(typeof(StaticDataService));
 
-            //New
             builder.AddSingleton(typeof(LocalGameFactory));
             builder.AddSingleton(typeof(LocalSnakesFactory));
-            builder.AddSingleton(typeof(LocalSnakesRegistry));
             builder.AddSingleton(typeof(LocalSnakesDestruction));
             builder.AddSingleton(typeof(LocalVfxFactory));
             builder.AddSingleton(typeof(LocalAppleFactory));
             builder.AddSingleton(typeof(EnvInfo));
-
 
             builder.AddSingleton(typeof(LeaderboardService));
             builder.AddSingleton(typeof(SnakesFactory));

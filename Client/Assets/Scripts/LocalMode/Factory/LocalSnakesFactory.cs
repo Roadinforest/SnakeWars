@@ -4,12 +4,11 @@ using Gameplay.Player;
 using Gameplay.SnakeLogic;
 using Infrastructure;
 
-using LocalMode.Snakes;
-using LocalMode.Extensions;
 
 using Services;
 using UnityEngine;
 using Gameplay.Animations;
+using Network.Services.Snakes;
 using Network.Schemas;
 
 namespace LocalMode.Factory
@@ -17,32 +16,29 @@ namespace LocalMode.Factory
     public class LocalSnakesFactory
     {
         private const string PlayerSnakePath = "Snake/Player Snake";
-        private const string RemoteSnakePath = "Snake/Remote Snake";
         private const string SnakeDetailPath = "Snake/Body Detail";
 
         private readonly Assets _assets;
-        private readonly LocalSnakesRegistry _snakes;
         private readonly StaticDataService _staticData;
         private readonly CameraProvider _cameraProvider;
-        private Snake _OnlySnake;//唯一的小蛇蛇
+        private Snake _onlySnake;//唯一的小蛇蛇
+        private SnakeInfo _onlySnakeInfo;
+        private readonly SnakesRegistry _snakes;
 
-        public LocalSnakesFactory(Assets assets, LocalSnakesRegistry snakes, StaticDataService staticData, CameraProvider cameraProvider)
+        public LocalSnakesFactory(Assets assets, SnakesRegistry snakes, StaticDataService staticData, CameraProvider cameraProvider)
         {
             _assets = assets;
-            _snakes = snakes;
             _staticData = staticData;
             _cameraProvider = cameraProvider;
+            _onlySnakeInfo = new SnakeInfo();
+            _snakes = snakes;
         }
 
         public Snake CreateLocalSnake()
         {
-            Debug.Log("Try to create Local Snake");
 
             //填写身份证阶段
-            SnakeInfo snakeInfo = new SnakeInfo();
-
             PlayerSchema _playerSchema = new PlayerSchema();
-            _playerSchema = new PlayerSchema();
             _playerSchema.username = "Player";
 
             _playerSchema.position = new Vector2Schema();
@@ -51,33 +47,30 @@ namespace LocalMode.Factory
 
             _playerSchema.skinId = (byte)Random.Range(0, 7);
             _playerSchema.size = (byte)3;//默认长度一开始为3
-            snakeInfo.Player = _playerSchema;
 
             var data = _staticData.ForSnake();
             var skin = _staticData.ForSnakeSkin(_playerSchema.skinId);
+            _onlySnake = CreateSnake(PlayerSnakePath, new Vector3(0, 0, 0), skin, data.MovementSpeed);
 
-            var snake = CreateSnake(PlayerSnakePath, new Vector3(0, 0, 0), skin, data.MovementSpeed);
-            snakeInfo.Snake = snake;
+            _onlySnakeInfo.Player = _playerSchema;
+            _onlySnakeInfo.Snake = _onlySnake;
 
-            //添加户口，默认ID为Player
-            _snakes.Add("Player", snakeInfo);
+            // 上户口
+            _snakes.Add("Player", _playerSchema, _onlySnake);
 
             //本地小蛇
-            var localSnake = snake.GetComponent<LocalSnake>();
+            var localSnake = _onlySnake.GetComponent<LocalSnake>();
             localSnake.Initialize(_playerSchema);
 
+            _onlySnake.GetComponentInChildren<PlayerAim>().Construct(data.MovementSpeed, data.RotationSpeed);
+            _cameraProvider.Follow(_onlySnake.Head.transform);
 
-            snake.GetComponentInChildren<PlayerAim>().Construct(data.MovementSpeed, data.RotationSpeed);
-            _cameraProvider.Follow(snake.Head.transform);
-            //_OnlySnake=snake;
-
-            return snake;
+            return _onlySnake;
         }
 
         private Snake CreateSnake(string pathToPrefab, Vector3 position, Material skin, float movementSpeed)
         {
             var snake = _assets.Instantiate<Snake>(pathToPrefab, position, Quaternion.identity, null);
-            _OnlySnake=snake;
             snake.Head.Construct(movementSpeed);
             snake.GetComponentInChildren<SnakeSkin>().ChangeTo(skin);
             return snake;
@@ -86,25 +79,22 @@ namespace LocalMode.Factory
 
         public void RemoveSnake()
         {
-            Object.Destroy(_OnlySnake.gameObject);
-            Debug.Log("RemoveSnake in LocalSnakesFactory");
+            Object.Destroy(_onlySnake.gameObject);
         }
 
         public void AddSnakeDetail(string snakeId, int count)
         {
-            var snakeInfo = _snakes[snakeId];
-            var skin = _staticData.ForSnakeSkin(snakeInfo.Player.skinId);
+            var skin = _staticData.ForSnakeSkin(_onlySnakeInfo.Player.skinId);
 
             for (var i = 0; i < count; i++)
-                snakeInfo.Snake.AddDetail(CreateSnakeDetail(snakeInfo.Snake.Head.transform, snakeInfo.Snake.transform, skin));
+                _onlySnake.AddDetail(CreateSnakeDetail(_onlySnakeInfo.Snake.Head.transform, _onlySnake.transform, skin));
         }
 
         public void RemoveSnakeDetails(string snakeId, int count)
         {
-            var snakeInfo = _snakes[snakeId];
 
             for (var i = 0; i < count; i++)
-                Object.Destroy(snakeInfo.Snake.RemoveDetail());
+                Object.Destroy(_onlySnake.RemoveDetail());
         }
 
         private GameObject CreateSnakeDetail(Transform head, Transform parent, Material skin)

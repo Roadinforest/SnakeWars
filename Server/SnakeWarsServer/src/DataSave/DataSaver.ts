@@ -29,23 +29,6 @@ export class DataSaver {
         }
     }
 
-    //    async saveGameUser(gameUser: GameUser): Promise<GameUser> {
-    //        await this.waitForInitialization();
-    //        if (!this.manager) {
-    //            throw new Error("DataSaver is not initialized yet.");
-    //        }
-    //        return this.manager.save(gameUser);
-    //    }
-
-    //    async saveGameRecord(gameRecord: GameRecord): Promise<GameRecord> {
-    //        await this.waitForInitialization();
-    //        if (!this.manager) {
-    //            throw new Error("DataSaver is not initialized yet.");
-    //        }
-    //        return this.manager.save(gameRecord);
-    //    }
-
-
     async saveGameRecord(gameType: string, gameId: string, userName: string, score: number): Promise<GameRecord> {
         await this.waitForInitialization();
         if (!this.manager) {

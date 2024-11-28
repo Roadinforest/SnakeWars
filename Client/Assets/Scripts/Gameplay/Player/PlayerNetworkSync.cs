@@ -1,4 +1,5 @@
-﻿using Network.Services.RoomHandlers;
+﻿using Gameplay.SnakeLogic;
+using Network.Services.RoomHandlers;
 using Reflex.Attributes;
 using UnityEngine;
 
@@ -13,8 +14,14 @@ namespace Gameplay.Player
         public void Construct(NetworkTransmitter transmitter) => 
             _transmitter = transmitter;
 
-        private void Update() =>
+        private void Update()
+        {
+            if(this.GetComponentInParent<LocalSnake>().isInitialized()==false)
+            {
             _transmitter.SendPosition(_playerAim.transform.position);
+                Debug.Log("send position");
+            }
+        }
         //更新位置，这样其他客户端也能够更新
     }
 }

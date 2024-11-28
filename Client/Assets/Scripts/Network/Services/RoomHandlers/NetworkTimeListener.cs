@@ -1,13 +1,8 @@
 
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using Colyseus.Schema;
-using Extensions;
 using Network.Schemas;
 using Network.Services.Factory;
-using Services.Leaders;
-//using UnityEditorInternal;
 using UnityEngine;
 using UI.Screens;
 using Debug = UnityEngine.Debug;
@@ -33,10 +28,6 @@ namespace Network.Services.RoomHandlers
         {
             _state = state;
             state.leftTime.OnChange(OnLeftTimeChanged);
-
-            //state.players.OnAdd(OnPlayerAdded).AddTo(_disposes);
-            //state.players.OnRemove(OnPlayerRemoved).AddTo(_disposes);
-            //state.;
         }
         
         public void Dispose()
@@ -45,11 +36,8 @@ namespace Network.Services.RoomHandlers
             _disposes.Clear();
         }
         
-        //private void OnLeftTimeChanged(DataChange[] dataChanges)
         private void OnLeftTimeChanged()
         {
-            //Debug.Log("LeftTime Change");
-            //Debug.Log(_state.leftTime.leftTime);
             if(_downScreen == null)
             {
                 Debug.Log("DownScreen is null");

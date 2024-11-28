@@ -1,11 +1,12 @@
 ﻿using System.Collections.Generic;
-using Gameplay;
-using Gameplay.Common;
 using Gameplay.Environment;
 using Infrastructure;
+using Gameplay.Common;
 
-using LocalMode.Extensions;
 using UnityEngine;
+using System;
+using Random = UnityEngine.Random;
+using Object = UnityEngine.Object;
 
 namespace LocalMode.Factory
 {
@@ -14,14 +15,13 @@ namespace LocalMode.Factory
         private const string ApplePath = "Apple/Local Apple";
 
         private readonly Assets _assets;
-        private readonly Dictionary<string, Apple> _apples;
+        private readonly Dictionary<string, LocalApple> _apples;
         private int _mapSize = 20;
 
         public LocalAppleFactory(Assets assets)
         {
             _assets = assets;
-            _apples = new Dictionary<string, Apple>();
-            Debug.Log("Instantiate LocalAppleFactory");
+            _apples = new Dictionary<string, LocalApple>();
         }
 
         public LocalApple CreateApple()
@@ -32,6 +32,10 @@ namespace LocalMode.Factory
 
 
             var localApple = _assets.Instantiate<LocalApple>(ApplePath, new Vector3(x, y, z), Quaternion.identity, null);
+            string key = Guid.NewGuid().ToString();
+            
+            localApple.GetComponent<UniqueId>().Construct(key);
+            _apples[key] = localApple;
             return localApple;
         }
         // 本地的苹果没有必要添加单独标识

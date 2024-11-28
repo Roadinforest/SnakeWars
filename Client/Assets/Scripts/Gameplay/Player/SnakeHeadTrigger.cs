@@ -15,9 +15,9 @@ namespace Gameplay.Player
         [SerializeField] private SnakeDeath _snakeDeath;
         [SerializeField] private SnakeHeadAnimator _animator;
         [SerializeField] private SphereCollider _mouthCollider;
-        [SerializeField, Range(0, 180)] private float _deathAngle = 100f;
         [SerializeField] private LayerMask _targetMask;
-        [SerializeField] private LocalSnake _snake;
+        [SerializeField] private LocalSnake _localSnake;
+        [SerializeField] private AudioSource _audioSource;
 
         private readonly Collider[] _colliders = new Collider[3];
 
@@ -37,38 +37,26 @@ namespace Gameplay.Player
 
         private void ProcessCollision(Component target,int index)
         {
-            Debug.Log("ProcessCollision");
             if (target.TryGetComponent(out Apple apple))
             {
                 _animator.PlayEat();
                 apple.Collect();
-                //apple会发送信号，这里就不会手动增加
+                _audioSource.Play();
             }
 
             else if (target.TryGetComponent(out LocalApple localApple))
             {
                 _animator.PlayEat();
                 localApple.Collect();
-                _snake.EatApple();//本地蛇触发加分
+                _localSnake.EatApple();
+                _audioSource.Play();
             }
 
-            //else if (target.TryGetComponent(out SnakeHead head))
-            //{
-            //    var angle = Vector3.Angle(_head.transform.forward, head.transform.forward);
-            //    if (angle > _deathAngle)
-            //        _snakeDeath.Die();
-
-            //    _localGameFactory.RemoveSnake(transform.position);
-               
-
-            //    Debug.Log("I die");
-            //}
             else
             {
                 _snakeDeath.Die();
+                if(_localSnake != null && _localSnake.isInitialized()==true)
                 _localGameFactory.RemoveSnake(transform.position);
-                
-                Debug.Log("I die");
             }
             _colliders[index] = null;
         }

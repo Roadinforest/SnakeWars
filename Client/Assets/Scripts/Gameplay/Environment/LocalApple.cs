@@ -37,7 +37,6 @@ namespace Gameplay.Environment
             float x = Random.Range(-_xRange,_xRange);
             float y = 0f; // 确保y轴始终为0
             float z = Random.Range(-_zRnage,_zRnage);
-
             transform.position = new Vector3(x, y, z);
         }
     }
