@@ -4,13 +4,14 @@
     "\\Client",
     "\\Client\\Assets",
     "\\Client\\Assets\\Scripts",
-    "\\Client\\Assets\\Scripts\\Network",
-    "\\Client\\Assets\\Scripts\\Network\\Services",
-    "\\Client\\Assets\\Scripts\\Network\\Services\\Factory",
-    "\\Client\\Assets\\Scripts\\Network\\Services\\RoomHandlers",
-    "\\Client\\Assets\\Scripts\\UI",
-    "\\Client\\Assets\\Scripts\\UI\\Screens"
+    "\\Client\\Assets\\Scripts\\LocalMode",
+    "\\Client\\Assets\\Scripts\\LocalMode\\Factory",
+    "\\Server",
+    "\\Server\\SnakeWarsServer",
+    "\\Server\\SnakeWarsServer\\src",
+    "\\Server\\SnakeWarsServer\\src\\rooms",
+    "\\Server\\SnakeWarsServer\\src\\rooms\\schema"
   ],
-  "SelectedNode": "\\Client\\Assets\\Scripts\\Network\\Services\\RoomHandlers\\NetworkStateInitializer.cs",
+  "SelectedNode": "\\Client\\Assets\\Scripts\\Network\\Services\\NetworkClient.cs",
   "PreviewInSolutionExplorer": false
 }

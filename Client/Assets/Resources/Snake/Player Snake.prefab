@@ -176,7 +176,7 @@ MonoBehaviour:
   _targetMask:
     serializedVersion: 2
     m_Bits: 72
-  _snake: {fileID: 0}
+  _snake: {fileID: -4265523063313193996}
 --- !u!1 &3168570585787361072
 GameObject:
   m_ObjectHideFlags: 0
