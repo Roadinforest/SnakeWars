@@ -5,5 +5,6 @@
 /Client/Library/
 /Client/WebGL Builds/
 /Client/obj/
+/Server/node_modules/
 
 

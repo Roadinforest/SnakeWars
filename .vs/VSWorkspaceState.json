@@ -1,7 +1,6 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Client",
     "\\Client\\Assets",
     "\\Client\\Assets\\Scripts",
     "\\Client\\Assets\\Scripts\\Network",
@@ -10,9 +9,10 @@
     "\\Server",
     "\\Server\\SnakeWarsServer",
     "\\Server\\SnakeWarsServer\\src",
-    "\\Server\\SnakeWarsServer\\src\\rooms",
-    "\\Server\\SnakeWarsServer\\src\\rooms\\schema"
+    "\\Server\\SnakeWarsServer\\src\\DataSave",
+    "\\Server\\SnakeWarsServer\\src\\entity",
+    "\\Server\\SnakeWarsServer\\src\\services"
   ],
-  "SelectedNode": "\\Client\\Assets\\Scripts\\Gameplay\\SnakeLogic\\RemoteSnake.cs",
+  "SelectedNode": "\\Server\\SnakeWarsServer\\src\\entity\\GameUser.ts",
   "PreviewInSolutionExplorer": false
 }
