@@ -5,25 +5,24 @@ import { matchMaker } from "@colyseus/core";
 import { GameRoom } from "./GameRoom";
 import { RoomListingData } from "colyseus";
 
-export class TestGameRoom extends Room<GameRoomState> {
+export class MainGameRoom extends Room<GameRoomState> {
 
 	private static DoublewaitingClients: Map<string, {
 		client: Client,
 		options: any
-	} > = new Map(); // 等待队列
+	} > = new Map(); 
 
 	private static MultiwaitingClients: Map<string, {
 		client: Client,
 		options: any
-	} > = new Map(); // 多人等待队列
+	} > = new Map();
 
 	private _MultiRoom : RoomListingData<any>;//多人房唯一标识
 
 
 	onCreate(options: any) {
-		console.log("TestGame Room created!");
+		console.log("MainGameRoomcreated!");
 
-		// 借用一下GameRoomState
         const staticData = new StaticData();
         staticData.initialize();
         this.setState(new GameRoomState(staticData));
@@ -34,11 +33,10 @@ export class TestGameRoom extends Room<GameRoomState> {
 	}
 
 	async onJoin(client: Client, options: any) {
-		console.log(client.sessionId, "join TestRoom!", options.username);
+		console.log(client.sessionId, "join MainGameRoom!", options.username);
 
 		// 单人模式逻辑
 		if (options.type === 0) {
-				// 创建房间
 				const room = await matchMaker.createRoom("GameRoom", {
 					type: 0,
 					player1: client,
@@ -53,10 +51,10 @@ export class TestGameRoom extends Room<GameRoomState> {
 		}
 		// 双人模式匹配逻辑
 		else if (options.type === 1) {
-			if (TestGameRoom.DoublewaitingClients.size ==1) {
+			if (MainGameRoom.DoublewaitingClients.size ==1) {
 				// 如果有等待中的客户端，取出第一个
-				const [waitingClientId, waitingClientOptions] = TestGameRoom.DoublewaitingClients.entries().next().value;
-				TestGameRoom.DoublewaitingClients.delete(waitingClientId);
+				const [waitingClientId, waitingClientOptions] = MainGameRoom.DoublewaitingClients.entries().next().value;
+				MainGameRoom.DoublewaitingClients.delete(waitingClientId);
 
 				console.log(`Pairing ${waitingClientId} with ${client.sessionId}`);
 				if (waitingClientOptions.client == null) console.log("Waiting Client is null");
@@ -82,7 +80,7 @@ export class TestGameRoom extends Room<GameRoomState> {
 			}
 			else {
 				// 如果没有等待的客户端，将当前客户端加入等待队列
-				TestGameRoom.DoublewaitingClients.set(client.sessionId, { client, options });
+				MainGameRoom.DoublewaitingClients.set(client.sessionId, { client, options });
 				console.log(`${client.sessionId} is now waiting.`);
 			}
 		}
@@ -97,15 +95,15 @@ export class TestGameRoom extends Room<GameRoomState> {
 			}
 
 			//没有房间，则等待人到齐了再创建
-			if (TestGameRoom.MultiwaitingClients.size >= 2) {
+			if (MainGameRoom.MultiwaitingClients.size >= 2) {
 				// 取出等待中的前两个客户端
-				const iterator = TestGameRoom.MultiwaitingClients.entries();
+				const iterator = MainGameRoom.MultiwaitingClients.entries();
 				const [waitingClient1Id, waitingClient1] = iterator.next().value;
 				const [waitingClient2Id, waitingClient2] = iterator.next().value;
 
 				// 从等待队列中移除
-				TestGameRoom.MultiwaitingClients.delete(waitingClient1Id);
-				TestGameRoom.MultiwaitingClients.delete(waitingClient2Id);
+			 MainGameRoom.MultiwaitingClients.delete(waitingClient1Id);
+			 MainGameRoom.MultiwaitingClients.delete(waitingClient2Id);
 
 				console.log(`Pairing ${waitingClient1Id}, ${waitingClient2Id}, and ${client.sessionId}`);
 
@@ -130,7 +128,7 @@ export class TestGameRoom extends Room<GameRoomState> {
 				console.log(`Multi-player room created: ${room.roomId}`);
 			} else {
 				// 如果等待人数不足，则将当前玩家加入等待队列
-				TestGameRoom.MultiwaitingClients.set(client.sessionId, { client, options });
+			 MainGameRoom.MultiwaitingClients.set(client.sessionId, { client, options });
 				console.log(`${client.sessionId} is now waiting for multi-player pairing.`);
 			}
 		}
@@ -141,21 +139,20 @@ export class TestGameRoom extends Room<GameRoomState> {
 	}
 
 	onLeave(client: Client, consented: boolean) {
-		console.log(client.sessionId, "left in TestGameRoom!");
+		console.log(client.sessionId, "left in MainGameRoom!");
 
 		// 如果客户端在等待队列中，移除
-		if (TestGameRoom.DoublewaitingClients.has(client.sessionId)) {
-			TestGameRoom.DoublewaitingClients.delete(client.sessionId);
+		if ( MainGameRoom.DoublewaitingClients.has(client.sessionId)) {
+		 MainGameRoom.DoublewaitingClients.delete(client.sessionId);
 			console.log(`${client.sessionId} removed from waiting queue.`);
 		}
-		else if (TestGameRoom.MultiwaitingClients.has(client.sessionId)) {
-			TestGameRoom.MultiwaitingClients.delete(client.sessionId);
+		else if (MainGameRoom.MultiwaitingClients.has(client.sessionId)) {
+			MainGameRoom.MultiwaitingClients.delete(client.sessionId);
 			console.log(`${client.sessionId} removed from waiting queue.`);
 		}
-		//this.state.removePlayer(client.sessionId);
 	}
 
 	onDispose() {
-		console.log("TestGameRoom", this.roomId, "disposing...");
+		console.log("MainGameRoom", this.roomId, "disposing...");
 	}
 }

@@ -4,13 +4,10 @@ import { GameRoomState } from "./schema/GameRoomState";
 import { Vector2Schema } from "./schema/Vector2Schema";
 import { StaticData } from "../services/staticData";
 import { DataSaver } from "../DataSave/DataSaver"
-import { Schema, MapSchema, type } from "@colyseus/schema";
-import { PlayerSchema } from "./schema/PlayerSchema";
 
 export class GameRoom extends Room<GameRoomState> {
     readonly startApplesCount: number = 50;
 
-    // 直接地图长度即可，不用/2
     readonly SingleMapSize: number = 40;
     readonly DoubleMapSize: number = 90;
     readonly MultiMapSize: number = 130;
@@ -20,7 +17,7 @@ export class GameRoom extends Room<GameRoomState> {
 
     GameType: number = -1;
 
-    public delayedTimeout!: Delayed;//倒计时
+    public delayedTimeout!: Delayed;
 
 
     async onCreate(options: any) {
@@ -74,7 +71,6 @@ export class GameRoom extends Room<GameRoomState> {
 
     countDown(minutes : number) {
         this.clock.start();
-        // Set a timeout that will execute after 5 minutes
         this.clock.setTimeout(() => {
             this.gameOver();
         }, minutes * 60 * 1000); // 5 minutes in milliseconds
@@ -100,12 +96,10 @@ export class GameRoom extends Room<GameRoomState> {
         }
 
         const _results = this.state.results;
-        console.log("The size of results is "+_results.size)
+        console.log("Total results.size "+_results.size)
         for (let entry of _results.entries()) {
-            //console.log(`Key: ${entry[1].username}, Value: ${entry[1].score}`);
             this.dataSaver.saveGameRecord(GameTypeName, this.roomId, entry[1].username, entry[1].score);
         }
-        //此处调用数据库写入逻辑
         this.state.endGame();
     }
 

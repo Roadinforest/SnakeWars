@@ -16,7 +16,7 @@ export class PlayerSchema extends Schema {
         this.skinId = skinId;
         this.score = score;
         this.size = size;
-        this.lives = 1; //生命条数默认为1
+        this.lives = 1; 
     }
 
     //设置生命条数

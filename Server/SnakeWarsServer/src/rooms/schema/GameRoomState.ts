@@ -6,12 +6,11 @@ import { AppleSchema } from "./AppleSchema";
 import { LefttimeSchema } from "./LefttimeSchema";
 
 export class GameRoomState extends Schema {
-    mapSize: number = 140;//地图大小
+    mapSize: number = 140;
     readonly scorePerApple: number = 1;
     readonly maxApplesOnRoom: number = 150;
 
     @type({ map: PlayerSchema }) players = new MapSchema<PlayerSchema>();
-    //lives = new Map<string,number>();
     @type({ map: PlayerSchema }) results= new MapSchema<PlayerSchema>();//结束时记录玩家数据
     @type({ map: AppleSchema}) apples = new MapSchema<AppleSchema>();
     @type(LefttimeSchema) leftTime = new LefttimeSchema(5*60*1000);
@@ -19,9 +18,8 @@ export class GameRoomState extends Schema {
     staticData: StaticData;
     lastAppleId: number = 0;
     processedDeaths: Set<string>;
-    //leftTime : number = 5*60*1000;//如果是多人模式，就会有倒计时为5min
     gameState : boolean = true;//游戏模式，true为正常模式，false为结束模式
-    lifePerPlayer: number = 1;//游戏模式，true为正常模式，false为结束模式
+    lifePerPlayer: number = 1;
 
     constructor(staticData: StaticData) {
         super();
@@ -32,7 +30,6 @@ export class GameRoomState extends Schema {
     // 结束游戏
     endGame() {
         this.gameState = false;
-        //后面追加addResult的逻辑
     }
 
     setLeftTime(time : number) {
@@ -41,7 +38,6 @@ export class GameRoomState extends Schema {
 
     decreaseLeftTime(deltaTime : number) {
         this.leftTime.leftTime-=deltaTime;
-        //console.log("leftTime:",this.leftTime.leftTime);
     }
 
 
@@ -49,12 +45,7 @@ export class GameRoomState extends Schema {
         this.mapSize = size;
     }
 
-    // 存储对局结果，为后面存数据做准备
-    //addResult(result: PlayerSchema) {
-    //    this.results.set(result.username, result);
-    //}
 
-    // 设置每个玩家的生命条数
     setLife(lives: number) {
         this.lifePerPlayer = lives;
     }

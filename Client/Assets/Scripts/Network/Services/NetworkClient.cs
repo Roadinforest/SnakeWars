@@ -13,7 +13,7 @@ namespace Network.Services
     public class NetworkClient
     {
         private const string GameRoomName = "GameRoom";
-        private const string TestGameRoomName = "TestGameRoom";
+        private const string MainGameRoomName = "MainGameRoom";
         private readonly StaticDataService _staticData;
         private readonly IEnumerable<INetworkRoomHandler> _handlers;
 
@@ -61,7 +61,7 @@ namespace Network.Services
 
             try
             {
-                _MainRoom = await client.JoinOrCreate<GameRoomState>(TestGameRoomName, new Dictionary<string, object>()
+                _MainRoom = await client.JoinOrCreate<GameRoomState>(MainGameRoomName, new Dictionary<string, object>()
                 {
                     ["type"] = type,
                     [nameof(username)] = username
