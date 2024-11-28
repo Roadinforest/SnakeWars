@@ -24,19 +24,51 @@ export class DataSaver {
         }
     }
 
-    async saveGameUser(gameUser: GameUser): Promise<GameUser> {
+//    async saveGameUser(gameUser: GameUser): Promise<GameUser> {
+//        await this.waitForInitialization();
+//        if (!this.manager) {
+//            throw new Error("DataSaver is not initialized yet.");
+//        }
+//        return this.manager.save(gameUser);
+//    }
+
+//    async saveGameRecord(gameRecord: GameRecord): Promise<GameRecord> {
+//        await this.waitForInitialization();
+//        if (!this.manager) {
+//            throw new Error("DataSaver is not initialized yet.");
+//        }
+//        return this.manager.save(gameRecord);
+//    }
+
+
+    async saveGameRecord(gameType: string, gameId: string, userName: string, score: number): Promise<GameRecord> {
         await this.waitForInitialization();
         if (!this.manager) {
             throw new Error("DataSaver is not initialized yet.");
         }
-        return this.manager.save(gameUser);
+
+        const gameRecord = new GameRecord();
+        gameRecord.score = score;
+        gameRecord.user_name = userName;
+        gameRecord.game_id = gameId;
+        gameRecord.game_mode = gameType;
+        gameRecord.time = new Date();
+
+        console.log("Save one record");
+        return this.manager.save(gameRecord);
     }
 
-    async saveGameRecord(gameRecord: GameRecord): Promise<GameRecord> {
+    async saveGameUser(userName: string, passWard: string): Promise<GameUser> {
         await this.waitForInitialization();
         if (!this.manager) {
             throw new Error("DataSaver is not initialized yet.");
         }
-        return this.manager.save(gameRecord);
+
+        const gameUser = new GameUser();
+        gameUser.name = userName;
+        gameUser.password = passWard;
+
+        console.log("Save one game user");
+        return this.manager.save(gameUser);
     }
 }

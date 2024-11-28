@@ -91,14 +91,15 @@ export class GameRoomState extends Schema {
 
     removePlayer(sessionId: string) {
             const player = this.players.get(sessionId);
+            console.log("removePlayer:", player.lives);
             
 
         // 玩家死亡,进行记录
-        if (player.lives == 1) {
+        if (player.lives === 1) {
             this.results.set(player.username, player);
-            if (this.players.has(sessionId)) {
-                this.players.delete(sessionId);
-            }
+            //if (this.players.has(sessionId)) {
+            //    this.players.delete(sessionId);
+            //}
             return;
         }
         else {
@@ -140,6 +141,10 @@ export class GameRoomState extends Schema {
         for (let entry of this.results.entries()) {
             console.log(`Key: ${entry[1].username}, Value: ${entry[1].score}`);
         }
+    }
+
+    returnResult(): MapSchema<PlayerSchema>{
+        return this.results;
     }
 
     movePlayer(sessionId: string, targetPosition: Vector2Schema) {

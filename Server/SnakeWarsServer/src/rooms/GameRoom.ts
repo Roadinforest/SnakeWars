@@ -1,8 +1,11 @@
-import { Room, Client } from "@colyseus/core";
+import { Room, Client} from "@colyseus/core";
 import { Delayed } from "@colyseus/core";
 import { GameRoomState } from "./schema/GameRoomState";
 import { Vector2Schema } from "./schema/Vector2Schema";
 import { StaticData } from "../services/staticData";
+import { DataSaver } from "../DataSave/DataSaver"
+import { Schema, MapSchema, type } from "@colyseus/schema";
+import { PlayerSchema } from "./schema/PlayerSchema";
 
 export class GameRoom extends Room<GameRoomState> {
     readonly startApplesCount: number = 50;
@@ -78,10 +81,28 @@ export class GameRoom extends Room<GameRoomState> {
         }, 1000);
     }
 
-    gameOver() {
+    async gameOver() {
         console.log("Game Over");
         this.state.showResult();
+
         //此处调用数据库写入逻辑
+        const dataSaver = await new DataSaver();
+        let GameTypeName;
+        switch (this.GameType) {
+            case 0: GameTypeName = "Single Mode" 
+            break
+            case 1: GameTypeName="Double Mode"
+            break
+            case 2: GameTypeName="Multi Mode"
+                break
+            default: GameTypeName="Unknown"
+        }
+
+        const _results = this.state.results;
+        for (let entry of _results.entries()) {
+            console.log(`Key: ${entry[1].username}, Value: ${entry[1].score}`);
+            dataSaver.saveGameRecord(GameTypeName, this.roomId, entry[1].username, entry[1].score);
+        }
         this.state.endGame();
     }
 
