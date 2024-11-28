@@ -27,15 +27,15 @@
    cd Server/SnakeWarsServer
    ```
 3. 运行安装依赖
-  ```
-  npm install
-  ```
+   ```
+   npm install
+   ```
 4. 启动本地服务器
-  ```
-  npm start
-  ```
+   ```
+   npm start
+   ```
 
- ## 运行服务端
+## 运行服务端
   使用Unity打开Client文件夹，便可以直接运行
 
 ## 更改ip和接口
