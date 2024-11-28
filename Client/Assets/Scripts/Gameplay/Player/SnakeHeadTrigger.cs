@@ -5,6 +5,7 @@ using LocalMode.Factory;
 using Reflex.Attributes;
 using UnityEngine;
 using Services.Leaders;
+using System;
 
 namespace Gameplay.Player
 {
@@ -36,6 +37,7 @@ namespace Gameplay.Player
 
         private void ProcessCollision(Component target,int index)
         {
+            Debug.Log("ProcessCollision");
             if (target.TryGetComponent(out Apple apple))
             {
                 _animator.PlayEat();
