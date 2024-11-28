@@ -11,7 +11,7 @@ export class GameRoomState extends Schema {
     readonly maxApplesOnRoom: number = 150;
 
     @type({ map: PlayerSchema }) players = new MapSchema<PlayerSchema>();
-    lives = new MapSchema<number>();
+    //lives = new Map<string,number>();
     @type({ map: PlayerSchema }) results= new MapSchema<PlayerSchema>();//结束时记录玩家数据
     @type({ map: AppleSchema}) apples = new MapSchema<AppleSchema>();
     @type(LefttimeSchema) leftTime = new LefttimeSchema(5*60*1000);
@@ -84,14 +84,26 @@ export class GameRoomState extends Schema {
 
     createPlayer(sessionId: string, username: string): PlayerSchema {
         const player = new PlayerSchema(username, this.getSpawnPoint(this.mapSize), this.getRandomSkinId(), 1);
+        player.setLife(this.lifePerPlayer);
         this.players.set(sessionId, player);
-        //this.lives.set(username, this.lifePerPlayer);//设置生命条数
         return player;
     }
 
     removePlayer(sessionId: string) {
-        if (this.players.has(sessionId)){
-            this.players.delete(sessionId);
+            const player = this.players.get(sessionId);
+            
+
+        // 玩家死亡,进行记录
+        if (player.lives == 1) {
+            this.results.set(player.username, player);
+            if (this.players.has(sessionId)) {
+                this.players.delete(sessionId);
+            }
+            return;
+        }
+        else {
+            player.lives--;
+            this.createPlayer(sessionId, player.username);
         }
     }
 
@@ -122,6 +134,12 @@ export class GameRoomState extends Schema {
         const x = Math.floor(Math.random() * size) - size / 2;
         const y = Math.floor(Math.random() * size) - size / 2;
         return new Vector2Schema(x, y);
+    }
+
+    showResult() {
+        for (let entry of this.results.entries()) {
+            console.log(`Key: ${entry[1].username}, Value: ${entry[1].score}`);
+        }
     }
 
     movePlayer(sessionId: string, targetPosition: Vector2Schema) {

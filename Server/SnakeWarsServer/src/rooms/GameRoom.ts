@@ -8,6 +8,7 @@ export class GameRoom extends Room<GameRoomState> {
     readonly startApplesCount: number = 50;
 
     // 直接地图长度即可，不用/2
+    readonly SingleMapSize: number = 40;
     readonly DoubleMapSize: number = 90;
     readonly MultiMapSize: number = 130;
     readonly MultiLives: number = 3;
@@ -37,8 +38,12 @@ export class GameRoom extends Room<GameRoomState> {
             this.state.processSnakeDeath(data.snakeId, data.positions);
         })
 
-        //双人模式
-        if (options != null && options.type == 1) {
+        if (options != null && options.type == 0) {
+            this.state.setMapSize(this.SingleMapSize);
+            this.GameType = 0;
+            console.log("This is a single-player game!!!");
+        }
+        else if (options != null && options.type == 1) {
             this.state.setMapSize(this.DoubleMapSize);
             this.GameType = 1;
             console.log("This is a double-player game!!!");
@@ -48,7 +53,6 @@ export class GameRoom extends Room<GameRoomState> {
             this.GameType = 1;
             console.log("This is a double-player game!!!");
         }
-        //多人模式
         else if (options != null && options.type == 2) {
             console.log("This is a multi-player game!!!");
             this.GameType = 2;
@@ -76,6 +80,8 @@ export class GameRoom extends Room<GameRoomState> {
 
     gameOver() {
         console.log("Game Over");
+        this.state.showResult();
+        //此处调用数据库写入逻辑
         this.state.endGame();
     }
 
@@ -96,6 +102,7 @@ export class GameRoom extends Room<GameRoomState> {
     }
 
     onDispose() {
+        this.gameOver();
         console.log("GameRoom", this.roomId, "disposing...");
     }
 }

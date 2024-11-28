@@ -36,21 +36,22 @@ export class TestGameRoom extends Room<GameRoomState> {
 	async onJoin(client: Client, options: any) {
 		console.log(client.sessionId, "join TestRoom!", options.username);
 
-		// 双人模式匹配逻辑
+		// 单人模式逻辑
 		if (options.type === 0) {
 				// 创建房间
 				const room = await matchMaker.createRoom("GameRoom", {
-					type: 1,
+					type: 0,
 					player1: client,
 				});
-				const reservation2 = await matchMaker.reserveSeatFor(room, options);
+				const reservation = await matchMaker.reserveSeatFor(room, options);
 				console.log(`Single Room created: ${room.roomId}`);
 
 				// 将 seat reservations 发送给客户端
-				client.send("seatReservation", reservation2);
+				client.send("seatReservation", reservation);
 
 				console.log(`Single-player room created: ${room.roomId}`);
 		}
+		// 双人模式匹配逻辑
 		else if (options.type === 1) {
 			if (TestGameRoom.DoublewaitingClients.size ==1) {
 				// 如果有等待中的客户端，取出第一个
